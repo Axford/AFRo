@@ -1,0 +1,397 @@
+<html>
+<head>
+
+<style>
+
+    html, body {
+      width:100%;
+      height:100%;
+      margin:0;
+    }
+
+	.graph {
+		width: 95%;
+		height: 20%;
+		top: 80%;
+		position:absolute;
+	}
+	
+	#info {
+		position:absolute;
+		left: 250px;
+	}
+	
+	#canvas {
+		position:absolute;
+	}
+
+</style>
+		
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script language="javascript" type="text/javascript" src="flot/jquery.flot.js"></script>
+	<script type="text/javascript" src="dat.gui.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.js"></script>
+	
+	
+
+<script type="text/javascript">
+$(function() {
+
+  var mx = 0;
+  var my = 0;
+  var md = false;
+  
+  var targetLine;
+  
+  var AFRo = function() {
+  	  this.PostPosition = new THREE.Vector3(0,0,0);
+  	  this.PostHeight = 500;
+  	  this.PostRadius = 20/2;
+  	  
+  	  this.ShoulderOffset = 60;
+  
+	  this.ShoulderPosition = new THREE.Vector3(0, 0, this.ShoulderOffset);
+	  this.ShoulderMaxAngle = 300/2;
+	  this.ShoulderMinAngle = -this.ShoulderMaxAngle;
+	  this.ShoulderAngle = 0;
+	  
+	  this.HumerusLength = 200;
+	  
+	  this.HumerusObj = null;
+	  
+	  this.ElbowPosition = function() {
+	  	  var sp = new THREE.Vector3();
+	  	  sp.copy(this.PostPosition);
+	  	  sp = sp.add(this.ShoulderPosition);
+	  	  sp.x += this.HumerusLength * Math.cos(this.ShoulderAngle * Math.PI/180);
+	  	  sp.y += this.HumerusLength * Math.sin(this.ShoulderAngle * Math.PI/180); 
+	  	  return sp;
+	  }
+	  
+	  this.ElbowMaxAngle = 300/2;
+	  this.ElbowMinAngle = -this.ElbowMaxAngle;
+	  this.ElbowAngle = 0;
+	  
+	  this.UlnaLength = 200;
+	  
+	  this.UlnaObj = null;
+	  
+	  this.WristPosition = function() {
+	  	  var sp = new THREE.Vector3();
+	  	  sp.copy(this.ElbowPosition());
+	  	  sp.x += this.UlnaLength * Math.cos((this.ElbowAngle + this.ShoulderAngle) * Math.PI/180);
+	  	  sp.y += this.UlnaLength * Math.sin((this.ElbowAngle + this.ShoulderAngle) * Math.PI/180); 
+	  	  return sp;
+	  }
+	  
+	  this.WristMaxAngle = 330/2;
+	  this.WristMinAngle = -this.WristMaxAngle;
+	  this.WristAngle = 0;
+	  
+	  
+	  this.SpoonLength = 100;
+	  this.SpoonRadius = 35/2;
+	  
+	  this.SpoonPosition = function() {
+	  	  var sp = new THREE.Vector3();
+	  	  sp.copy(this.WristPosition());
+	  	  sp.x += this.SpoonLength * Math.cos((this.WristAngle + this.ElbowAngle + this.ShoulderAngle) * Math.PI/180);
+	  	  sp.y += this.SpoonLength * Math.sin((this.WristAngle + this.ElbowAngle + this.ShoulderAngle) * Math.PI/180); 
+	  	  return sp;
+	  }
+	  
+	};
+	
+  var afro = new AFRo();
+
+  
+
+	window.onload = function() {
+	  
+	  var gui = new dat.GUI();
+	  gui.add(afro, 'ShoulderAngle', afro.ShoulderMinAgle, afro.ShoulderMaxAngle);
+	  
+	};
+
+
+  // set the scene size
+	var WIDTH = window.innerWidth,
+	    HEIGHT = window.innerHeight;
+
+	// set some camera attributes
+	var VIEW_ANGLE = 45,
+	    ASPECT = WIDTH / HEIGHT,
+	    NEAR = 0.1,
+	    FAR = 10000;
+	    
+	var frame = 0;
+	var simTime = 0;
+	var lastTime = new Date();
+	    
+	
+	var data = [];
+	var data1 = [];
+	var totalPoints = 1000;
+	
+	for (var i=1; i<totalPoints; i++) {
+		data.push([i,0]);
+		data1.push([i,0]);
+	}
+	
+	
+	function getData() {
+		return [data,data1];
+	}
+	
+	var plot;
+
+	function updatePlot() {
+		plot.setData(getData());
+		plot.setupGrid();
+		plot.draw();
+	}
+
+			
+
+	function init() {
+
+		
+		
+
+		window.addEventListener( 'resize', onWindowResize, false );
+		
+		onWindowResize();
+
+	}
+	
+	
+  function rotateVector2(V, ang) {
+  	 var l = V.length();
+  	 var VT = new THREE.Vector2(V.x,V.y);
+  	 
+  	 var sang = Math.atan2(V.y, V.x);
+  	 
+  	 sang += ang;
+  	 VT.x = l * Math.cos(sang);
+  	 VT.y = l * Math.sin(sang);	 
+  	  
+  	 return VT;
+  }
+  
+  var dirs = [false,false,false];
+  var twitch = [false, false, true];
+  
+  function nextTwitch() {
+  	twitch[0] = false;
+	twitch[1] = false;
+	twitch[2] = false;
+	twitch[Math.round(Math.random()*2)] = true;
+  }
+  
+  function animate() {
+
+		requestAnimationFrame( animate );
+		
+		
+		frame +=1;
+		var thisTime = new Date();
+		simTime += thisTime - lastTime;
+		lastTime = thisTime;
+		
+		
+		// Direct canvas updates
+		var canvas=document.getElementById('canvas');
+		var ctx=canvas.getContext('2d');
+
+		//ctx.clearRect(0, 0, canvas.width, canvas.height);
+		
+		ctx.fillStyle = 'rgba(255,255,255,0.05)';
+   		if (Math.random() < 0.1) 
+   			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		
+		ctx.strokeStyle = "#888";
+		ctx.lineWidth = 1;
+		
+		var cx = canvas.width/2;
+		var cy = canvas.height/2;
+		var scale = canvas.height/(2.1*(afro.HumerusLength + afro.UlnaLength + afro.SpoonLength));
+		
+		// draw post
+		ctx.beginPath();
+		ctx.arc(cx,cy,afro.PostRadius * scale, 0, 2*Math.PI);
+		ctx.stroke();
+		
+		
+		// humerus
+		var x1 = cx + afro.ElbowPosition().x * scale;
+		var y1 = cy + afro.ElbowPosition().y * scale;
+		
+		ctx.beginPath();
+		ctx.moveTo(cx,cy);
+		ctx.lineTo(x1, y1);
+		ctx.lineWidth = 1;
+		ctx.strokeStyle = "rgba(120,120,120,0.2)";
+		ctx.stroke();
+		
+		// ulna
+		var x2 = cx + afro.WristPosition().x * scale;
+		var y2 = cy + afro.WristPosition().y * scale;
+		
+		ctx.beginPath();
+		ctx.moveTo(x1,y1);
+		ctx.lineTo(x2, y2);
+		ctx.lineWidth = 1;
+		ctx.strokeStyle = "rgba(255,120,120,0.2)";
+		ctx.stroke();
+		
+		// spoon
+		var x3 = cx + afro.SpoonPosition().x * scale;
+		var y3 = cy + afro.SpoonPosition().y * scale;
+		
+		ctx.beginPath();
+		ctx.moveTo(x2,y2);
+		ctx.lineTo(x3, y3);
+		ctx.lineWidth = 1;
+		ctx.strokeStyle = "rgba(120,120,255,0.2)";
+		ctx.stroke();
+		
+		ctx.beginPath();
+		ctx.strokeStyle = "#88f";
+		ctx.arc(x3,y3,afro.SpoonRadius * scale, 0, 2*Math.PI);
+		ctx.stroke();
+		
+		
+		// change angles
+		
+		/*
+		afro.ShoulderAngle = afro.ShoulderMaxAngle * Math.cos(frame/50);
+		afro.ElbowAngle = afro.ShoulderMaxAngle * Math.cos(frame/130);
+		afro.WristAngle = afro.ShoulderMaxAngle * Math.cos(frame/330);
+		*/
+		
+		
+		
+		
+		
+		
+			// wrist
+		if (twitch[2]) {
+			if (dirs[2]) {
+				if (afro.WristAngle < afro.WristMaxAngle) {
+					afro.WristAngle += 5;
+				} else {
+					dirs[2] = false;
+					afro.WristAngle = afro.WristMaxAngle;
+					nextTwitch();
+	
+				}
+			} else {
+				if (afro.WristAngle > afro.WristMinAngle) {
+					afro.WristAngle -= 5;
+				} else {
+					dirs[2] = true;
+					afro.WristAngle = afro.WristMinAngle;
+					nextTwitch();
+				}
+			}
+		}
+		
+		// elbow
+		if (twitch[1]) {
+			if (dirs[1]) {
+				if (afro.ElbowAngle < afro.ElbowMaxAngle) {
+					afro.ElbowAngle += 3;
+				} else {
+					dirs[1] = false;
+					afro.ElbowAngle = afro.ElbowMaxAngle;
+					nextTwitch();
+				}
+			} else {
+				if (afro.ElbowAngle > afro.ElbowMinAngle) {
+					afro.ElbowAngle -= 3;
+				} else {
+					dirs[1] = true;
+					afro.ElbowAngle = afro.ElbowMinAngle;
+					nextTwitch();
+				}
+			}
+		}
+		
+		
+		
+		// shoulder angle
+		if (twitch[0]) {
+			if (dirs[0]) {
+				if (afro.ShoulderAngle < afro.ShoulderMaxAngle) {
+					afro.ShoulderAngle += 2;
+				} else {
+					dirs[0] = false;
+					nextTwitch();
+				}
+			} else {
+				if (afro.ShoulderAngle > afro.ShoulderMinAngle) {
+					afro.ShoulderAngle -= 2;
+				} else {
+					dirs[0] = true;
+					nextTwitch();
+				}
+			}
+		}
+		
+		if (Math.random() < 0.05)
+			nextTwitch();
+		
+	}
+	
+  
+  
+  function onWindowResize() {	
+  		var canvas=document.getElementById('canvas');
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+
+	}
+  
+  jQuery(document).ready(function($) {
+	
+	plot = $.plot("#plot", [ getData() ], {
+			series: {
+				shadowSize: 0	// Drawing is faster without shadows
+			}
+		});
+	
+	init();
+	animate();
+
+  });
+  
+  (function() {
+    window.onmousedown = handleMouseDown;
+    function handleMouseDown(event) {
+        event = event || window.event; // IE-ism
+        mx = event.clientX;
+        my = event.clientY;
+        md = true;
+        // event.clientX and event.clientY contain the mouse position
+        
+        
+    }
+})();
+
+  
+});
+</script>
+
+
+</head>
+<body>
+
+	<div id="info"></div>
+
+	<div id="plot" class="graph"></div>
+
+	<canvas id="canvas"></canvas>
+	
+</body>
+</html>

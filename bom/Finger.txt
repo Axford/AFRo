@@ -1,0 +1,11 @@
+Finger:
+Vitamins:
+  1 Aluminium Extrusion BR_20x20 150mm
+  1 Aluminium Extrusion BR_20x20 60mm
+  6 Aluminium Extrusion Twist Nut
+  1 BR20x20Gusset
+  6 M4 cap screw x 8mm
+  4 Washer M4 x 9mm x 0.8mm
+
+Printed:
+

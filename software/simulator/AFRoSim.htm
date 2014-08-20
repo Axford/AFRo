@@ -1,0 +1,348 @@
+<html>
+<head>
+
+<style>
+
+	.graph {
+		width: 95%;
+		height: 20%;
+		top: 80%;
+		position:absolute;
+	}
+	
+	#info {
+		position:absolute;
+		left: 250px;
+	}
+	
+	#canvas {
+		position:absolute;
+	}
+
+</style>
+		
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script language="javascript" type="text/javascript" src="flot/jquery.flot.js"></script>
+	<script type="text/javascript" src="dat.gui.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.js"></script>
+	<script type="text/javascript" src="OrbitControls.js"></script>
+	
+
+<script type="text/javascript">
+$(function() {
+
+  var mx = 0;
+  var my = 0;
+  var md = false;
+  
+  var targetLine;
+  
+  var AFRo = function() {
+  	  this.PostPosition = new THREE.Vector3(0,0,0);
+  	  this.PostHeight = 500;
+  	  this.PostRadius = 20/2;
+  	  
+  	  this.ShoulderOffset = 60;
+  
+	  this.ShoulderPosition = new THREE.Vector3(0, 0, this.ShoulderOffset);
+	  this.ShoulderMaxAngle = 300/2;
+	  this.ShoulderMinAngle = -this.ShoulderMaxAngle;
+	  this.ShoulderAngle = 0;
+	  
+	  this.HumerusLength = 200;
+	  
+	  this.HumerusObj = null;
+	  
+	  this.ElbowPosition = function() {
+	  	  var sp = new THREE.Vector3();
+	  	  sp.copy(this.PostPosition);
+	  	  sp = sp.add(this.ShoulderPosition);
+	  	  sp.x += this.HumerusLength * Math.cos(this.ShoulderAngle);
+	  	  sp.y += Math.sin(this.ShoulderAngle); 
+	  	  return sp;
+	  }
+	  
+	  this.ElbowMaxAngle = 300/2;
+	  this.ElbowMinAngle = -this.ElbowMaxAngle;
+	  this.ElbowAngle = 0;
+	  
+	  this.UlnaLength = 200;
+	  
+	  this.UlnaObj = null;
+	  
+	};
+	
+  var afro = new AFRo();
+
+  
+
+	window.onload = function() {
+	  
+	  var gui = new dat.GUI();
+	  gui.add(afro, 'ShoulderAngle', afro.ShoulderMinAgle, afro.ShoulderMaxAngle);
+	  
+	};
+
+
+  // set the scene size
+	var WIDTH = window.innerWidth,
+	    HEIGHT = window.innerHeight;
+
+	// set some camera attributes
+	var VIEW_ANGLE = 45,
+	    ASPECT = WIDTH / HEIGHT,
+	    NEAR = 0.1,
+	    FAR = 10000;
+	    
+	var frame = 0;
+	var simTime = 0;
+	var lastTime = new Date();
+	    
+	    
+	var camera, scene, renderer, controls;
+	
+	var data = [];
+	var data1 = [];
+	var totalPoints = 1000;
+	
+	for (var i=1; i<totalPoints; i++) {
+		data.push([i,0]);
+		data1.push([i,0]);
+	}
+	
+	
+	function getData() {
+		return [data,data1];
+	}
+	
+	var plot;
+
+	function updatePlot() {
+		plot.setData(getData());
+		plot.setupGrid();
+		plot.draw();
+	}
+
+			
+
+	function init() {
+
+		renderer = new THREE.WebGLRenderer();
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		document.body.appendChild( renderer.domElement );
+
+		// Setup camera and scene
+		camera = new THREE.PerspectiveCamera(  VIEW_ANGLE,
+	                                ASPECT,
+	                                NEAR,
+	                                FAR  );
+		camera.position.x = 200;
+		camera.position.y = -400;
+		camera.position.z = 500;
+
+		scene = new THREE.Scene();
+		
+		controls = new THREE.OrbitControls( camera );
+		controls.damping = 0.2;
+		controls.addEventListener( 'change', render );
+		
+		var axisHelper = new THREE.AxisHelper( 5 );
+		scene.add( axisHelper );
+		
+		
+		// POST
+		var geometry = new THREE.CylinderGeometry( afro.PostRadius, afro.PostRadius, afro.PostHeight );
+		var material = new THREE.MeshBasicMaterial( {color: 0xe0e0e0} );
+		var cylinder = new THREE.Mesh( geometry, material );
+		cylinder.rotation.x += Math.PI/2;
+		cylinder.position.z += afro.PostHeight/2;
+		scene.add( cylinder );
+
+		
+		// HUMERUS
+		var geometry = new THREE.Geometry();
+    	geometry.vertices.push(afro.ShoulderPosition);
+    	geometry.vertices.push(afro.ElbowPosition());
+
+		afro.HumerusObj = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0xFF0000 } ) );
+		scene.add(afro.HumerusObj);
+
+
+
+		/*
+		// SPHERE ************
+		
+		// create the sphere's material
+		var sphereMaterial = new THREE.MeshLambertMaterial(
+		{
+			color: 0xF0F0F0
+		});
+
+		// set up the sphere vars
+		var radius = 20, segments = 16, rings = 16;
+
+		// create a new mesh with sphere geometry -
+		// we will cover the sphereMaterial next!
+		var sphere = new THREE.Mesh(
+		   new THREE.SphereGeometry(radius, segments, rings),
+		   sphereMaterial);
+
+		sphere.position.y  = 30;
+		sphere.position.x = 0.1;
+		// add the sphere to the scene
+		scene.add(sphere);
+		
+		
+		
+		/ MAGNET ***************
+		
+		var magnetMaterial = new THREE.MeshLambertMaterial(
+		{
+			color: 0x808080
+		});
+		
+		magnet = new THREE.Mesh(
+			new THREE.CubeGeometry( 20, 50, 20 ),
+			magnetMaterial);
+			
+		magnet.position.y = 100;
+		scene.add(magnet);
+		
+		
+		// TARGET DIST LINE **************
+		
+		var geometry = new THREE.Geometry();
+    	geometry.vertices.push(new THREE.Vertex(new THREE.Vector3(-100, 0, 0)));
+    	geometry.vertices.push(new THREE.Vertex(new THREE.Vector3(100, 0, 0)));
+
+		targetLine = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0xFF0000 } ) );
+		scene.add(targetLine);
+		
+		// SPHERE LINE *********
+		sphereLine = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0x00FF00 } ) );
+		scene.add(sphereLine);
+		
+		*/
+
+		// and the camera
+		scene.add(camera);
+
+		// create a point light
+		var pointLight = new THREE.PointLight( 0xFFFFFF );
+
+		// set its position
+		pointLight.position.x = 10;
+		pointLight.position.y = 50;
+		pointLight.position.z = 130;
+
+		// add to the scene
+		scene.add(pointLight);
+		
+
+		window.addEventListener( 'resize', onWindowResize, false );
+
+	}
+	
+	
+  function rotateVector2(V, ang) {
+  	 var l = V.length();
+  	 var VT = new THREE.Vector2(V.x,V.y);
+  	 
+  	 var sang = Math.atan2(V.y, V.x);
+  	 
+  	 sang += ang;
+  	 VT.x = l * Math.cos(sang);
+  	 VT.y = l * Math.sin(sang);	 
+  	  
+  	 return VT;
+  }
+  
+  
+  function animate() {
+
+		requestAnimationFrame( animate );
+		controls.update();
+		
+		//setTimeout( function() { requestAnimationFrame( animate ); }, 1000 / 5 );
+		
+		frame +=1;
+		var thisTime = new Date();
+		simTime += thisTime - lastTime;
+		lastTime = thisTime;
+		
+		
+		
+		
+		
+		
+		// Direct canvas updates
+		//var canvas=document.getElementById('canvas');
+		//var ctx=canvas.getContext('2d');
+
+		//ctx.clearRect(0, 0, 300,250);
+		//ctx.strokeStyle = "#CCC";
+		
+		//var cx = 100;
+		//var cy = 100;
+		
+		
+		render();
+	}
+	
+	function render() {
+       renderer.render( scene, camera );
+     }
+  
+  
+  function onWindowResize() {
+
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+
+		renderer.setSize( window.innerWidth, window.innerHeight );
+
+	}
+  
+  jQuery(document).ready(function($) {
+	
+	plot = $.plot("#plot", [ getData() ], {
+			series: {
+				shadowSize: 0	// Drawing is faster without shadows
+			}
+		});
+	
+	init();
+	animate();
+
+  });
+  
+  (function() {
+    window.onmousedown = handleMouseDown;
+    function handleMouseDown(event) {
+        event = event || window.event; // IE-ism
+        mx = event.clientX;
+        my = event.clientY;
+        md = true;
+        // event.clientX and event.clientY contain the mouse position
+        
+        
+    }
+})();
+
+  
+});
+</script>
+
+
+</head>
+<body>
+
+	<div id="info"></div>
+
+	<div id="plot" class="graph"></div>
+
+	<canvas id="canvas" width="500" height="500"></canvas>
+	
+</body>
+</html>
