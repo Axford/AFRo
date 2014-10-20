@@ -12,7 +12,10 @@ BB623 = [3, 10, 4, "623"];            // 623 bearings
 BB624 = [4, 13, 5, "624"];            // 624 ball bearing for idlers
 BB608 = [8, 22, 7, "608"];            // 608 bearings for wades
 BB625_2RS = [5, 16, 5, "625_2RS"];    //  625 bearings for Delrin v groove wheels
+BB6205_2RS = [25, 52, 15, "6205_2RS"]; 
 
+function ball_bearing_id(type) = type[0];
+function ball_bearing_od(type) = type[1];
 function ball_bearing_diameter(type) = type[1];
 function ball_bearing_width(type) = type[2];
 

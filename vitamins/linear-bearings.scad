@@ -15,7 +15,9 @@ LM8UU  = [24, 15,  8];
 LM6UU  = [19, 12,  6];
 LM4UU  = [12,  8,  4];
 
+function linear_bearing_od(type) = type[1];
 function bearing_radius(type) = type[1] / 2;
+function linear_bearing_height(type) = type[0];
 function bearing_height(type) = type[0];
 
 bearing_color = grey80;

@@ -57,14 +57,14 @@ module roundedRect(size, radius, center=false, shell=0) {
 	}
 }
 
-module roundedRectX(size, radius, center=false) {
+module roundedRectX(size, radius, center=false, shell=0) {
 	// X-axis aligned roundedRect
-	translate([0,0,center?0:size[2]]) rotate([0,90,0]) roundedRect([size[2],size[1],size[0]], radius, center);
+	translate([0,0,center?0:size[2]]) rotate([0,90,0]) roundedRect([size[2],size[1],size[0]], radius, center, shell);
 }
 
-module roundedRectY(size, radius, center=false) {
+module roundedRectY(size, radius, center=false, shell=0) {
 	// Y-axis aligned roundedRect
-	translate([0,0,center?0:size[2]]) rotate([-90,0,0]) roundedRect([size[0],size[2],size[1]], radius, center);
+	translate([0,0,center?0:size[2]]) rotate([-90,0,0]) roundedRect([size[0],size[2],size[1]], radius, center, shell);
 }
 
 module allRoundedRect(size, radius, center=false) {

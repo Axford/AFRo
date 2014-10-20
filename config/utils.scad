@@ -21,8 +21,13 @@ include <../utils/cables.scad>
 include <../utils/obiscad/vector.scad>
 include <../utils/obiscad/attach.scad>
 
+include <../utils/MCAD/involute_gears.scad>
+
+include <../utils/oshw.scad>
 
 include <../utils/ThreadlessBallscrew-v2-1a.scad>
+
+include <../utils/OpenScadFont.scad>
 
 function sqr(a) = a*a;
 
@@ -135,6 +140,19 @@ module tube(or, ir, h, center = true) {
             circle(or);
             circle(ir);
         }
+}
+
+
+module aluAngle(w,h,l,t) {
+	// stands vertically at origin (l extends in z+)
+	// w in x+, h in y+
+	
+	color(alu_color)
+		linear_extrude(l)
+		union() {
+			square([t,h]);
+			square([w,t]);
+		}
 }
 
 //

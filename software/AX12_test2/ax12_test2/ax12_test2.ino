@@ -1,11 +1,36 @@
 #include <ax12.h>
 
+// using X driver on RAMPS 1.4....
+
+/*
 #define Z_STEP_PIN         A0
 #define Z_DIR_PIN          A1
 #define Z_ENABLE_PIN       38
+*/
+
+/*
+// E0
+#define Z_STEP_PIN         26
+#define Z_DIR_PIN          28
+#define Z_ENABLE_PIN       24
+
+*/
+
+// E1 on RAMPS 1.4
+#define Z_STEP_PIN         36
+#define Z_DIR_PIN          34
+#define Z_ENABLE_PIN       30
+
+// SAM-3 Servo interface
+
+
 
 AX12 motor1;
 AX12 motor2;
+AX12 motor3;
+
+int spoonTorq = 2;
+int spoonID = 0;
 
 void enable_z() {
    //WRITE(Z_ENABLE_PIN, LOW);
@@ -14,21 +39,26 @@ void enable_z() {
 
 void disable_z() {
    //WRITE(Z_ENABLE_PIN, HIGH); 
+   digitalWrite(Z_ENABLE_PIN, HIGH);
 }
 
 void setup() {
  
   motor1 = AX12();
   motor2 = AX12();
+  motor3 = AX12();
 
   Serial.begin (115200);  // inicializa el Serial a 115,2 Kb/s
   AX12::init (1000000);   // inicializa los AX12 a 1 Mb/s
 
-  motor1.id = 1; 
-  motor1.SRL = RETURN_ALL;
+  motor1.id = 3; 
+  motor1.SRL = RETURN_READ;
  
   motor2.id = 2;  
   motor2.SRL = RETURN_ALL;
+  
+  motor3.id = 1;  
+  motor3.SRL = RETURN_ALL;
   
   pinMode(Z_ENABLE_PIN, OUTPUT);
   pinMode(Z_STEP_PIN, OUTPUT);  
@@ -37,44 +67,117 @@ void setup() {
   pinMode(13, OUTPUT);
 
   enable_z();    
+  //disable_z();
+  
+  noInterrupts();
   
   // set up Timer 1
   TCCR1A = 0;          // normal operation
   TCCR1B = bit(WGM12) | bit(CS11);   // CTC, scale / 8
   //OCR1A =  625;       // compare A register value, approx 1 RPM with 200 steps per rev and 16x microstepping
-  OCR1A = 625;
+  // ORC1A =     // 1 RPM with 200 steps per rev and 2x microstepping
+  OCR1A = 500;
   TIMSK1 = bit (OCIE1A);             // interrupt on Compare A Match
   
   // set up Timer 3
   TCCR3A = 0;          // normal operation
-  TCCR3B = bit(WGM12) | bit(CS12);   // CTC, scale / 1024
-  OCR3A =  521;       // compare A register value, approx 30 Hz
+  TCCR3B = bit(WGM12) | bit(CS12) | bit(CS10);   // CTC, scale / 1024
+  OCR3A =  156;       // compare A register value, approx 100 Hz
   TIMSK3 = bit (OCIE3A);             // interrupt on Compare A Match
   
   // set default velocities
-  motor1.setVel(100);
-  motor2.setVel(100);
+  motor1.setVel(200);
+  motor2.setVel(200);
+  motor3.setVel(200);
+  
+  // set initial torques
+  motor1.setTorque(500);
+  motor2.setTorque(400);
+  motor3.setTorque(200);
   
   // set initial positions
   motor1.setPos(512);
   motor2.setPos(512);
+  motor3.setPos(512);
+  
+  // punch
+  motor1.writeInfo(PUNCH, 60);
+  motor2.writeInfo(PUNCH, 50);
+  
+  // compliance margins
+  motor1.writeInfo(CW_COMPLIANCE_MARGIN, 0);
+  motor1.writeInfo(CCW_COMPLIANCE_MARGIN, 0);
+ 
+  // compliance slopes
+  motor1.writeInfo(CW_COMPLIANCE_SLOPE, 64);
+  motor1.writeInfo(CCW_COMPLIANCE_SLOPE, 64);
+  
+  // compliance margins
+  motor2.writeInfo(CW_COMPLIANCE_MARGIN, 0);
+  motor2.writeInfo(CCW_COMPLIANCE_MARGIN, 0);
+ 
+  // compliance slopes
+  motor2.writeInfo(CW_COMPLIANCE_SLOPE, 32);
+  motor2.writeInfo(CCW_COMPLIANCE_SLOPE, 32);
+  
+  // compliance margins
+  motor3.writeInfo(CW_COMPLIANCE_MARGIN, 0);
+  motor3.writeInfo(CCW_COMPLIANCE_MARGIN, 0);
+ 
+  // compliance slopes
+  motor3.writeInfo(CW_COMPLIANCE_SLOPE, 16);
+  motor3.writeInfo(CCW_COMPLIANCE_SLOPE, 16);
+
+  
+  
+  
+  Serial3.begin(115200);
+  
+  // spoon - set speed
+   int tmp1 = 0xE0 | 0;
+   int tmp2 = 0x0D;
+   int tmp3 = 1;
+   int tmp4 = 20;
+   int checksum = (tmp1 ^ tmp2 ^ tmp3 ^ tmp4) & 0x7f;
+   Serial3.write(0xff);
+   Serial3.write(tmp1);
+   Serial3.write(tmp2);
+   Serial3.write(tmp3);
+   Serial3.write(tmp4);
+   Serial3.write(checksum);
   
   Serial.begin(115200);
   
   delay(1000); // give them time to get there
+  
+  // enable interrupts
+  interrupts();
 }
 
 long stepCount = 0;
+long stepTimer = 500;
+
 
 void step_z() {
-   digitalWrite(Z_STEP_PIN, true);
-   digitalWrite(Z_STEP_PIN, false);
+   
+   if (stepCount % 30 == 0 && stepTimer > 120) {
+      stepTimer--;
+      //OCR1A = stepTimer; 
+   }
+  
+   if (stepCount < (long)3200 * 15) {
+  
+     digitalWrite(Z_STEP_PIN, true);
+     digitalWrite(Z_STEP_PIN, false);
+   
+   }
    
    stepCount++;
    
-   if (stepCount > 3200 * 10) {
+   if (stepCount > (long)3200 * 16) {
       digitalWrite(Z_DIR_PIN, !digitalRead(Z_DIR_PIN)); 
       stepCount = 0;
+      stepTimer = 500;
    }
 }
 
@@ -87,8 +190,9 @@ volatile boolean moveDone = true;
 int startPos = 512;
 int endPos = 512;
 int posChange = 0;
-int eventCount = 30 * 2;
+int eventCount = 10 * 2;
 int events = 0;
+
 
 ISR(TIMER1_COMPA_vect)
 {
@@ -97,7 +201,7 @@ ISR(TIMER1_COMPA_vect)
 
 
 
-float v0 = 20;  // jerk velocity
+float v0 = 10;  // jerk velocity
 float v2 = 0;
 float v3 = v0;
 float t1, t2, t3, t4;
@@ -150,8 +254,8 @@ void prepTrapezoid() {
    */
   }
   
-  accelerateUntil = round(t1 * 30);
-  decelerateAfter = round(t2 * 30);
+  accelerateUntil = round(t1 * 10);
+  decelerateAfter = round(t2 * 10);
 }
 
 int getTrapezoidPos(float t) {
@@ -190,10 +294,21 @@ int getTrapezoidVel(float t) {
 ISR(TIMER3_COMPA_vect)
 {
  interrupts();
+
+ int p = 512;
+ 
+ p = p + round(300 * sin(events * 0.007));
+ 
+ 
+ motor1.setPos(p);
+ motor2.setPos(p);
+ motor3.setPos(p);
+ 
+ events++;
   
   if (!moveDone) {
     events++;
-    float t = events/30.0;
+    float t = events/10.0;
     if (t > t3 ) t = t3;
     int pos =  getTrapezoidPos(t);
     if (posChange > 0) {
@@ -201,14 +316,17 @@ ISR(TIMER3_COMPA_vect)
     } else {
        pos = startPos - pos;
     }
-    int vel = abs(getTrapezoidVel(t));
+    int vel = abs(getTrapezoidVel(t + 1/10.0));
     
+    /*
     Serial.print(t);
     Serial.print(": ");
     Serial.print(pos);
     Serial.print(", ");
     Serial.println(vel);
-    motor2.setPosVel(pos,vel);
+    */
+    
+    motor1.setPosVel(pos,vel);
     
     if (t >= t3) {
        moveDone = true; 
@@ -217,19 +335,49 @@ ISR(TIMER3_COMPA_vect)
 }
 
 void loop() {
-   delay(100);
+  
+  
+   //delay(100);
+  
+  
+   //motor1.setTorque(200);
+   //motor2.setTorque(200);
+  
+   
+   // shoulder
+   //motor1.setPosVel(random(400, 600), 40);
+   
+   // elbow
+  // motor2.setPosVel(random(200, 800), 60);
+   
+   // wrist
+   //motor3.setPosVel(random(10,1000), 200);
+   
+   // spoon - set pos
+   int tmp1 = (spoonTorq << 5) | spoonID;
+   int tmp2 = random(128 - 70, 128 + 10);
+   //tmp2 = 128 + 85;
+   int checksum = (tmp1 ^ tmp2) & 0x7f;
+   Serial3.write(0xff);
+   Serial3.write(tmp1);
+   Serial3.write(tmp2);
+   Serial3.write(checksum);
+   
+   
+   delay(1000);
+   
     
-   if (moveDone) {
+   if (moveDone  && false) {
       // setup next move
       Serial.println();
-      delay(500);
+      delay(2000);
       
       
-      startPos = motor2.getPos();
+      startPos = motor1.getPos();
       while (startPos < 0 || startPos > 1024) {
-          startPos = motor2.getPos();
+          startPos = motor1.getPos();
       }
-      endPos = random(512 - 250,  512 + 250);
+      endPos = random(10, 1000);
       posChange = endPos - startPos;
       
       Serial.print(startPos);
@@ -251,8 +399,8 @@ void loop() {
       */
       
       distance = abs(posChange);
-      vmax = 300;
-      a = 100;
+      vmax = 60;
+      a = 10;
       
       prepTrapezoid();
       
@@ -272,9 +420,9 @@ void loop() {
       Serial.println(",");
       
       // set initial velocity
-      motor2.setVel(v0);
+      motor1.setVel(v0);
       
-      eventCount = round(t3 * 30.0);
+      eventCount = round(t3 * 10.0);
       
       events = 0;
       

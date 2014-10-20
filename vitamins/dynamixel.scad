@@ -11,6 +11,13 @@
 //                width, depth, height,   width, depth, height,  od, t     
 DYNAMIXELAX12  = [32,    50,    38,       26,    47,    38,      22, 4   ];
 
+function dynamixel_width(dyna) = dyna[0]; 
+function dynamixel_depth(dyna) = dyna[1]; 
+function dynamixel_height(dyna) = dyna[2];
+function dynamixel_inner_height(dyna) = dyna[2] - 5;
+function dynamixel_horn_thickness(dyna) = dyna[7];  
+
+
 module DynamixelAX12() {
 	// local coordinate system places origin centred on upper surface of control horn
 	// body of servo extends along y-

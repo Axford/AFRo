@@ -18,7 +18,7 @@ Pitch = 5;
 bearingOffset = 30;
 
 //Thickness of the frame
-MountHeight = 12;
+MountHeight = 14;
 //Base captive nut (small) outer diameter
 BaseNutDiameter = 8;
 //Base bolt diameter
@@ -95,7 +95,7 @@ module topBearing(zAngle) {
 	union () {
 		translate ([0,0,MountHeight/2]) cylinder (h=MountHeight*4, r=BearingIR, center = true, $fn=cylFn);//bearing bolt hole
 		translate ([0,0,mhD2bhD2]) cylinder (h=BearingHeight, r=BearingHoleOD, center = true, $fn=cylFn);
-		#translate ([0,0,mhD2bhD2]) cylinder (h=BearingHeight, r=BearingOR, center = true, $fn=cylFn);//bearing
+		*translate ([0,0,mhD2bhD2]) cylinder (h=BearingHeight, r=BearingOR, center = true, $fn=cylFn);//bearing
 		difference() { //raise center bearing race
 			translate ([0,0,mhD2bhD2-brOffset]) cylinder (h=BearingHeight, r=BearingHoleOD, center = true, $fn=cylFn);
 			translate ([0,0,mhD2bhD2-brOffset]) cylinder (h=BearingHeight, r=BearingHoleOD/1.5, center = true, $fn=cylFn);
@@ -107,7 +107,7 @@ module bottomBearing(zAngle) {
 	rotate([0,Angle*.71,0])	
  	union () {
 		translate ([0,0,-mhD2bhD2])  cylinder (h=BearingHeight, r=BearingHoleOD, center=true, $fn=cylFn);
-		#translate ([0,0,-mhD2bhD2]) cylinder (h=BearingHeight, r=BearingOR, center=true, $fn=cylFn); //bearing
+		*translate ([0,0,-mhD2bhD2]) cylinder (h=BearingHeight, r=BearingOR, center=true, $fn=cylFn); //bearing
 		difference() {
 			translate ([0,0,-mhD2bhD2+brOffset]) cylinder (h=BearingHeight, r=BearingHoleOD, center = true, $fn=cylFn);
 			translate ([0,0,-mhD2bhD2+brOffset]) cylinder (h=BearingHeight, r=BearingHoleOD/1.5, center = true, $fn=cylFn);

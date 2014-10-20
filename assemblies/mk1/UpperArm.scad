@@ -74,7 +74,7 @@ module UpperArmSpar_stl() {
 			// servo fixing tabs
 			for (y=[0,1], z=[0,1])
 				translate([UpperArmWidth/2 - 6, -34 - y*(UpperArmLength-37), -5 - z*(35)])
-				cube([5, 31, 3]);
+				cube([5, 33, 3]);
 				
 			// i-beam top/bottom
 			for (z=[0,1])
@@ -87,7 +87,8 @@ module UpperArmSpar_stl() {
 		// hollow for servo fixings
 		for (y=[0,1], z=[0,1])
 			translate([UpperArmWidth/2 - 4, -34 - y*(UpperArmLength-37), -10 - z*(27)]) {
-				cube([5, 31, 5]);
+				translate([0,-1,0])
+					cube([5, 33, 5]);
 			
 				// screw holes
 				for (i=[0:3])
@@ -109,6 +110,7 @@ module UpperArmSpar_stl() {
 		for (i=[-2:2])
 			translate([0, -UpperArmLength/2  + i*25, -21])
 			rotate([0,90,0])
+			scale([1.4,1,1])
 			cylinder(r=22/2, h=100, center=true);
 			
 		// more weight loss
@@ -118,8 +120,8 @@ module UpperArmSpar_stl() {
 			cylinder(r=16/2, h=100, center=true);
 			
 		// notch for servo bottom locating lugs
-		for (i=[0,1])
-			translate([UpperArmWidth/2 - 9, -35 - i*(UpperArmLength-61), -41])
+		*for (i=[0,1])
+			translate([UpperArmWidth/2 - 9, -33 - i*(UpperArmLength-57), -41])
 			cube([5, 9, 4]);			
 	}
 }

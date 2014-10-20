@@ -38,3 +38,7 @@ hard_washer_color				 = grey50;
 nut_color						 = grey50;
 
 plastic_color 					 = "orange";
+
+Level2PlasticColor 				 = [1, 0.6, 0];
+
+wood_color = "orange";

@@ -1,5 +1,8 @@
 import processing.serial.*;
 import controlP5.*;
+import java.util.Arrays;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 ControlP5 cp5;
 PFont f;
@@ -8,31 +11,148 @@ DropdownList dlSerialPorts;
 StringList serialLog;
 Serial port; 
 
+JSONObject config;
+
+float x=0, y=0, z=0, a=0, b=0;
+
+String lastCmd = "";
+
+StringList sendBuffer = new StringList();
+
+boolean cts = true;
+
+void saveConfig() {
+  // save connection string
+  saveJSONObject(config, "config.json");
+}
+
+void stop() {
+  saveConfig(); 
+  Disconnect(0);
+
+  super.stop();
+}
+
 
 void setup() {
-  size(700, 400,P3D);
-  f = createFont("Arial",11,true); 
-  
+  size(700, 400, P3D);
+  f = createFont("Arial", 11, true); 
+
+  try {
+    config = loadJSONObject("config.json");
+  } 
+  catch(Exception e) {
+  }
+
   cp5 = new ControlP5(this);
-  
+
   // Configure Serial Ports Dropdown
   // -------------------------------
   dlSerialPorts = cp5.addDropdownList("dlSerialPorts")
-          .setPosition(5, 25)
-          .setWidth(200)
-          ;
+    .setPosition(5, 25)
+      .setWidth(200)
+        ;
   dlSerialPorts.captionLabel().set("Choose a Serial Port");
   customize(dlSerialPorts);
   // Get list of ports
   dlSerialPorts.addItems(Serial.list());
-  
+
+  if (config != null) {
+    int i = Arrays.asList(Serial.list()).indexOf(config.getString("port"));  
+    dlSerialPorts.setValue(i);
+  }
+
   // Connect button
   cp5.addButton("Connect")
-     .setValue(0)
-     .setPosition(220,5)
-     .setSize(50,20)
-     ;
+    .setPosition(220, 5)
+      .setSize(50, 20)
+        ;
+
+  // Disconnect button
+  cp5.addButton("Disconnect")
+    .setPosition(280, 5)
+      .setSize(50, 20)
+        ;
+
+
+  // home
+  cp5.addButton("Home")
+    .setPosition(340, 5)
+      .setSize(50, 20)
+        ;
+
+
+  // Send
+  cp5.addButton("SendCommand")
+    .setPosition(400, 5)
+      .setSize(50, 20)
+        ;
+        
+        
+  // Store
+  cp5.addButton("Store")
+    .setPosition(460, 5)
+      .setSize(50, 20)
+        ;
+        
+        
+   // PlayBack
+  cp5.addButton("PlayBack")
+    .setPosition(520, 5)
+      .setSize(50, 20)
+        ;
+        
+
+  // Shoulder
+  cp5.addSlider("Shoulder")
+    .setValue(0.0)
+      .setRange(0.0, 100.0)
+        .setPosition(220, 50)
+          .setSize(200, 20)
+            ;
+
+  // Elbow
+  cp5.addSlider("Elbow")
+    .setValue(0.0)
+      .setRange(0.0, 100.0)
+        .setPosition(220, 80)
+          .setSize(200, 20)
+            ;
+            
+  // Wrist
+  cp5.addSlider("Wrist")
+    .setValue(0.0)
+      .setRange(0.0, 100.0)
+        .setPosition(220, 110)
+          .setSize(200, 20)
+            ;
+            
+  // Spoon
+  cp5.addSlider("Spoon")
+    .setValue(0.0)
+      .setRange(0.0, 100.0)
+        .setPosition(220, 140)
+          .setSize(200, 20)
+            ;
+
+  // Z
+  cp5.addSlider("Z")
+    .setValue(0.0)
+      .setRange(0.0, 300.0)
+        .setPosition(220, 170)
+          .setSize(200, 20)
+            ; 
+
+  cp5.addTextfield("LastCommand")
+    .setPosition(220, 200)
+      .setSize(400, 20)
+        .setFont(createFont("arial", 11))
+          .setAutoClear(false)
+            ;
+
   
+
+
   // Configure serialLog
   serialLog = new StringList();
   serialLog.append("Log");
@@ -40,10 +160,87 @@ void setup() {
 }
 
 public void Connect(int theValue) {
-   port = new Serial(this, Serial.list()[int(dlSerialPorts.getValue())], 115200);
-   port.bufferUntil(10);  // line feed
+  if (dlSerialPorts.getValue() >= 0) {
+    String c = Serial.list()[int(dlSerialPorts.getValue())];
+    port = new Serial(this, c, 115200);
+    port.bufferUntil(10);  // line feed
+
+    config.setString("port", c);
+    saveConfig();
+  }
 }
 
+public void Disconnect(int theValue) {
+  if (port != null) {
+    port.dispose();
+    port = null;
+    
+    sendBuffer.clear();
+  }
+}
+
+public void SendCMD(String c) {
+  if (port != null) {
+    serialLog.append(c);
+    cts = false; // reset by receiving an ok
+    println("sending: "+c);
+    port.write(c); 
+    lastCmd = c;
+    cp5.get(Textfield.class, "LastCommand").setText(c);
+  }
+}
+
+public void QueueCMD(String c) {
+   sendBuffer.append(c); 
+}
+
+public void Home(int v) {
+  QueueCMD("G28 Z\r\n");
+}
+
+public void Shoulder(float v) {
+  x = v;
+}
+
+public void Elbow(float v) {
+  y = v;
+}
+
+public void Wrist(float v) {
+  a = v;
+}
+
+public void Spoon(float v) {
+  b = v;
+}
+
+
+public void Z(float v) {
+  z = v;
+}
+
+public void SendCommand(int v) {
+  QueueCMD("G1 X"+x+" Y"+y+" Z"+z+" E"+a+" A"+b+" F1500\r\n");
+}
+
+public void Store(int v) {
+   appendTextToFile("playback.gcode",lastCmd);
+}
+
+public void PlayBack(int v) {
+  String lines[] = loadStrings("playback.gcode");
+  for (int i = 0 ; i < lines.length; i++) {
+     if (lines[i] != "") {
+        QueueCMD(lines[i] + "\r\n");
+     }
+  }
+}
+
+void delay(int delay)
+{
+  int time = millis();
+  while(millis() - time <= delay);
+}
 
 void customize(DropdownList ddl) {
   // a convenience function to customize a DropdownList
@@ -59,42 +256,68 @@ void customize(DropdownList ddl) {
 
 void serialEvent(Serial p) { 
   String s = p.readString(); 
+  if (s.substring(0,2).equals("ok")) cts = true;
+  println("Received: "+s + ", cts: "+cts);
   serialLog.append(s);
-  if (serialLog.size() > 20) serialLog.remove(0);
+  while (serialLog.size () > 20) serialLog.remove(0);
 }
 
 
 void keyPressed() {
   if (key=='1') {
-    
-  } 
-  
-}
-
-void controlEvent(ControlEvent theEvent) {
-  // DropdownList is of type ControlGroup.
-  // A controlEvent will be triggered from inside the ControlGroup class.
-  // therefore you need to check the originator of the Event with
-  // if (theEvent.isGroup())
-  // to avoid an error message thrown by controlP5.
-
-  if (theEvent.isGroup()) {
-    // check if the Event was triggered from a ControlGroup
-    println("event from group : "+theEvent.getGroup().getValue()+" from "+theEvent.getGroup());
-  } 
-  else if (theEvent.isController()) {
-    println("event from controller : "+theEvent.getController().getValue()+" from "+theEvent.getController());
   }
 }
 
+
 void draw() {
   background(128);
-  textFont(f,11);
-  
+  textFont(f, 11);
+
   // Draw serialLog
   fill(0);
-  for (int i=0; i<serialLog.size(); i++) {
+  for (int i=0; i<serialLog.size (); i++) {
     String s = serialLog.get(i);
-    text(s, 10, 40 + i*15); 
+    text(s, 10, 40 + i*15);
+  }
+  
+  // send stuff
+  if (sendBuffer.size() > 0 && cts) {
+    String c = sendBuffer.get(0);
+    sendBuffer.remove(0);
+    SendCMD(c);
+  }
+}
+
+
+/**
+ * Appends text to the end of a text file located in the data directory, 
+ * creates the file if it does not exist.
+ * Can be used for big files with lots of rows, 
+ * existing lines will not be rewritten
+ */
+void appendTextToFile(String filename, String text){
+  File f = new File(dataPath(filename));
+  if(!f.exists()){
+    createFile(f);
+  }
+  try {
+    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(f, true)));
+    out.print(text);
+    out.close();
+  }catch (IOException e){
+      e.printStackTrace();
+  }
+}
+
+/**
+ * Creates a new file including all subfolders
+ */
+void createFile(File f){
+  File parentDir = f.getParentFile();
+  try{
+    parentDir.mkdirs(); 
+    f.createNewFile();
+  }catch(Exception e){
+    e.printStackTrace();
   }
 }

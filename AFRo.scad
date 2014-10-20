@@ -8,16 +8,21 @@ ElbowAngle = 130 * cos($t * 360 * 2);
 WristAngle = 300/2 * cos($t * 360 * 4);
 
 // No animation
-ShoulderPosition = ShoulderVerticalTravel/2;
-ShoulderAngle = -30;
-ElbowAngle = 0;
-WristAngle = 0;
+ShoulderPosition = 100;
+ShoulderAngle = 0;
+ElbowAngle = 85;
+WristAngle = -30;
+SpoonAngle = 90;
 
 AFRoAssembly();
 
 
 // worktop mockup
-if (true) {
+if (false) {
+	
+	// table
+	translate([-500, -500, -10])
+		cube([1000,1000,10]);
 	
 	// dinner plate with guard
 	translate([250, - 250, 0]) {
@@ -34,7 +39,7 @@ if (true) {
 			}
 
 		// guard
-		translate([0,0,5])
+		*translate([0,0,5])
 			rotate([0,0,225])
 			color([1,1,1,0.5])
 			difference() {

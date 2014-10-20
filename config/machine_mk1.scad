@@ -22,7 +22,7 @@ ServoBracketOpening = 41;  // distance between top and bottom horn faces
 
 // Base
 
-FanOffsetX = -34;
+FanOffsetX = 0;
 
 // Shoulder
 
@@ -59,6 +59,9 @@ LowerArmWidth = 32;
 
 WristAngle = 90;
 
+SpoonAngle = 0;
 
 PostLength = ShoulderVerticalTravel + ShoulderBracketHeight + 75;
 ZAxisLength = ShoulderVerticalTravel + ShoulderBracketHeight + 4;
+
+EndStopOffsetY = ShoulderPostDia/2 + 2*tw;

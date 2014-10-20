@@ -16,7 +16,7 @@ module ShoulderAssembly() {
 	translate([0, -ShoulderPostAxisOffset, ServoBracketOpening + tw])
 		ShoulderBracket_Ballscrew_stl();
 	
-	*translate([0,-ShoulderPostJointOffset, ServoBracketOpening + tw])
+	translate([0,-ShoulderPostJointOffset, ServoBracketOpening + tw])
 		rotate([0,0, ShoulderAngle])
 		UpperArmAssembly();
 	
@@ -28,7 +28,7 @@ module ShoulderAssembly() {
 module ShoulderBracket_Ballscrew_stl() {
 	// local origin places ballscrew below z=0, with upper mating surface at z=0,
 	// centred in x/y on the axis rod
-	frame();
+	//frame();
 	
 	//render()
 	difference() {
@@ -46,14 +46,25 @@ module ShoulderBracket_Ballscrew_stl() {
 						}
 						
 				// clamp
-				translate([-ShoulderBracketWidth/4, 20, -MountHeight -tw])
-					roundedRectY([ShoulderBracketWidth/2, 10, 2*tw], 2);
+				translate([-ShoulderBracketWidth/8, 20, -MountHeight -tw])
+					roundedRectY([ShoulderBracketWidth/4, 10, 2*tw], 2);
 					
 				// top fixing
 				translate([0, -27, - MountHeight])
-					cylinder(r=tw, h=2*tw, center=true);
+					cylinder(r=4.3/2 + dw, h=2*tw, center=true);
 			}
-		
+			
+			// bigger clamp
+			translate([-ShoulderBracketWidth/4, 20, -MountHeight -tw])
+				roundedRectY([ShoulderBracketWidth/2, 10, MountHeight + tw], 2);
+					
+			// squared faces for clamp bolt
+			translate([-ShoulderBracketWidth/4 - 5, 20, -MountHeight -tw])
+				roundedRectY([ShoulderBracketWidth/2 + 10, 10, 2*tw], 2);
+			
+			translate([0, 20, -MountHeight])
+				rotate([0,90,0])
+				cylinder(r=4.3/2 + dw, h=ShoulderBracketWidth/2 + 10, center=true);
 		}
 		
 		// bearings
@@ -77,6 +88,19 @@ module ShoulderBracket_Ballscrew_stl() {
 		// clamp slot
 		translate([-dw/2, 0, -50])
 			cube([dw, 100, 100]);
+			
+		// clamp bolt - M4
+		translate([0, 20, -MountHeight])
+			rotate([0,90,0])
+			cylinder(r=4.3/2, h=100, center=true);
+			
+		// vert fixing through clamp
+		translate([6, 25, -MountHeight])
+			cylinder(r=4.3/2, h=100, center=true);
+			
+		// vert fixing through tip
+		translate([0, -27, - MountHeight])
+			cylinder(r=4.3/2, h=100, center=true);
 		
 	}
 	
@@ -178,7 +202,7 @@ module ShoulderBracket_UpperPlate_stl() {
 				cylinder(r=ShoulderAxisDia/2 + 1, h=100);
 			
 			// servo hub/bushing
-			translate([0, -ShoulderPostJointOffset, 0])
+			*translate([0, -ShoulderPostJointOffset, 0])
 				cylinder(r=8/3.2, h=300, center=true);
 
 			// servo horn fixings
@@ -198,11 +222,33 @@ module ShoulderBracket_UpperPlate_stl() {
 				mirror([i,0,0])	
 				translate([0, -ShoulderPostAxisOffset, ServoBracketOpening - 3*tw])
 				rotate([0,0,-35])
-				translate([ShoulderBracketWidth/2 - tw,0,0])
-				cylinder(r=1.3, h=ServoBracketOpening - tw);
+				translate([ShoulderBracketWidth/2 - tw,0,0]) {
+					cylinder(r=1.3, h=ServoBracketOpening - tw);
+					// CS
+					translate([0,0,5*tw])
+						cylinder(r=screw_head_radius(M4_cap_screw)+0.3, h=100);
+				}
 			
-			translate([0, -ShoulderPostJointOffset + 27, ServoBracketOpening - 3*tw])
-				cylinder(r=1.3, h=ServoBracketOpening-tw);
+			// tip of ballscrew fixing
+			translate([0, -ShoulderPostJointOffset + 27, 0])
+				cylinder(r=4.3/2, h=100);
+			// CS
+			translate([0, -ShoulderPostJointOffset + 27, ServoBracketOpening + tw + tw])
+				cylinder(r=screw_head_radius(M4_cap_screw)+0.3, h=100);
+			
+			// vert fixing to ballscrew	
+			translate([6, 25 - ShoulderPostAxisOffset, 0])
+				cylinder(r=4.3/2, h=100);
+			// CS
+			translate([6, 25 - ShoulderPostAxisOffset, ServoBracketOpening + tw + tw])
+				cylinder(r=screw_head_radius(M4_cap_screw)+0.3, h=100);
+			
+			// back fixing
+			translate([0, ShoulderBracketWidth/2 - tw, 0])
+				cylinder(r=1.3, h=100);
+			// CS
+			translate([0, ShoulderBracketWidth/2 - tw, ServoBracketOpening + tw + tw])
+				cylinder(r=screw_head_radius(M4_cap_screw)+0.3, h=100);
 		}	
 	}
 }
@@ -232,10 +278,14 @@ module ShoulderBracket_LowerPlate_stl() {
 				translate([0, -ShoulderPostAxisOffset, 0])
 				rotate([0,0,-35])
 				translate([ShoulderBracketWidth/2 - tw,0,0])
-				cylinder(r=tw, h=ServoBracketOpening - tw);
+				cylinder(r=tw, h=ServoBracketOpening + tw);
 				
-			translate([0, -ShoulderPostJointOffset + 27, 0])
-				cylinder(r=tw, h=ServoBracketOpening - tw);
+			*translate([0, -ShoulderPostJointOffset + 27, 0])
+				cylinder(r=tw, h=ServoBracketOpening + tw);
+				
+			// back post
+			translate([0, ShoulderBracketWidth/2 - tw, 0])
+				cylinder(r=tw, h=ServoBracketOpening + tw);
 				
 			// thicken around lin bearing
 			cylinder(r1=ShoulderBracketWidth/2 - tw, r2=bearing_radius(ShoulderPostLinearBearing) + dw, h=2*tw);
@@ -265,7 +315,7 @@ module ShoulderBracket_LowerPlate_stl() {
 			
 		// servo hub/bushing
 		translate([0, -ShoulderPostJointOffset, 0])
-			cylinder(r=8/3.2, h=300, center=true);
+			cylinder(r=8/2, h=300, center=true);
 			
 		// vertical post fixings
 		for (i=[0,1])
@@ -273,10 +323,14 @@ module ShoulderBracket_LowerPlate_stl() {
 			translate([0, -ShoulderPostAxisOffset, ServoBracketOpening - 3*tw])
 			rotate([0,0,-35])
 			translate([ShoulderBracketWidth/2 - tw,0,0])
-			cylinder(r=1.3, h=ServoBracketOpening - tw);
+			cylinder(r=1.3, h=100);
 			
 		translate([0, -ShoulderPostJointOffset + 27, ServoBracketOpening - 3*tw])
 			cylinder(r=1.3, h=ServoBracketOpening-tw);
+			
+		// back post
+		translate([0, ShoulderBracketWidth/2 - tw, ServoBracketOpening - 3*tw])
+				cylinder(r=1.3, h=100);
 
 	}
 	

@@ -41,7 +41,10 @@ include <../vitamins/curvedPipe.scad>
 include <../vitamins/microbore.scad>
 
 include <../vitamins/dynamixel.scad>
+include <../vitamins/sam3.scad>
+include <../vitamins/cupHolder.scad>
 
+use <../vitamins/pulleys2.scad>
 
 module rod(d , l, center=true) {
     vitamin(str("RD", d, round(l), ": Smooth rod ", d, "mm x ", round(l), "mm"));
