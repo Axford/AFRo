@@ -24,6 +24,11 @@ DefConUp = DefCon;
 
 DefConDown = [[0,0,0],[0,0,-1],0,0,0];
 
+DefConLeft =  [[0,0,0],[-1,0,0],0,0,0];
+DefConRight = [[0,0,0],[1,0,0],0,0,0];
+DefConFront = [[0,0,0],[0,1,0],0,0,0];
+DefConBack =  [[0,0,0],[0,-1,0],0,0,0];
+
 
 // Connector getter functions
 
@@ -81,7 +86,7 @@ function offsetConnector(a, o) = [[a[0][0]+o[0], a[0][1]+o[1], a[0][2]+o[2]], a[
 //--    a -> Connector of the main part
 //--    b -> Connector of the attachable part
 //-------------------------------------------------------------------------
-module attach(a,b, Invert=false, ExplodeSpacing = 10)
+module attach(a,b, Invert=false, ExplodeSpacing = 10, offset=0)
 {
   //-- Get the data from the connectors
   pos1 = a[0];  //-- Attachment point. Main part
@@ -114,7 +119,7 @@ module attach(a,b, Invert=false, ExplodeSpacing = 10)
         {
              //-- Attachable part to the origin
             translate(-pos2)
-                translate([0,0, $Explode ? -vref[2] * ExplodeSpacing * au : 0])
+                translate($Explode ? -vref * ExplodeSpacing * au : [0,0,0])
                 assign($Explode=false)  // turn off explosions for children
                 children(i);
                 
@@ -122,7 +127,7 @@ module attach(a,b, Invert=false, ExplodeSpacing = 10)
             if ($Explode) {
 		        // show attachment axis
 		        color([1,0,0, au * 0.7])
-		            translate(-vref * ExplodeSpacing * au)
+		            translate(-vref * ExplodeSpacing * au + vref*offset)
 		            vector(vref * ExplodeSpacing, l=abs(ExplodeSpacing * au), l_arrow=2, mark=false);
 		    }
             
@@ -160,7 +165,7 @@ function attachMatrix(a,b, Invert=false, ExplodeSpacing=10) =
         normV=false
     ) *
     translate(-b[0]) *
-    translate([0,0, $Explode ? (-b[1][2] * ExplodeSpacing * ($AnimateExplode ? (1-$AnimateExplodeT) : 1)) : 0])
+    translate($Explode ? (-b[1] * ExplodeSpacing * ($AnimateExplode ? (1-$AnimateExplodeT) : 1)) : [0,0,0])
     ;
 
 // --------------------------------------

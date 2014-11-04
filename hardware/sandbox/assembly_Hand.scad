@@ -3,5 +3,5 @@ UseSTL=false;
 UseVitaminSTL=true;
 DebugConnectors=true;
 DebugCoordinateFrames=true;
-$ShowStep=1;
+$ShowStep=3;
 HandAssembly();

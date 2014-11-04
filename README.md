@@ -12,6 +12,7 @@ https://docs.google.com/document/d/1HDJsVby1FxGu6IQ2XBOvq7dboFC9hibPxshcKR86C0M/
 
 OpenSCAD model, assembly guide and STL for printed parts
 
+![](hardware/images/AFRo_view.png)
 
 ## Software
 

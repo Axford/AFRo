@@ -1,7 +1,7 @@
-2014-11-04 18:19:35.942 OpenSCAD[74415:507]   compiled module: 0x105c8f370
-2014-11-04 18:19:35.945 OpenSCAD[74415:507]   compiled module: 0x105ca1c90
-2014-11-04 18:19:35.951 OpenSCAD[74415:507]   compiled module: 0x105ca43c0
-2014-11-04 18:19:35.954 OpenSCAD[74415:507]   compiled module: 0x105e36880
-2014-11-04 18:19:35.957 OpenSCAD[74415:507]   compiled module: 0x105d2ae80
-2014-11-04 18:20:50.814 OpenSCAD[74415:507] Compiling design (CSG Products normalization)...
-2014-11-04 18:20:50.815 OpenSCAD[74415:507] Normalized CSG tree has 231 elements
+2014-11-04 21:12:56.865 OpenSCAD[76427:507]   compiled module: 0x101f9a200
+2014-11-04 21:12:56.868 OpenSCAD[76427:507]   compiled module: 0x101e0fd30
+2014-11-04 21:12:56.874 OpenSCAD[76427:507]   compiled module: 0x101d19b20
+2014-11-04 21:12:56.877 OpenSCAD[76427:507]   compiled module: 0x101facb10
+2014-11-04 21:12:56.880 OpenSCAD[76427:507]   compiled module: 0x101da7f40
+2014-11-04 21:14:12.831 OpenSCAD[76427:507] Compiling design (CSG Products normalization)...
+2014-11-04 21:14:12.832 OpenSCAD[76427:507] Normalized CSG tree has 246 elements

@@ -7,6 +7,7 @@
 //
 // Utilities
 //
+include <../utils/transformationMatrices.scad>
 include <../utils/assemblies.scad>
 include <../utils/polyholes.scad>
 //include <../utils/teardrops.scad>
@@ -142,15 +143,3 @@ module tube(or, ir, h, center = true) {
         }
 }
 
-
-module aluAngle(w,h,l,t) {
-	// stands vertically at origin (l extends in z+)
-	// w in x+, h in y+
-	
-	color(alu_color)
-		linear_extrude(l)
-		union() {
-			square([t,h]);
-			square([w,t]);
-		}
-}

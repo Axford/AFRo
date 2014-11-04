@@ -76,7 +76,7 @@ LowerArmWidth = 32;
 
 // Wrist
 
-WristAngle = 90;
+WristAngle = 0;
 
 SpoonAngle = 0;
 

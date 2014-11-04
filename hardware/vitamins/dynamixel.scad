@@ -27,6 +27,58 @@ DynamixelAX12_Con_HornFixings =[
     [[0,-8,0], [0,0,-1], 0,0,0]
 ];
 
+// x- z+
+DynamixelAX12_Con_TopLeft = [
+    [[-27/2, -6.5, -5], [0,0,-1], 0,0,0],
+    [[-27/2, -6.5-8, -5], [0,0,-1], 0,0,0],
+    [[-27/2,-6.5-16, -5], [0,0,-1], 0,0,0],
+    [[-27/2,-6.5-24, -5], [0,0,-1], 0,0,0]
+];
+
+// x+ z+
+DynamixelAX12_Con_TopRight = [
+    [[27/2, -6.5, -5], [0,0,-1], 0,0,0],
+    [[27/2, -6.5-8, -5], [0,0,-1], 0,0,0],
+    [[27/2,-6.5-16, -5], [0,0,-1], 0,0,0],
+    [[27/2,-6.5-24, -5], [0,0,-1], 0,0,0]
+];
+
+// x- z-
+DynamixelAX12_Con_BottomLeft = [
+    [[-27/2, -6.5, -37], [0,0,1], 0,0,0],
+    [[-27/2, -6.5-8, -37], [0,0,1], 0,0,0],
+    [[-27/2,-6.5-16, -37], [0,0,1], 0,0,0],
+    [[-27/2,-6.5-24, -37], [0,0,1], 0,0,0]
+];
+
+// x+ z-
+DynamixelAX12_Con_BottomRight = [
+    [[27/2, -6.5, -37], [0,0,1], 0,0,0],
+    [[27/2, -6.5-8, -37], [0,0,1], 0,0,0],
+    [[27/2,-6.5-16, -37], [0,0,1], 0,0,0],
+    [[27/2,-6.5-24, -37], [0,0,1], 0,0,0]
+];
+
+// y- z+
+DynamixelAX12_Con_BackTop = [
+    [[-16/2, -36, -5], [0,0,-1], 0,0,0],
+    [[16/2, -36, -5], [0,0,-1], 0,0,0]
+];
+
+// y- z-
+DynamixelAX12_Con_BackBottom = [
+    [[-16/2, -36, -37], [0,0,1], 0,0,0],
+    [[16/2, -36, -37], [0,0,1], 0,0,0]
+];
+
+function DynamixelAX12_Con_Nut(dir=[1,0,0]) = [[0,0,0], dir, 0,0,0];
+
+function DynamixelAX12_Con_NutTrap(con, dir=[1,0,0]) = [
+    [con[0][0], con[0][1], con[0][2] + con[1][2] * 3],
+    dir,
+    0,0,0
+];
+
 module DynamixelAX12() {
 	// local coordinate system places origin centred on upper surface of control horn
 	// body of servo extends along y-
@@ -44,8 +96,20 @@ module DynamixelAX12() {
     
     if (DebugCoordinateFrames) frame();
     if (DebugConnectors) {
-        for (i=[0:3])
+        for (i=[0:3]) {
             connector(DynamixelAX12_Con_HornFixings[i]);
+        
+            connector(DynamixelAX12_Con_TopLeft[i]);
+            connector(DynamixelAX12_Con_TopRight[i]);
+            
+            connector(DynamixelAX12_Con_BottomLeft[i]);
+            connector(DynamixelAX12_Con_BottomRight[i]);
+        }
+        
+        for (i=[0:1]) {
+            connector(DynamixelAX12_Con_BackTop[i]);
+            connector(DynamixelAX12_Con_BackBottom[i]);
+        }
     }
     
     vitamin("vitamins/dynamixel.scad", "Dynamixel AX12", "DynamixelAX12()") {

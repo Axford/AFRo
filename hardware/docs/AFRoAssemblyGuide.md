@@ -15,17 +15,21 @@ Qty | Vitamin | Image
 1 | [NEMA11 Stepper Motor]() | ![](../vitamins/images/NEMA11StepperMotor_view.png) | 
 2 | [NEMA17 Stepper Motor]() | ![](../vitamins/images/NEMA17StepperMotor_view.png) | 
 1 | [Spoon]() | ![](../vitamins/images/Spoon_view.png) | 
+1 | [Aluminium Angle 10x10x1mm 420mm]() | ![](../vitamins/images/AluminiumAngle10x10x1mm420mm_view.png) | 
+2 | [Aluminium Angle 10x40x1.5mm 200mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mm200mm_view.png) | 
+2 | [Aluminium Angle 10x40x1.5mm 250mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mm250mm_view.png) | 
 2 | [Ball Bearing 608]() | ![](../vitamins/images/BallBearing608_view.png) | 
 2 | [Ball Bearing 6205_2RS]() | ![](../vitamins/images/BallBearing6205_2RS_view.png) | 
 4 | [Ball Bearing 624]() | ![](../vitamins/images/BallBearing624_view.png) | 
 2 | [Belt T2p5x6]() | ![](../vitamins/images/BeltT2p5x6_view.png) | 
 1 | [LM20UU Linear Bearing]() | ![](../vitamins/images/LM20UULinearBearing_view.png) | 
 1 | [LM8UU Linear Bearing]() | ![](../vitamins/images/LM8UULinearBearing_view.png) | 
+4 | [M2 Nut]() | ![](../vitamins/images/M2Nut_view.png) | 
 3 | [Nyloc M4 Nut]() | ![](../vitamins/images/NylocM4Nut_view.png) | 
 2 | [M6 Nut]() | ![](../vitamins/images/M6Nut_view.png) | 
 1 | [Nyloc M6 Nut]() | ![](../vitamins/images/NylocM6Nut_view.png) | 
 1 | [T2.5x18 Pulley]() | ![](../vitamins/images/T25x18Pulley_view.png) | 
-4 | [M2 pan screw x 6mm]() | ![](../vitamins/images/M2panscrewx6mm_view.png) | 
+12 | [M2 pan screw x 6mm]() | ![](../vitamins/images/M2panscrewx6mm_view.png) | 
 2 | [M4 cap screw x 20mm]() | ![](../vitamins/images/M4capscrewx20mm_view.png) | 
 1 | [M4 hex screw x 30mm]() | ![](../vitamins/images/M4hexscrewx30mm_view.png) | 
 12 | [M4 Washer 9x0.8]() | ![](../vitamins/images/M4Washer9x08_view.png) | 
@@ -68,6 +72,7 @@ Qty | Vitamin | Image
 --- | --- | ---
 1 | [Dynamixel AX12]() | ![](../vitamins/images/DynamixelAX12_view.png) | 
 1 | [Spoon]() | ![](../vitamins/images/Spoon_view.png) | 
+4 | [M2 Nut]() | ![](../vitamins/images/M2Nut_view.png) | 
 4 | [M2 pan screw x 6mm]() | ![](../vitamins/images/M2panscrewx6mm_view.png) | 
 
 ### Printed Parts
@@ -78,11 +83,20 @@ Qty | Part Name | Image
 
 ### Assembly Steps
 
-1. Attach the spoon holder to the servo
+1. Push M2 nuts into the back of the servo fixing tabs
 ![](../assemblies/AFRo/Spoon_step1_view.png)
+2. Attach the spoon holder to the servo
+![](../assemblies/AFRo/Spoon_step2_view.png)
 
 
 ## Hand
+
+### Vitamins
+
+Qty | Vitamin | Image
+--- | --- | ---
+1 | [Dynamixel AX12]() | ![](../vitamins/images/DynamixelAX12_view.png) | 
+8 | [M2 pan screw x 6mm]() | ![](../vitamins/images/M2panscrewx6mm_view.png) | 
 
 ### Printed Parts
 
@@ -98,9 +112,9 @@ Qty | Name
 
 ### Assembly Steps
 
-1. Push M2 nuts into back of the servo fixing tabs
+1. Screw the wrist bracket onto the wrist servo
 ![](../assemblies/AFRo/Hand_step1_view.png)
-2. Push the bracket onto the servo
+2. Push the spoon assembly into the wrist bracket
 ![](../assemblies/AFRo/Hand_step2_view.png)
 3. Screw through the bracket into the servo fixings
 ![](../assemblies/AFRo/Hand_step3_view.png)
@@ -132,7 +146,7 @@ Qty | Part Name | Image
 
 Qty | Vitamin | Image
 --- | --- | ---
-1 | [Dynamixel AX12]() | ![](../vitamins/images/DynamixelAX12_view.png) | 
+2 | [Aluminium Angle 10x40x1.5mm 200mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mm200mm_view.png) | 
 
 ### Printed Parts
 
@@ -146,6 +160,15 @@ Qty | Part Name | Image
 Qty | Name 
 --- | --- 
 1 | Hand
+
+### Assembly Steps
+
+1. Push the servo brackets onto the servo, optionally screw them into place
+![](../assemblies/AFRo/LowerArm_step1_view.png)
+2. Bolt through the aluminium channels and servo brackets
+![](../assemblies/AFRo/LowerArm_step2_view.png)
+3. Bolt through the aluminium channels and elbow joint
+![](../assemblies/AFRo/LowerArm_step3_view.png)
 
 
 ## Counterweight Idler (x2)
@@ -174,6 +197,7 @@ Qty | Part Name | Image
 Qty | Vitamin | Image
 --- | --- | ---
 1 | [NEMA11 Stepper Motor]() | ![](../vitamins/images/NEMA11StepperMotor_view.png) | 
+2 | [Aluminium Angle 10x40x1.5mm 250mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mm250mm_view.png) | 
 1 | [LM20UU Linear Bearing]() | ![](../vitamins/images/LM20UULinearBearing_view.png) | 
 1 | [LM8UU Linear Bearing]() | ![](../vitamins/images/LM8UULinearBearing_view.png) | 
 
@@ -206,6 +230,12 @@ Qty | Part Name | Image
 
 
 ## Cable Guide
+
+### Vitamins
+
+Qty | Vitamin | Image
+--- | --- | ---
+1 | [Aluminium Angle 10x10x1mm 420mm]() | ![](../vitamins/images/AluminiumAngle10x10x1mm420mm_view.png) | 
 
 
 ## Torso
