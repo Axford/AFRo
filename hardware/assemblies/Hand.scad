@@ -45,10 +45,10 @@ module HandAssembly() {
             
             rotate([0,0,WristAngle])
                 for (i=[0:1]) {
-                    attach(attachedConnector(Hand_Con_SpoonAssembly, DefConUp, offsetConnector(DynamixelAX12_Con_BackTop[i],[0,0,dw]), $Explode=false), DefConDown, offset=6)
+                    attach(attachedConnector(Hand_Con_SpoonAssembly, DefConUp, offsetConnector(DynamixelAX12_Con_BackTop[i],[0,0,dw]), $Explode=false), DefConDown, offset=6, ExplodeSpacing=20)
                         screw(M2_pan_screw, 6);
 
-                    attach(attachedConnector(Hand_Con_SpoonAssembly, DefConUp, offsetConnector(DynamixelAX12_Con_BackBottom[i],[0,0,-dw]), $Explode=false), DefConDown, offset=6)
+                    attach(attachedConnector(Hand_Con_SpoonAssembly, DefConUp, offsetConnector(DynamixelAX12_Con_BackBottom[i],[0,0,-dw]), $Explode=false), DefConDown, offset=6, ExplodeSpacing=20)
                         screw(M2_pan_screw, 6);
             }
         }

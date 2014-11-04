@@ -30,7 +30,7 @@ module belt(type, x1=0, y1=0, r1=10, x2=100, y2=0, r2=10, gap = 0) {
     //vitamin(str("BT", belt_pitch(type) * 10,width, round(length), ": Belt T", belt_pitch(type)," x ", width, "mm x ", round(length), "mm"));
 
     tn = type[3];
-    vitamin("vitamins/belts.scad", str("Belt ",tn), str("belt(",tn,")")) {
+    vitamin("vitamins/belts.scad", str("Belt ",tn," ",round(length + 40),"mm"), str("belt(",tn,")")) {
         view(t=[52,10,-5], r=[53,0,327], d=735);
     }
 
