@@ -1,8 +1,0 @@
-PMount:
-Vitamins:
-
-Printed:
-
-Sub-assemblies:
-  1 Azimuth
-  1 PArm

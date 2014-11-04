@@ -1,8 +1,0 @@
-Azimuth:
-Vitamins:
-  2 Aluminium Extrusion BR_20x40 150mm
-  1 M10 cap screw x 25mm
-  1 Washer M10 x 21mm x 2.2mm
-
-Printed:
-

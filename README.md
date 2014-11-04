@@ -1,5 +1,4 @@
-AFRo
-====
+# AFRo
 
 Assisted Feeding Robot
 
@@ -9,8 +8,12 @@ Design notes (WIP):
 https://docs.google.com/document/d/1HDJsVby1FxGu6IQ2XBOvq7dboFC9hibPxshcKR86C0M/pub
 
 
-Software
-========
+## Hardware
+
+OpenSCAD model, assembly guide and STL for printed parts
+
+
+## Software
 
 **AFRoHost**
 Host interface for controlling/debugging the arm, written in Processing.  
