@@ -1,7 +1,14 @@
+LowerArmLeftSide_Con_Default = DefConRight;
+
 module LowerArmLeftSide(complete=false) {
 
     vt = [25,40,16];
     vr = [163,339,90];
+
+    if (DebugCoordinateFrames) frame();
+    if (DebugConnectors) {
+        connector(LowerArmLeftSide_Con_Default);
+    }
 
     cutPart(
         "cutparts/LowerArmLeftSide.scad",

@@ -100,7 +100,8 @@ module attach(a,b, Invert=false, ExplodeSpacing = 10, offset=0)
   //-------- Calculations for the "orientate operator"------
   //-- Calculate the rotation axis
   //raxis = cross(vref,v);
-  raxis = v[0]==vref[0] && v[1]==vref[1] ? [0,1,0] : cross(vref,v);
+  //raxis = v[0]==vref[0] && v[1]==vref[1] ? [0,1,0] : cross(vref,v);
+  raxis = mod(cross(vref,v)) == 0 ? ( vref[0] == 0 ? [1,0,0] : ( vref[1] == 0 ? [0,1,0] : [0,0,1] ) ): cross(vref,v);
     
   //-- Calculate the angle between the vectors
   ang = anglev(vref,v);

@@ -1,8 +1,22 @@
 
 
+LowerArm_Con_Elbow = DefConUp;
+
+LowerArm_Con_Wrist = [[0, -LowerArmLength, -42], [0,0,1], 0,0,0];
+
+LowerArm_Con_LeftSide = [[dynamixel_width(DYNAMIXELAX12)/2 + 1.5, 0, 0], [-1,0,0], 90,0,0];
+
 module LowerArmAssembly() {
 	
 	sw = dynamixel_width(DYNAMIXELAX12);
+    
+    if (DebugCoordinateFrames) frame();
+    if (DebugConnectors) {
+        connector(LowerArm_Con_Elbow);
+        connector(LowerArm_Con_Wrist);
+        connector(LowerArm_Con_LeftSide);
+        
+    }
 	
 	assembly("assemblies/LowerArm.scad", "Lower Arm", "LowerArmAssembly()") {
 	        
@@ -16,7 +30,7 @@ module LowerArmAssembly() {
                 mirror([1,0,0])
                 LowerArmServoBracket_stl();
 
-            translate([0, -LowerArmLength, -42]) {
+            attach(LowerArm_Con_Wrist, DefConUp, $Explode=false) {
                 rotate([0,0, WristAngle])
                     HandAssembly();
             }
@@ -33,8 +47,9 @@ module LowerArmAssembly() {
                 rotate([-90,0,0])
                 mirror([1,0,0])
                 aluAngle(10,40,LowerArmLength,1.5);
-                
-            LowerArmLeftSide(complete=true);
+               
+            attach(LowerArm_Con_LeftSide, LowerArmLeftSide_Con_Default)
+                LowerArmLeftSide(complete=true);
                 
             // bolts
             
