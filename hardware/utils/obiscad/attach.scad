@@ -151,7 +151,9 @@ function attachV(a,b, Invert=false) =
     Invert ? invertVector(a[1]) : a[1];
 
 function attachRAxis(a,b,Invert=false) =
-    attachV(a,b,Invert)[0]==b[1][0] && attachV(a,b,Invert)[1]==b[1][1] ? [0,1,0] : cross(b[1],attachV(a,b,Invert));
+    mod(cross(b[1],attachV(a,b,Invert))) == 0 ? 
+        ( b[1][0] == 0 ? [1,0,0] : ( b[1][1] == 0 ? [0,1,0] : [0,0,1]  ) ) : 
+        cross(b[1], attachV(a,b,Invert));
 
 function attachMatrix(a,b, Invert=false, ExplodeSpacing=10) = 
     translate(a[0]) *
