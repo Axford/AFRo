@@ -162,7 +162,7 @@
                 "file": "vitamins/stepper-motors.scad"
             },
             {
-                "hash": "5fab8de41376afb3c8e188a8cf66e9ac",
+                "hash": "7c8169fdd7063c3104dbed7aa6acf7d8",
                 "views": [
                     {
                         "rotate": [
@@ -189,7 +189,7 @@
                 "title": "T2.5x18 Pulley",
                 "qty": 1,
                 "parts": [],
-                "call": "pulley(type=T2p5x18_metal_pulley)",
+                "call": "metal_pulley(type=T2p5x18_metal_pulley)",
                 "file": "vitamins/pullies.scad"
             },
             {
@@ -1003,7 +1003,7 @@
                         "title": "T2.5x18 Pulley",
                         "qty": 1,
                         "parts": [],
-                        "call": "pulley(type=T2p5x18_metal_pulley)",
+                        "call": "metal_pulley(type=T2p5x18_metal_pulley)",
                         "file": "vitamins/pullies.scad"
                     },
                     {
@@ -2927,7 +2927,7 @@
                             },
                             {
                                 "type": "vitamin",
-                                "call": "pulley(type=T2p5x18_metal_pulley)",
+                                "call": "metal_pulley(type=T2p5x18_metal_pulley)",
                                 "children": [
                                     {
                                         "rotate": [

@@ -25,11 +25,11 @@ Qty | Vitamin | Image
 1 | [Belt T2p5x6 673mm]() | ![](../vitamins/images/BeltT2p5x6673mm_view.png) | 
 1 | [LM20UU Linear Bearing]() | ![](../vitamins/images/LM20UULinearBearing_view.png) | 
 1 | [LM8UU Linear Bearing]() | ![](../vitamins/images/LM8UULinearBearing_view.png) | 
+1 | [T2.5x18 Pulley]() | ![](../vitamins/images/T25x18Pulley_view.png) | 
 4 | [M2 Nut]() | ![](../vitamins/images/M2Nut_view.png) | 
 5 | [Nyloc M4 Nut]() | ![](../vitamins/images/NylocM4Nut_view.png) | 
 2 | [M6 Nut]() | ![](../vitamins/images/M6Nut_view.png) | 
 1 | [Nyloc M6 Nut]() | ![](../vitamins/images/NylocM6Nut_view.png) | 
-1 | [T2.5x18 Pulley]() | ![](../vitamins/images/T25x18Pulley_view.png) | 
 12 | [M2 pan screw x 6mm]() | ![](../vitamins/images/M2panscrewx6mm_view.png) | 
 2 | [M4 cap screw x 20mm]() | ![](../vitamins/images/M4capscrewx20mm_view.png) | 
 1 | [M4 hex screw x 30mm]() | ![](../vitamins/images/M4hexscrewx30mm_view.png) | 
@@ -278,8 +278,8 @@ Qty | Vitamin | Image
 2 | [Ball Bearing 6205_2RS]() | ![](../vitamins/images/BallBearing6205_2RS_view.png) | 
 2 | [Ball Bearing 624]() | ![](../vitamins/images/BallBearing624_view.png) | 
 1 | [Belt T2p5x6 960mm]() | ![](../vitamins/images/BeltT2p5x6960mm_view.png) | 
-1 | [Nyloc M4 Nut]() | ![](../vitamins/images/NylocM4Nut_view.png) | 
 1 | [T2.5x18 Pulley]() | ![](../vitamins/images/T25x18Pulley_view.png) | 
+1 | [Nyloc M4 Nut]() | ![](../vitamins/images/NylocM4Nut_view.png) | 
 1 | [M4 hex screw x 30mm]() | ![](../vitamins/images/M4hexscrewx30mm_view.png) | 
 4 | [M4 Washer 9x0.8]() | ![](../vitamins/images/M4Washer9x08_view.png) | 
 2 | [M5 Washer 20x1.4]() | ![](../vitamins/images/M5Washer20x14_view.png) | 

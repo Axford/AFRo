@@ -36,7 +36,7 @@ module metal_pulley(type) {
     vitamin(
         "vitamins/pullies.scad", 
         str(type[0]," Pulley"),
-        str("pulley(type=",type[15],")")
+        str("metal_pulley(type=",type[15],")")
     ) {
         view();
     }
