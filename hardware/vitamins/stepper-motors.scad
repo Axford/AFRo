@@ -27,6 +27,16 @@ function NEMA_shaft_dia(motor) = motor[6];
 function NEMA_shaft_length(motor) = motor[7];
 function NEMA_hole_pitch(motor) = motor[8];
 
+// connectors
+NEMA_Con_Default = [[0,0,0], [0,0,-1], 0,0,0];
+
+function NEMA_Con_Fixings(m) = [
+    [[m[8]/2, m[8]/2, 0], [0,0,-1], 0,0,0],
+    [[m[8]/2, -m[8]/2, 0], [0,0,-1], 0,0,0],
+    [[-m[8]/2, -m[8]/2, 0], [0,0,-1], 0,0,0],
+    [[-m[8]/2, m[8]/2, 0], [0,0,-1], 0,0,0]
+];
+
 module NEMA(motor) {
     side = NEMA_width(motor);
     length = NEMA_length(motor);
@@ -40,6 +50,13 @@ module NEMA(motor) {
     tn = motor[9];
      vitamin("vitamins/stepper-motors.scad", str("NEMA",tn," Stepper Motor"), str("NEMA(NEMA",tn,")")) {
         view(t=[0,-7,-12]);
+    }
+    
+    if (DebugCoordinateFrames) frame();
+    if (DebugConnectors) {
+        connector(NEMA_Con_Default);
+        for (i=[0:3])
+            connector(NEMA_Con_Fixings(motor)[i]);
     }
     
     union() {
