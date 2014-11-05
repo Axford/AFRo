@@ -4,6 +4,16 @@
             {
                 "completeCall": "LowerArmLeftSide(true)",
                 "hash": "f49c41c160688931b548a1d4d868aa8a",
+                "vitamins": [
+                    {
+                        "views": [],
+                        "title": "Aluminium Angle 10x40x1.5mm x 200mm",
+                        "qty": 4,
+                        "parts": [],
+                        "call": "aluAngle(10,40,200,1.5)",
+                        "file": "vitamins/aluAngle.scad"
+                    }
+                ],
                 "views": [
                     {
                         "rotate": [
@@ -29,8 +39,6 @@
                 ],
                 "title": "Lower Arm Left Side",
                 "qty": 2,
-                "call": "LowerArmLeftSide()",
-                "file": "cutparts/LowerArmLeftSide.scad",
                 "steps": [
                     {
                         "views": [
@@ -84,10 +92,12 @@
                         "num": 2,
                         "desc": "Drill 4mm diameter fixing holes"
                     }
-                ]
+                ],
+                "file": "cutparts/LowerArmLeftSide.scad",
+                "call": "LowerArmLeftSide()"
             }
         ],
-        "hash": "ee53362163ad30b9504b4261ddc9bd76",
+        "hash": "5d74dc1dde920bd23093af1d2206e222",
         "vitamins": [
             {
                 "hash": "93d5f505840843188b054f8cc861f21f",
@@ -270,7 +280,7 @@
                     }
                 ],
                 "title": "M4 Washer 9x0.8",
-                "qty": 12,
+                "qty": 16,
                 "parts": [],
                 "call": "washer(type=M4_washer)",
                 "file": "vitamins/washers.scad"
@@ -332,7 +342,7 @@
                     }
                 ],
                 "title": "Nyloc M4 Nut",
-                "qty": 3,
+                "qty": 5,
                 "parts": [],
                 "call": "nut(type=M4_nut,nyloc=true,brass=false )",
                 "file": "vitamins/nuts.scad"
@@ -772,6 +782,37 @@
                 "file": "vitamins/aluAngle.scad"
             },
             {
+                "hash": "dac417f58857c75a7829acc6d28e9973",
+                "views": [
+                    {
+                        "rotate": [
+                            55,
+                            0,
+                            25
+                        ],
+                        "dist": 500,
+                        "title": "view",
+                        "filepath": "../vitamins/images/M4hexscrewx40mm_view.png",
+                        "caption": "view",
+                        "translate": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "type": "view",
+                        "size": [
+                            400,
+                            300
+                        ]
+                    }
+                ],
+                "title": "M4 hex screw x 40mm",
+                "qty": 2,
+                "parts": [],
+                "call": "screw(type=M4_hex_screw,length=40, hob_point=0 )",
+                "file": "vitamins/screws.scad"
+            },
+            {
                 "hash": "4a8575d7a3ec81b33f750ab22d779344",
                 "views": [
                     {
@@ -869,7 +910,7 @@
         "assemblies": [
             {
                 "cut": [],
-                "hash": "fbe8c70a19e0a405518974ff6a9709ef",
+                "hash": "f538127f2b41626bb9024b8a35352ec6",
                 "vitamins": [],
                 "title": "AFRo",
                 "assemblies": [
@@ -939,7 +980,7 @@
             },
             {
                 "cut": [],
-                "hash": "88afcd949eec3544082561d915323c40",
+                "hash": "ca84c77a02df9fa22b9b6e85eba06426",
                 "vitamins": [
                     {
                         "views": [],
@@ -1198,7 +1239,7 @@
             },
             {
                 "cut": [],
-                "hash": "c422a24c4191b65d6a16711d89cc3241",
+                "hash": "3ba7f6fc9792fff5d7aa856e0ecfed07",
                 "vitamins": [
                     {
                         "views": [],
@@ -1385,8 +1426,33 @@
             },
             {
                 "cut": [],
-                "hash": "9b9412f800abf0b60d65f8bd26531ef7",
-                "vitamins": [],
+                "hash": "d7e2ee2e188be0b6de79d5c8ec323389",
+                "vitamins": [
+                    {
+                        "views": [],
+                        "title": "M4 Washer 9x0.8",
+                        "qty": 4,
+                        "parts": [],
+                        "call": "washer(type=M4_washer)",
+                        "file": "vitamins/washers.scad"
+                    },
+                    {
+                        "views": [],
+                        "title": "M4 hex screw x 40mm",
+                        "qty": 2,
+                        "parts": [],
+                        "call": "screw(type=M4_hex_screw,length=40, hob_point=0 )",
+                        "file": "vitamins/screws.scad"
+                    },
+                    {
+                        "views": [],
+                        "title": "Nyloc M4 Nut",
+                        "qty": 2,
+                        "parts": [],
+                        "call": "nut(type=M4_nut,nyloc=true,brass=false )",
+                        "file": "vitamins/nuts.scad"
+                    }
+                ],
                 "title": "Lower Arm",
                 "assemblies": [
                     {
@@ -1457,16 +1523,16 @@
                                 "rotate": [
                                     66,
                                     0,
-                                    26
+                                    7
                                 ],
-                                "dist": 936,
+                                "dist": 1000,
                                 "filepath": "../assemblies/AFRo/LowerArm_step2_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
-                                    -29,
-                                    -56,
-                                    -55
+                                    -21,
+                                    -71,
+                                    -47
                                 ],
                                 "type": "view",
                                 "size": [
@@ -4949,15 +5015,15 @@
                                                         "rotate": [
                                                             66,
                                                             0,
-                                                            26
+                                                            7
                                                         ],
-                                                        "dist": 936,
+                                                        "dist": 1000,
                                                         "title": "view",
                                                         "caption": "view",
                                                         "translate": [
-                                                            -29,
-                                                            -56,
-                                                            -55
+                                                            -21,
+                                                            -71,
+                                                            -47
                                                         ],
                                                         "type": "view",
                                                         "size": [
@@ -5244,6 +5310,231 @@
                                                                 "desc": "Drill 4mm diameter fixing holes"
                                                             }
                                                         ]
+                                                    },
+                                                    {
+                                                        "type": "vitamin",
+                                                        "call": "washer(type=M4_washer)",
+                                                        "children": [
+                                                            {
+                                                                "rotate": [
+                                                                    55,
+                                                                    0,
+                                                                    25
+                                                                ],
+                                                                "dist": 500,
+                                                                "title": "view",
+                                                                "caption": "view",
+                                                                "translate": [
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "type": "view",
+                                                                "size": [
+                                                                    400,
+                                                                    300
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "file": "vitamins/washers.scad",
+                                                        "title": "M4 Washer 9x0.8"
+                                                    },
+                                                    {
+                                                        "type": "vitamin",
+                                                        "call": "screw(type=M4_hex_screw,length=40, hob_point=0 )",
+                                                        "children": [
+                                                            {
+                                                                "rotate": [
+                                                                    55,
+                                                                    0,
+                                                                    25
+                                                                ],
+                                                                "dist": 500,
+                                                                "title": "view",
+                                                                "filepath": "../vitamins/images/M4hexscrewx40mm_view.png",
+                                                                "caption": "view",
+                                                                "translate": [
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "type": "view",
+                                                                "size": [
+                                                                    400,
+                                                                    300
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "file": "vitamins/screws.scad",
+                                                        "title": "M4 hex screw x 40mm"
+                                                    },
+                                                    {
+                                                        "type": "vitamin",
+                                                        "call": "washer(type=M4_washer)",
+                                                        "children": [
+                                                            {
+                                                                "rotate": [
+                                                                    55,
+                                                                    0,
+                                                                    25
+                                                                ],
+                                                                "dist": 500,
+                                                                "title": "view",
+                                                                "caption": "view",
+                                                                "translate": [
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "type": "view",
+                                                                "size": [
+                                                                    400,
+                                                                    300
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "file": "vitamins/washers.scad",
+                                                        "title": "M4 Washer 9x0.8"
+                                                    },
+                                                    {
+                                                        "type": "vitamin",
+                                                        "call": "screw(type=M4_hex_screw,length=40, hob_point=0 )",
+                                                        "children": [
+                                                            {
+                                                                "rotate": [
+                                                                    55,
+                                                                    0,
+                                                                    25
+                                                                ],
+                                                                "dist": 500,
+                                                                "title": "view",
+                                                                "caption": "view",
+                                                                "translate": [
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "type": "view",
+                                                                "size": [
+                                                                    400,
+                                                                    300
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "file": "vitamins/screws.scad",
+                                                        "title": "M4 hex screw x 40mm"
+                                                    },
+                                                    {
+                                                        "type": "vitamin",
+                                                        "call": "washer(type=M4_washer)",
+                                                        "children": [
+                                                            {
+                                                                "rotate": [
+                                                                    55,
+                                                                    0,
+                                                                    25
+                                                                ],
+                                                                "dist": 500,
+                                                                "title": "view",
+                                                                "caption": "view",
+                                                                "translate": [
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "type": "view",
+                                                                "size": [
+                                                                    400,
+                                                                    300
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "file": "vitamins/washers.scad",
+                                                        "title": "M4 Washer 9x0.8"
+                                                    },
+                                                    {
+                                                        "type": "vitamin",
+                                                        "call": "nut(type=M4_nut,nyloc=true,brass=false )",
+                                                        "children": [
+                                                            {
+                                                                "rotate": [
+                                                                    55,
+                                                                    0,
+                                                                    25
+                                                                ],
+                                                                "dist": 500,
+                                                                "title": "view",
+                                                                "caption": "view",
+                                                                "translate": [
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "type": "view",
+                                                                "size": [
+                                                                    400,
+                                                                    300
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "file": "vitamins/nuts.scad",
+                                                        "title": "Nyloc M4 Nut"
+                                                    },
+                                                    {
+                                                        "type": "vitamin",
+                                                        "call": "washer(type=M4_washer)",
+                                                        "children": [
+                                                            {
+                                                                "rotate": [
+                                                                    55,
+                                                                    0,
+                                                                    25
+                                                                ],
+                                                                "dist": 500,
+                                                                "title": "view",
+                                                                "caption": "view",
+                                                                "translate": [
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "type": "view",
+                                                                "size": [
+                                                                    400,
+                                                                    300
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "file": "vitamins/washers.scad",
+                                                        "title": "M4 Washer 9x0.8"
+                                                    },
+                                                    {
+                                                        "type": "vitamin",
+                                                        "call": "nut(type=M4_nut,nyloc=true,brass=false )",
+                                                        "children": [
+                                                            {
+                                                                "rotate": [
+                                                                    55,
+                                                                    0,
+                                                                    25
+                                                                ],
+                                                                "dist": 500,
+                                                                "title": "view",
+                                                                "caption": "view",
+                                                                "translate": [
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "type": "view",
+                                                                "size": [
+                                                                    400,
+                                                                    300
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "file": "vitamins/nuts.scad",
+                                                        "title": "Nyloc M4 Nut"
                                                     }
                                                 ],
                                                 "desc": "Bolt through the aluminium channels and servo brackets"

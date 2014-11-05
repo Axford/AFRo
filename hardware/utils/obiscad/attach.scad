@@ -13,6 +13,7 @@
 use <vector.scad>
 
 $Explode = false;  // override in global config or specific machine file
+$ExplodeChildren = false;  //  override to explode all children
 $AnimateExplode = false;  // set to true to animate the explosion  
 $AnimateExplodeT = 0;  // animation time, range 0:1
 
@@ -86,7 +87,7 @@ function offsetConnector(a, o) = [[a[0][0]+o[0], a[0][1]+o[1], a[0][2]+o[2]], a[
 //--    a -> Connector of the main part
 //--    b -> Connector of the attachable part
 //-------------------------------------------------------------------------
-module attach(a,b, Invert=false, ExplodeSpacing = 10, offset=0)
+module attach(a,b, Invert=false, ExplodeSpacing = 10, offset=0, showVector=true)
 {
   //-- Get the data from the connectors
   pos1 = a[0];  //-- Attachment point. Main part
@@ -121,11 +122,11 @@ module attach(a,b, Invert=false, ExplodeSpacing = 10, offset=0)
              //-- Attachable part to the origin
             translate(-pos2)
                 translate($Explode ? -vref * ExplodeSpacing * au : [0,0,0])
-                assign($Explode=false)  // turn off explosions for children
+                assign($Explode=$ExplodeChildren)  // turn off explosions for children
                 children(i);
                 
             // Show assembly vector 
-            if ($Explode) {
+            if ($Explode && showVector) {
 		        // show attachment axis
 		        color([1,0,0, au * 0.7])
 		            translate(-vref * ExplodeSpacing * au + vref*offset)

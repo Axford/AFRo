@@ -99,6 +99,19 @@ def gen_cut(m, a):
         md += ' (x'+str(a['qty'])+')'
     md += '\n\n'
     
+    # vitamins
+    if len(a['vitamins']) > 0:
+        a['vitamins'].sort(key=vitamin_call, reverse=False)
+        md += '### Vitamins\n\n'
+        md += 'Qty | Vitamin | Image\n'
+        md += '--- | --- | ---\n'
+        for v in a['vitamins']:
+            md += str(v['qty']) + ' | '
+            md += '['+v['title']+']() | '
+            md += '![](../vitamins/images/'+views.view_filename(v['title']+'_view') + ') | '
+            md += '\n'
+        md += '\n'
+    
     # fabrication steps
     if len(a['steps']) > 0:
         md += '### Fabrication Steps\n\n'
@@ -221,10 +234,14 @@ def guides():
             # BOM
             md += gen_bom(m)
             
+            md += '# Cutting Instructions\n\n'
+            
             # Cut Parts
             m['cut'].sort(key=cut_call, reverse=False)
             for c in m['cut']:
                 md += gen_cut(m,c)
+                
+            md += '# Assembly Instructions\n\n'
             
             # Assemblies
             # sort by level desc

@@ -286,7 +286,7 @@ def add_printed(jso, pl, addViews=True):
         add_views_for(jso, pfound)   
         
         
-def add_cut(jso, cl, addSteps=True, addViews=True):
+def add_cut(jso, cl, addSteps=True, addViews=True, addChildren=True):
     
     afound = None
     for a in cl:
@@ -300,7 +300,7 @@ def add_cut(jso, cl, addSteps=True, addViews=True):
         afound = { 
             'title':jso['title'], 'call':jso['call'], 'file':jso['file'],
             'completeCall':jso['completeCall'],
-            'qty':1, 'views':[], 'steps':[]
+            'qty':1, 'views':[], 'steps':[], 'vitamins':[]
             }
         cl.append(afound)
         
@@ -308,6 +308,25 @@ def add_cut(jso, cl, addSteps=True, addViews=True):
         add_views_for(jso, afound) 
     if addSteps:
         add_steps_for(jso, afound)     
+        
+    nvl = afound['vitamins'];
+        
+    # Collate immediate children, and sub-assemblies nested in steps!
+    if addChildren and 'children' in jso:
+        for c in jso['children']:
+            if type(c) is DictType:
+                tn = c['type']
+        
+                if tn == 'vitamin':
+                    add_vitamin(c, nvl, addViews=False)
+                    
+                if tn == 'step':
+                    for sc in c['children']:
+                        if type(sc) is DictType:
+                            tn2 = sc['type']
+        
+                            if tn2 == 'vitamin':
+                                add_vitamin(sc, nvl, addViews=False)
                         
     
     
@@ -355,7 +374,7 @@ def add_assembly(jso, al, pl, vl, cl, addSteps=True, addViews=True, addChildren=
                     add_assembly(c, nal, npl, nvl, ncl, addSteps=False, addViews=False, addChildren=False, level=nextlevel)    
         
                 if tn == 'cut':
-                    add_cut(c, ncl, addViews=False, addSteps=False)
+                    add_cut(c, ncl, addViews=False, addSteps=False, addChildren=False)
                     
                 if tn == 'printed':
                     add_printed(c, npl, addViews=False)
@@ -375,7 +394,7 @@ def add_assembly(jso, al, pl, vl, cl, addSteps=True, addViews=True, addChildren=
                                 add_printed(sc, npl, addViews=False)
                     
                             if tn == 'cut':
-                                add_cut(c, ncl, addViews=False,  addSteps=False)
+                                add_cut(c, ncl, addViews=False,  addSteps=False, addChildren=False)
                         
                             
     

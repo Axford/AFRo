@@ -30,7 +30,7 @@ function washer_soft(type)      = type[3];
 function washer_color(type) = washer_soft(type) ? soft_washer_color : hard_washer_color;
 function star_washer_diameter(type) = type[4];
 
-module washer(type) {
+module washer(type, ExplodeSpacing=10) {
     hole = type[0];
     thickness = washer_thickness(type);
     diameter  = washer_diameter(type);
@@ -47,8 +47,9 @@ module washer(type) {
         cylinder(r = diameter / 2, h = thickness - 0.05);
         cylinder(r = hole / 2, h = 2 * thickness + 1, center = true);
     }
+    
     if($children)
-        translate([0, 0, thickness])
+        attach(DefConDown, DefConDown, ExplodeSpacing=ExplodeSpacing)
             children();
 }
 

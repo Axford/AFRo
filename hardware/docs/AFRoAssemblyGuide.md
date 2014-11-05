@@ -26,14 +26,15 @@ Qty | Vitamin | Image
 1 | [LM20UU Linear Bearing]() | ![](../vitamins/images/LM20UULinearBearing_view.png) | 
 1 | [LM8UU Linear Bearing]() | ![](../vitamins/images/LM8UULinearBearing_view.png) | 
 4 | [M2 Nut]() | ![](../vitamins/images/M2Nut_view.png) | 
-3 | [Nyloc M4 Nut]() | ![](../vitamins/images/NylocM4Nut_view.png) | 
+5 | [Nyloc M4 Nut]() | ![](../vitamins/images/NylocM4Nut_view.png) | 
 2 | [M6 Nut]() | ![](../vitamins/images/M6Nut_view.png) | 
 1 | [Nyloc M6 Nut]() | ![](../vitamins/images/NylocM6Nut_view.png) | 
 1 | [T2.5x18 Pulley]() | ![](../vitamins/images/T25x18Pulley_view.png) | 
 12 | [M2 pan screw x 6mm]() | ![](../vitamins/images/M2panscrewx6mm_view.png) | 
 2 | [M4 cap screw x 20mm]() | ![](../vitamins/images/M4capscrewx20mm_view.png) | 
 1 | [M4 hex screw x 30mm]() | ![](../vitamins/images/M4hexscrewx30mm_view.png) | 
-12 | [M4 Washer 9x0.8]() | ![](../vitamins/images/M4Washer9x08_view.png) | 
+2 | [M4 hex screw x 40mm]() | ![](../vitamins/images/M4hexscrewx40mm_view.png) | 
+16 | [M4 Washer 9x0.8]() | ![](../vitamins/images/M4Washer9x08_view.png) | 
 2 | [M5 Washer 20x1.4]() | ![](../vitamins/images/M5Washer20x14_view.png) | 
 3 | [M8 Washer 17x1.8]() | ![](../vitamins/images/M8Washer17x18_view.png) | 
 
@@ -71,7 +72,15 @@ Qty | Part Name | Image
 1 | [Wrist Bracket](../printedparts/stl/WristBracket.stl) | ![](../printedparts/images/WristBracket_view.png) | 
 
 
+# Cutting Instructions
+
 ## Lower Arm Left Side (x2)
+
+### Vitamins
+
+Qty | Vitamin | Image
+--- | --- | ---
+4 | [Aluminium Angle 10x40x1.5mm x 200mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mmx200mm_view.png) | 
 
 ### Fabrication Steps
 
@@ -80,6 +89,8 @@ Qty | Part Name | Image
 2. Drill 4mm diameter fixing holes
 ![](../cutparts/images/LowerArmLeftSide_step2_view.png)
 
+
+# Assembly Instructions
 
 ## Spoon
 
@@ -158,6 +169,14 @@ Qty | Part Name | Image
 
 
 ## Lower Arm
+
+### Vitamins
+
+Qty | Vitamin | Image
+--- | --- | ---
+2 | [Nyloc M4 Nut]() | ![](../vitamins/images/NylocM4Nut_view.png) | 
+2 | [M4 hex screw x 40mm]() | ![](../vitamins/images/M4hexscrewx40mm_view.png) | 
+4 | [M4 Washer 9x0.8]() | ![](../vitamins/images/M4Washer9x08_view.png) | 
 
 ### Printed Parts
 

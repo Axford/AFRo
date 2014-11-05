@@ -73,6 +73,7 @@ ElbowAngle = 130;
 
 LowerArmLength = 200;  // distance between joint centres
 LowerArmWidth = 32;
+LowerArmHeight = 38;
 
 // Wrist
 
