@@ -1,8 +1,6 @@
 # AFRo
 # Assembly Guide
 
-![view](../images/AFRo_view.png)
-
 ## Bill of Materials
 
 Make sure you have all of the following parts before you begin.
@@ -15,13 +13,14 @@ Qty | Vitamin | Image
 1 | [NEMA11 Stepper Motor]() | ![](../vitamins/images/NEMA11StepperMotor_view.png) | 
 2 | [NEMA17 Stepper Motor]() | ![](../vitamins/images/NEMA17StepperMotor_view.png) | 
 1 | [Spoon]() | ![](../vitamins/images/Spoon_view.png) | 
-1 | [Aluminium Angle 10x10x1mm 420mm]() | ![](../vitamins/images/AluminiumAngle10x10x1mm420mm_view.png) | 
-2 | [Aluminium Angle 10x40x1.5mm 200mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mm200mm_view.png) | 
-2 | [Aluminium Angle 10x40x1.5mm 250mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mm250mm_view.png) | 
+1 | [Aluminium Angle 10x10x1mm x 420mm]() | ![](../vitamins/images/AluminiumAngle10x10x1mmx420mm_view.png) | 
+2 | [Aluminium Angle 10x40x1.5mm x 200mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mmx200mm_view.png) | 
+2 | [Aluminium Angle 10x40x1.5mm x 250mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mmx250mm_view.png) | 
 2 | [Ball Bearing 608]() | ![](../vitamins/images/BallBearing608_view.png) | 
 2 | [Ball Bearing 6205_2RS]() | ![](../vitamins/images/BallBearing6205_2RS_view.png) | 
 4 | [Ball Bearing 624]() | ![](../vitamins/images/BallBearing624_view.png) | 
-2 | [Belt T2p5x6]() | ![](../vitamins/images/BeltT2p5x6_view.png) | 
+1 | [Belt T2p5x6 960mm]() | ![](../vitamins/images/BeltT2p5x6960mm_view.png) | 
+1 | [Belt T2p5x6 673mm]() | ![](../vitamins/images/BeltT2p5x6673mm_view.png) | 
 1 | [LM20UU Linear Bearing]() | ![](../vitamins/images/LM20UULinearBearing_view.png) | 
 1 | [LM8UU Linear Bearing]() | ![](../vitamins/images/LM8UULinearBearing_view.png) | 
 4 | [M2 Nut]() | ![](../vitamins/images/M2Nut_view.png) | 
@@ -127,7 +126,7 @@ Qty | Name
 Qty | Vitamin | Image
 --- | --- | ---
 2 | [Ball Bearing 608]() | ![](../vitamins/images/BallBearing608_view.png) | 
-1 | [Belt T2p5x6]() | ![](../vitamins/images/BeltT2p5x6_view.png) | 
+1 | [Belt T2p5x6 673mm]() | ![](../vitamins/images/BeltT2p5x6673mm_view.png) | 
 2 | [M6 Nut]() | ![](../vitamins/images/M6Nut_view.png) | 
 1 | [Nyloc M6 Nut]() | ![](../vitamins/images/NylocM6Nut_view.png) | 
 3 | [M8 Washer 17x1.8]() | ![](../vitamins/images/M8Washer17x18_view.png) | 
@@ -146,7 +145,7 @@ Qty | Part Name | Image
 
 Qty | Vitamin | Image
 --- | --- | ---
-2 | [Aluminium Angle 10x40x1.5mm 200mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mm200mm_view.png) | 
+2 | [Aluminium Angle 10x40x1.5mm x 200mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mmx200mm_view.png) | 
 
 ### Printed Parts
 
@@ -197,7 +196,7 @@ Qty | Part Name | Image
 Qty | Vitamin | Image
 --- | --- | ---
 1 | [NEMA11 Stepper Motor]() | ![](../vitamins/images/NEMA11StepperMotor_view.png) | 
-2 | [Aluminium Angle 10x40x1.5mm 250mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mm250mm_view.png) | 
+2 | [Aluminium Angle 10x40x1.5mm x 250mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mmx250mm_view.png) | 
 1 | [LM20UU Linear Bearing]() | ![](../vitamins/images/LM20UULinearBearing_view.png) | 
 1 | [LM8UU Linear Bearing]() | ![](../vitamins/images/LM8UULinearBearing_view.png) | 
 
@@ -235,7 +234,7 @@ Qty | Part Name | Image
 
 Qty | Vitamin | Image
 --- | --- | ---
-1 | [Aluminium Angle 10x10x1mm 420mm]() | ![](../vitamins/images/AluminiumAngle10x10x1mm420mm_view.png) | 
+1 | [Aluminium Angle 10x10x1mm x 420mm]() | ![](../vitamins/images/AluminiumAngle10x10x1mmx420mm_view.png) | 
 
 
 ## Torso
@@ -247,7 +246,7 @@ Qty | Vitamin | Image
 1 | [NEMA17 Stepper Motor]() | ![](../vitamins/images/NEMA17StepperMotor_view.png) | 
 2 | [Ball Bearing 6205_2RS]() | ![](../vitamins/images/BallBearing6205_2RS_view.png) | 
 2 | [Ball Bearing 624]() | ![](../vitamins/images/BallBearing624_view.png) | 
-1 | [Belt T2p5x6]() | ![](../vitamins/images/BeltT2p5x6_view.png) | 
+1 | [Belt T2p5x6 960mm]() | ![](../vitamins/images/BeltT2p5x6960mm_view.png) | 
 1 | [Nyloc M4 Nut]() | ![](../vitamins/images/NylocM4Nut_view.png) | 
 1 | [T2.5x18 Pulley]() | ![](../vitamins/images/T25x18Pulley_view.png) | 
 1 | [M4 hex screw x 30mm]() | ![](../vitamins/images/M4hexscrewx30mm_view.png) | 

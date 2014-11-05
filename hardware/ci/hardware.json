@@ -1,9 +1,9 @@
 [
     {
-        "hash": "a60def552e7f8098d2f664570326fcbf",
         "vitamins": [
             {
                 "hash": "93d5f505840843188b054f8cc861f21f",
+                "title": "Ball Bearing 6205_2RS",
                 "views": [
                     {
                         "rotate": [
@@ -12,8 +12,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/BallBearing6205_2RS_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/BallBearing6205_2RS_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -27,7 +27,6 @@
                         ]
                     }
                 ],
-                "title": "Ball Bearing 6205_2RS",
                 "qty": 2,
                 "parts": [],
                 "call": "ball_bearing(BB6205_2RS)",
@@ -35,6 +34,7 @@
             },
             {
                 "hash": "43ad91f7d442439449440740564c121f",
+                "title": "NEMA17 Stepper Motor",
                 "views": [
                     {
                         "rotate": [
@@ -43,8 +43,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/NEMA17StepperMotor_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/NEMA17StepperMotor_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -58,7 +58,6 @@
                         ]
                     }
                 ],
-                "title": "NEMA17 Stepper Motor",
                 "qty": 2,
                 "parts": [],
                 "call": "NEMA(NEMA17)",
@@ -66,6 +65,7 @@
             },
             {
                 "hash": "5fab8de41376afb3c8e188a8cf66e9ac",
+                "title": "T2.5x18 Pulley",
                 "views": [
                     {
                         "rotate": [
@@ -74,8 +74,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/T25x18Pulley_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/T25x18Pulley_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -89,7 +89,6 @@
                         ]
                     }
                 ],
-                "title": "T2.5x18 Pulley",
                 "qty": 1,
                 "parts": [],
                 "call": "pulley(type=T2p5x18_metal_pulley)",
@@ -97,6 +96,7 @@
             },
             {
                 "hash": "3d249caf635ed63a37e76468cc606b56",
+                "title": "Belt T2p5x6 960mm",
                 "views": [
                     {
                         "rotate": [
@@ -105,8 +105,8 @@
                             327
                         ],
                         "dist": 735,
-                        "filepath": "../vitamins/images/BeltT2p5x6_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/BeltT2p5x6960mm_view.png",
                         "caption": "view",
                         "translate": [
                             52,
@@ -120,14 +120,14 @@
                         ]
                     }
                 ],
-                "title": "Belt T2p5x6",
-                "qty": 2,
+                "qty": 1,
                 "parts": [],
                 "call": "belt(T2p5x6)",
                 "file": "vitamins/belts.scad"
             },
             {
                 "hash": "92852f3753a109a34d6566b3d973039e",
+                "title": "Ball Bearing 624",
                 "views": [
                     {
                         "rotate": [
@@ -136,8 +136,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/BallBearing624_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/BallBearing624_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -151,7 +151,6 @@
                         ]
                     }
                 ],
-                "title": "Ball Bearing 624",
                 "qty": 4,
                 "parts": [],
                 "call": "ball_bearing(BB624)",
@@ -159,6 +158,7 @@
             },
             {
                 "hash": "1065932f95f7258a44ab203e8ee09ea9",
+                "title": "M4 Washer 9x0.8",
                 "views": [
                     {
                         "rotate": [
@@ -167,8 +167,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/M4Washer9x08_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/M4Washer9x08_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -182,7 +182,6 @@
                         ]
                     }
                 ],
-                "title": "M4 Washer 9x0.8",
                 "qty": 12,
                 "parts": [],
                 "call": "washer(type=M4_washer)",
@@ -190,6 +189,7 @@
             },
             {
                 "hash": "7bf70cbd85dcf0724c65ce3e8d284b72",
+                "title": "M4 cap screw x 20mm",
                 "views": [
                     {
                         "rotate": [
@@ -198,8 +198,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/M4capscrewx20mm_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/M4capscrewx20mm_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -213,7 +213,6 @@
                         ]
                     }
                 ],
-                "title": "M4 cap screw x 20mm",
                 "qty": 2,
                 "parts": [],
                 "call": "screw(type=M4_cap_screw,length=20, hob_point=0 )",
@@ -221,6 +220,7 @@
             },
             {
                 "hash": "1857e057bed4af4573b85e7bffbe35a1",
+                "title": "Nyloc M4 Nut",
                 "views": [
                     {
                         "rotate": [
@@ -229,8 +229,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/NylocM4Nut_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/NylocM4Nut_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -244,7 +244,6 @@
                         ]
                     }
                 ],
-                "title": "Nyloc M4 Nut",
                 "qty": 3,
                 "parts": [],
                 "call": "nut(type=M4_nut,nyloc=true,brass=false )",
@@ -252,6 +251,7 @@
             },
             {
                 "hash": "7e14871d574b8790f6db81213b9323e3",
+                "title": "LM8UU Linear Bearing",
                 "views": [
                     {
                         "rotate": [
@@ -260,8 +260,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/LM8UULinearBearing_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/LM8UULinearBearing_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -275,7 +275,6 @@
                         ]
                     }
                 ],
-                "title": "LM8UU Linear Bearing",
                 "qty": 1,
                 "parts": [],
                 "call": "linear_bearing(type=LM8UU)",
@@ -283,6 +282,7 @@
             },
             {
                 "hash": "88ee67be7aee7a2d22572739d18e14ac",
+                "title": "LM20UU Linear Bearing",
                 "views": [
                     {
                         "rotate": [
@@ -291,8 +291,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/LM20UULinearBearing_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/LM20UULinearBearing_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -306,29 +306,29 @@
                         ]
                     }
                 ],
-                "title": "LM20UU Linear Bearing",
                 "qty": 1,
                 "parts": [],
                 "call": "linear_bearing(type=LM20UU)",
                 "file": "vitamins/linear-bearings.scad"
             },
             {
-                "hash": "deda2446eaab78e31a407a767c725c76",
+                "hash": "4179ead1804f6a5554407541624a8867",
+                "title": "Aluminium Angle 10x40x1.5mm x 250mm",
                 "views": [
                     {
                         "rotate": [
-                            171,
-                            354,
-                            87
+                            168,
+                            352,
+                            90
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/AluminiumAngle10x40x15mm250mm_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/AluminiumAngle10x40x15mmx250mm_view.png",
                         "caption": "view",
                         "translate": [
-                            18,
-                            26,
-                            18
+                            16,
+                            14,
+                            5
                         ],
                         "type": "view",
                         "size": [
@@ -337,7 +337,6 @@
                         ]
                     }
                 ],
-                "title": "Aluminium Angle 10x40x1.5mm 250mm",
                 "qty": 2,
                 "parts": [],
                 "call": "aluAngle(10,40,250,1.5)",
@@ -345,6 +344,7 @@
             },
             {
                 "hash": "65d11b702fed7e8db450522a88abd18e",
+                "title": "NEMA11 Stepper Motor",
                 "views": [
                     {
                         "rotate": [
@@ -353,8 +353,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/NEMA11StepperMotor_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/NEMA11StepperMotor_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -368,7 +368,6 @@
                         ]
                     }
                 ],
-                "title": "NEMA11 Stepper Motor",
                 "qty": 1,
                 "parts": [],
                 "call": "NEMA(NEMA11)",
@@ -376,6 +375,7 @@
             },
             {
                 "hash": "b5b9cab4933be98f416e30ad0ee4db75",
+                "title": "Nyloc M6 Nut",
                 "views": [
                     {
                         "rotate": [
@@ -384,8 +384,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/NylocM6Nut_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/NylocM6Nut_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -399,7 +399,6 @@
                         ]
                     }
                 ],
-                "title": "Nyloc M6 Nut",
                 "qty": 1,
                 "parts": [],
                 "call": "nut(type=M6_nut,nyloc=true,brass=false )",
@@ -407,6 +406,7 @@
             },
             {
                 "hash": "38273ac5866a8b509936a8fe5ffbe147",
+                "title": "M8 Washer 17x1.8",
                 "views": [
                     {
                         "rotate": [
@@ -415,8 +415,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/M8Washer17x18_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/M8Washer17x18_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -430,14 +430,45 @@
                         ]
                     }
                 ],
-                "title": "M8 Washer 17x1.8",
                 "qty": 3,
                 "parts": [],
                 "call": "washer(type=M8_washer)",
                 "file": "vitamins/washers.scad"
             },
             {
+                "hash": "3d249caf635ed63a37e76468cc606b56",
+                "title": "Belt T2p5x6 673mm",
+                "views": [
+                    {
+                        "rotate": [
+                            53,
+                            0,
+                            327
+                        ],
+                        "dist": 735,
+                        "title": "view",
+                        "filepath": "../vitamins/images/BeltT2p5x6673mm_view.png",
+                        "caption": "view",
+                        "translate": [
+                            52,
+                            10,
+                            -5
+                        ],
+                        "type": "view",
+                        "size": [
+                            400,
+                            300
+                        ]
+                    }
+                ],
+                "qty": 1,
+                "parts": [],
+                "call": "belt(T2p5x6)",
+                "file": "vitamins/belts.scad"
+            },
+            {
                 "hash": "b2cc4d7a6822b992a8024594ff5dac20",
+                "title": "M6 Nut",
                 "views": [
                     {
                         "rotate": [
@@ -446,8 +477,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/M6Nut_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/M6Nut_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -461,7 +492,6 @@
                         ]
                     }
                 ],
-                "title": "M6 Nut",
                 "qty": 2,
                 "parts": [],
                 "call": "nut(type=M6_nut,nyloc=false,brass=false )",
@@ -469,6 +499,7 @@
             },
             {
                 "hash": "66af9c48b53cbed7e8ff2d72861d87fe",
+                "title": "Ball Bearing 608",
                 "views": [
                     {
                         "rotate": [
@@ -477,8 +508,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/BallBearing608_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/BallBearing608_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -492,7 +523,6 @@
                         ]
                     }
                 ],
-                "title": "Ball Bearing 608",
                 "qty": 2,
                 "parts": [],
                 "call": "ball_bearing(BB608)",
@@ -500,6 +530,7 @@
             },
             {
                 "hash": "438f32f91bddd77b4a49ed81206d950b",
+                "title": "Dynamixel AX12",
                 "views": [
                     {
                         "rotate": [
@@ -508,8 +539,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/DynamixelAX12_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/DynamixelAX12_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -523,7 +554,6 @@
                         ]
                     }
                 ],
-                "title": "Dynamixel AX12",
                 "qty": 2,
                 "parts": [],
                 "call": "DynamixelAX12()",
@@ -531,6 +561,7 @@
             },
             {
                 "hash": "0f7510ef77ddd92eca801ee21c039bc2",
+                "title": "M2 pan screw x 6mm",
                 "views": [
                     {
                         "rotate": [
@@ -539,8 +570,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/M2panscrewx6mm_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/M2panscrewx6mm_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -554,7 +585,6 @@
                         ]
                     }
                 ],
-                "title": "M2 pan screw x 6mm",
                 "qty": 12,
                 "parts": [],
                 "call": "screw(type=M2_pan_screw,length=6, hob_point=0 )",
@@ -562,6 +592,7 @@
             },
             {
                 "hash": "a4394805380374b7f9934c2999505277",
+                "title": "M2 Nut",
                 "views": [
                     {
                         "rotate": [
@@ -570,8 +601,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/M2Nut_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/M2Nut_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -585,7 +616,6 @@
                         ]
                     }
                 ],
-                "title": "M2 Nut",
                 "qty": 4,
                 "parts": [],
                 "call": "nut(type=M2_nut,nyloc=false,brass=false )",
@@ -593,6 +623,7 @@
             },
             {
                 "hash": "b7b950b85899fec8c5cae863fde772ca",
+                "title": "Spoon",
                 "views": [
                     {
                         "rotate": [
@@ -601,8 +632,8 @@
                             36
                         ],
                         "dist": 850,
-                        "filepath": "../vitamins/images/Spoon_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/Spoon_view.png",
                         "caption": "view",
                         "translate": [
                             30,
@@ -616,29 +647,29 @@
                         ]
                     }
                 ],
-                "title": "Spoon",
                 "qty": 1,
                 "parts": [],
                 "call": "Spoon()",
                 "file": "vitamins/Spoon.scad"
             },
             {
-                "hash": "7fae4b8034cf5b206c081cd62236f3df",
+                "hash": "2609a54e95b37ea4eb63a74b4048c0c1",
+                "title": "Aluminium Angle 10x40x1.5mm x 200mm",
                 "views": [
                     {
                         "rotate": [
-                            171,
-                            354,
-                            87
+                            168,
+                            352,
+                            90
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/AluminiumAngle10x40x15mm200mm_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/AluminiumAngle10x40x15mmx200mm_view.png",
                         "caption": "view",
                         "translate": [
-                            18,
-                            26,
-                            18
+                            16,
+                            14,
+                            5
                         ],
                         "type": "view",
                         "size": [
@@ -647,7 +678,6 @@
                         ]
                     }
                 ],
-                "title": "Aluminium Angle 10x40x1.5mm 200mm",
                 "qty": 2,
                 "parts": [],
                 "call": "aluAngle(10,40,200,1.5)",
@@ -655,6 +685,7 @@
             },
             {
                 "hash": "4a8575d7a3ec81b33f750ab22d779344",
+                "title": "M4 hex screw x 30mm",
                 "views": [
                     {
                         "rotate": [
@@ -663,8 +694,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/M4hexscrewx30mm_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/M4hexscrewx30mm_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -678,7 +709,6 @@
                         ]
                     }
                 ],
-                "title": "M4 hex screw x 30mm",
                 "qty": 1,
                 "parts": [],
                 "call": "screw(type=M4_hex_screw,length=30, hob_point=0 )",
@@ -686,6 +716,7 @@
             },
             {
                 "hash": "b2689061e2a28e2c91942b5c4a8d0c3f",
+                "title": "M5 Washer 20x1.4",
                 "views": [
                     {
                         "rotate": [
@@ -694,8 +725,8 @@
                             25
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/M5Washer20x14_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/M5Washer20x14_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -709,29 +740,29 @@
                         ]
                     }
                 ],
-                "title": "M5 Washer 20x1.4",
                 "qty": 2,
                 "parts": [],
                 "call": "washer(type=M5_penny_washer)",
                 "file": "vitamins/washers.scad"
             },
             {
-                "hash": "5bd6c57696f70b1bd2764ddf52b5fa9a",
+                "hash": "1675734d05b033a481d4320ec1079585",
+                "title": "Aluminium Angle 10x10x1mm x 420mm",
                 "views": [
                     {
                         "rotate": [
-                            171,
-                            354,
-                            87
+                            168,
+                            352,
+                            90
                         ],
                         "dist": 500,
-                        "filepath": "../vitamins/images/AluminiumAngle10x10x1mm420mm_view.png",
                         "title": "view",
+                        "filepath": "../vitamins/images/AluminiumAngle10x10x1mmx420mm_view.png",
                         "caption": "view",
                         "translate": [
-                            18,
-                            26,
-                            18
+                            16,
+                            14,
+                            5
                         ],
                         "type": "view",
                         "size": [
@@ -740,7 +771,6 @@
                         ]
                     }
                 ],
-                "title": "Aluminium Angle 10x10x1mm 420mm",
                 "qty": 1,
                 "parts": [],
                 "call": "aluAngle(10,10,420,1)",
@@ -750,15 +780,14 @@
         "title": "AFRo",
         "assemblies": [
             {
-                "hash": "2633dfea1cf8ae30e2b1d132f76d5303",
                 "vitamins": [],
                 "title": "AFRo",
                 "assemblies": [
                     {
                         "vitamins": [],
-                        "views": [],
-                        "assemblies": [],
                         "title": "Torso",
+                        "assemblies": [],
+                        "views": [],
                         "qty": 1,
                         "steps": [],
                         "printed": [],
@@ -768,9 +797,9 @@
                     },
                     {
                         "vitamins": [],
-                        "views": [],
-                        "assemblies": [],
                         "title": "Torso Drive",
+                        "assemblies": [],
+                        "views": [],
                         "qty": 1,
                         "steps": [],
                         "printed": [],
@@ -802,90 +831,89 @@
                     }
                 ],
                 "qty": 1,
-                "call": "AFRoAssembly()",
+                "steps": [],
                 "printed": [
                     {
-                        "views": [],
+                        "title": "Base Bracket",
                         "qty": 1,
                         "call": "BaseBracket_stl()",
                         "file": "printedparts/BaseBracket.scad",
-                        "title": "Base Bracket"
+                        "views": []
                     }
                 ],
                 "file": "assemblies/AFRo.scad",
-                "steps": [],
+                "call": "AFRoAssembly()",
                 "level": 0
             },
             {
-                "hash": "f822752d82e401e877a6efee03f83db1",
                 "vitamins": [
                     {
-                        "views": [],
                         "title": "Ball Bearing 6205_2RS",
+                        "views": [],
                         "qty": 2,
                         "parts": [],
                         "call": "ball_bearing(BB6205_2RS)",
                         "file": "vitamins/ball-bearings.scad"
                     },
                     {
-                        "views": [],
                         "title": "NEMA17 Stepper Motor",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "NEMA(NEMA17)",
                         "file": "vitamins/stepper-motors.scad"
                     },
                     {
-                        "views": [],
                         "title": "T2.5x18 Pulley",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "pulley(type=T2p5x18_metal_pulley)",
                         "file": "vitamins/pullies.scad"
                     },
                     {
+                        "title": "Belt T2p5x6 960mm",
                         "views": [],
-                        "title": "Belt T2p5x6",
                         "qty": 1,
                         "parts": [],
                         "call": "belt(T2p5x6)",
                         "file": "vitamins/belts.scad"
                     },
                     {
-                        "views": [],
                         "title": "M4 hex screw x 30mm",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "screw(type=M4_hex_screw,length=30, hob_point=0 )",
                         "file": "vitamins/screws.scad"
                     },
                     {
-                        "views": [],
                         "title": "M4 Washer 9x0.8",
+                        "views": [],
                         "qty": 4,
                         "parts": [],
                         "call": "washer(type=M4_washer)",
                         "file": "vitamins/washers.scad"
                     },
                     {
-                        "views": [],
                         "title": "M5 Washer 20x1.4",
+                        "views": [],
                         "qty": 2,
                         "parts": [],
                         "call": "washer(type=M5_penny_washer)",
                         "file": "vitamins/washers.scad"
                     },
                     {
-                        "views": [],
                         "title": "Ball Bearing 624",
+                        "views": [],
                         "qty": 2,
                         "parts": [],
                         "call": "ball_bearing(BB624)",
                         "file": "vitamins/ball-bearings.scad"
                     },
                     {
-                        "views": [],
                         "title": "Nyloc M4 Nut",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "nut(type=M4_nut,nyloc=true,brass=false )",
@@ -896,9 +924,9 @@
                 "assemblies": [
                     {
                         "vitamins": [],
-                        "views": [],
-                        "assemblies": [],
                         "title": "Counterweight Idler",
+                        "assemblies": [],
+                        "views": [],
                         "qty": 2,
                         "steps": [],
                         "printed": [],
@@ -908,9 +936,9 @@
                     },
                     {
                         "vitamins": [],
-                        "views": [],
-                        "assemblies": [],
                         "title": "Shoulder",
+                        "assemblies": [],
+                        "views": [],
                         "qty": 1,
                         "steps": [],
                         "printed": [],
@@ -920,9 +948,9 @@
                     },
                     {
                         "vitamins": [],
-                        "views": [],
-                        "assemblies": [],
                         "title": "Counterweight",
+                        "assemblies": [],
+                        "views": [],
                         "qty": 1,
                         "steps": [],
                         "printed": [],
@@ -932,9 +960,9 @@
                     },
                     {
                         "vitamins": [],
-                        "views": [],
-                        "assemblies": [],
                         "title": "Cable Guide",
+                        "assemblies": [],
+                        "views": [],
                         "qty": 1,
                         "steps": [],
                         "printed": [],
@@ -966,78 +994,77 @@
                     }
                 ],
                 "qty": 1,
-                "call": "TorsoAssembly()",
+                "steps": [],
                 "printed": [
                     {
-                        "views": [],
+                        "title": "Torso Big Gear",
                         "qty": 1,
                         "call": "TorsoBigGear_stl()",
                         "file": "printedparts/TorsoBigGear.scad",
-                        "title": "Torso Big Gear"
+                        "views": []
                     },
                     {
-                        "views": [],
+                        "title": "Torso Base",
                         "qty": 1,
                         "call": "TorsoBase_stl()",
                         "file": "printedparts/TorsoBase.scad",
-                        "title": "Torso Base"
+                        "views": []
                     },
                     {
-                        "views": [],
+                        "title": "Torso Bearing Collar",
                         "qty": 1,
                         "call": "TorsoBearingCollar_stl()",
                         "file": "printedparts/TorsoBearingCollar.scad",
-                        "title": "Torso Bearing Collar"
+                        "views": []
                     },
                     {
-                        "views": [],
+                        "title": "Torso Bearing Top Collar",
                         "qty": 1,
                         "call": "TorsoBearingTopCollar_stl()",
                         "file": "printedparts/TorsoBearingTopCollar.scad",
-                        "title": "Torso Bearing Top Collar"
+                        "views": []
                     },
                     {
-                        "views": [],
+                        "title": "Torso Cap",
                         "qty": 1,
                         "call": "TorsoCap_stl()",
                         "file": "printedparts/TorsoCap.scad",
-                        "title": "Torso Cap"
+                        "views": []
                     }
                 ],
                 "file": "assemblies/Torso.scad",
-                "steps": [],
+                "call": "TorsoAssembly()",
                 "level": 1
             },
             {
-                "hash": "60badaad3aef63d368afe7a5ff11e059",
                 "vitamins": [
                     {
-                        "views": [],
                         "title": "Ball Bearing 624",
+                        "views": [],
                         "qty": 2,
                         "parts": [],
                         "call": "ball_bearing(BB624)",
                         "file": "vitamins/ball-bearings.scad"
                     },
                     {
-                        "views": [],
                         "title": "M4 Washer 9x0.8",
+                        "views": [],
                         "qty": 8,
                         "parts": [],
                         "call": "washer(type=M4_washer)",
                         "file": "vitamins/washers.scad"
                     },
                     {
-                        "views": [],
                         "title": "M4 cap screw x 20mm",
+                        "views": [],
                         "qty": 2,
                         "parts": [],
                         "call": "screw(type=M4_cap_screw,length=20, hob_point=0 )",
                         "file": "vitamins/screws.scad"
                     },
                     {
-                        "views": [],
                         "title": "Nyloc M4 Nut",
+                        "views": [],
                         "qty": 2,
                         "parts": [],
                         "call": "nut(type=M4_nut,nyloc=true,brass=false )",
@@ -1048,57 +1075,56 @@
                 "assemblies": [],
                 "views": [],
                 "qty": 2,
-                "call": "CounterweightIdlerAssembly()",
+                "steps": [],
                 "printed": [
                     {
-                        "views": [],
+                        "title": "Counterweight Idler",
                         "qty": 2,
                         "call": "CounterweightIdler_stl()",
                         "file": "printedparts/CounterweightIdler.scad",
-                        "title": "Counterweight Idler"
+                        "views": []
                     },
                     {
-                        "views": [],
+                        "title": "Counterweight Idler Guide",
                         "qty": 2,
                         "call": "CounterweightIdlerGuide_stl()",
                         "file": "printedparts/CounterweightIdlerGuide.scad",
-                        "title": "Counterweight Idler Guide"
+                        "views": []
                     }
                 ],
                 "file": "assemblies/Torso.scad",
-                "steps": [],
+                "call": "CounterweightIdlerAssembly()",
                 "level": 2
             },
             {
-                "hash": "2c717f41360f0ed09daa04f98e243697",
                 "vitamins": [
                     {
-                        "views": [],
                         "title": "LM8UU Linear Bearing",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "linear_bearing(type=LM8UU)",
                         "file": "vitamins/linear-bearings.scad"
                     },
                     {
-                        "views": [],
                         "title": "LM20UU Linear Bearing",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "linear_bearing(type=LM20UU)",
                         "file": "vitamins/linear-bearings.scad"
                     },
                     {
+                        "title": "Aluminium Angle 10x40x1.5mm x 250mm",
                         "views": [],
-                        "title": "Aluminium Angle 10x40x1.5mm 250mm",
                         "qty": 2,
                         "parts": [],
                         "call": "aluAngle(10,40,250,1.5)",
                         "file": "vitamins/aluAngle.scad"
                     },
                     {
-                        "views": [],
                         "title": "NEMA11 Stepper Motor",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "NEMA(NEMA11)",
@@ -1109,9 +1135,9 @@
                 "assemblies": [
                     {
                         "vitamins": [],
-                        "views": [],
-                        "assemblies": [],
                         "title": "Elbow Joint",
+                        "assemblies": [],
+                        "views": [],
                         "qty": 1,
                         "steps": [],
                         "printed": [],
@@ -1121,9 +1147,9 @@
                     },
                     {
                         "vitamins": [],
-                        "views": [],
-                        "assemblies": [],
                         "title": "Lower Arm",
+                        "assemblies": [],
+                        "views": [],
                         "qty": 1,
                         "steps": [],
                         "printed": [],
@@ -1134,93 +1160,92 @@
                 ],
                 "views": [],
                 "qty": 1,
-                "call": "ShoulderAssembly()",
+                "steps": [],
                 "printed": [
                     {
-                        "views": [],
+                        "title": "Shoulder Bracket Left",
                         "qty": 1,
                         "call": "ShoulderBracketLeft_stl()",
                         "file": "printedparts/ShoulderBracketLeft.scad",
-                        "title": "Shoulder Bracket Left"
+                        "views": []
                     },
                     {
-                        "views": [],
+                        "title": "Shoulder Bracket Right",
                         "qty": 1,
                         "call": "ShoulderBracketRight_stl()",
                         "file": "printedparts/ShoulderBracketRight.scad",
-                        "title": "Shoulder Bracket Right"
+                        "views": []
                     },
                     {
-                        "views": [],
+                        "title": "Shoulder Belt Clamp",
                         "qty": 1,
                         "call": "ShoulderBeltClamp_stl()",
                         "file": "printedparts/ShoulderBeltClamp.scad",
-                        "title": "Shoulder Belt Clamp"
+                        "views": []
                     },
                     {
-                        "views": [],
+                        "title": "Elbow Drive Pulley",
                         "qty": 1,
                         "call": "ElbowDrivePulley_stl()",
                         "file": "printedparts/ElbowDrivePulley.scad",
-                        "title": "Elbow Drive Pulley"
+                        "views": []
                     },
                     {
-                        "views": [],
+                        "title": "Elbow Motor Plate",
                         "qty": 1,
                         "call": "ElbowMotorPlate_stl()",
                         "file": "printedparts/ElbowMotorPlate.scad",
-                        "title": "Elbow Motor Plate"
+                        "views": []
                     },
                     {
-                        "views": [],
+                        "title": "Counterweight Line Bracket",
                         "qty": 1,
                         "call": "CounterweightLineBracket_stl()",
                         "file": "printedparts/CounterweightLineBracket.scad",
-                        "title": "Counterweight Line Bracket"
+                        "views": []
                     }
                 ],
                 "file": "assemblies/Shoulder.scad",
-                "steps": [],
+                "call": "ShoulderAssembly()",
                 "level": 2
             },
             {
-                "hash": "f8330eb5e90c22b51f1844320627948d",
                 "vitamins": [
                     {
-                        "views": [],
                         "title": "Nyloc M6 Nut",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "nut(type=M6_nut,nyloc=true,brass=false )",
                         "file": "vitamins/nuts.scad"
                     },
                     {
-                        "views": [],
                         "title": "M8 Washer 17x1.8",
+                        "views": [],
                         "qty": 3,
                         "parts": [],
                         "call": "washer(type=M8_washer)",
                         "file": "vitamins/washers.scad"
                     },
                     {
+                        "title": "Belt T2p5x6 673mm",
                         "views": [],
-                        "title": "Belt T2p5x6",
                         "qty": 1,
                         "parts": [],
                         "call": "belt(T2p5x6)",
                         "file": "vitamins/belts.scad"
                     },
                     {
-                        "views": [],
                         "title": "M6 Nut",
+                        "views": [],
                         "qty": 2,
                         "parts": [],
                         "call": "nut(type=M6_nut,nyloc=false,brass=false )",
                         "file": "vitamins/nuts.scad"
                     },
                     {
-                        "views": [],
                         "title": "Ball Bearing 608",
+                        "views": [],
                         "qty": 2,
                         "parts": [],
                         "call": "ball_bearing(BB608)",
@@ -1231,33 +1256,32 @@
                 "assemblies": [],
                 "views": [],
                 "qty": 1,
-                "call": "ElbowJointAssembly()",
+                "steps": [],
                 "printed": [
                     {
-                        "views": [],
+                        "title": "Elbow Driven Pulley",
                         "qty": 1,
                         "call": "ElbowDrivenPulley_stl()",
                         "file": "printedparts/ElbowDrivenPulley.scad",
-                        "title": "Elbow Driven Pulley"
+                        "views": []
                     },
                     {
-                        "views": [],
+                        "title": "Elbow Joint",
                         "qty": 1,
                         "call": "ElbowJoint_stl()",
                         "file": "printedparts/ElbowJoint.scad",
-                        "title": "Elbow Joint"
+                        "views": []
                     }
                 ],
                 "file": "assemblies/Shoulder.scad",
-                "steps": [],
+                "call": "ElbowJointAssembly()",
                 "level": 3
             },
             {
-                "hash": "e705c34f1ff9d135fe94167a6f9b1341",
                 "vitamins": [
                     {
+                        "title": "Aluminium Angle 10x40x1.5mm x 200mm",
                         "views": [],
-                        "title": "Aluminium Angle 10x40x1.5mm 200mm",
                         "qty": 2,
                         "parts": [],
                         "call": "aluAngle(10,40,200,1.5)",
@@ -1268,9 +1292,9 @@
                 "assemblies": [
                     {
                         "vitamins": [],
-                        "views": [],
-                        "assemblies": [],
                         "title": "Hand",
+                        "assemblies": [],
+                        "views": [],
                         "qty": 1,
                         "steps": [],
                         "printed": [],
@@ -1281,123 +1305,119 @@
                 ],
                 "views": [],
                 "qty": 1,
-                "call": "LowerArmAssembly()",
+                "steps": [
+                    {
+                        "desc": "Push the servo brackets onto the servo, optionally screw them into place",
+                        "num": 1,
+                        "views": [
+                            {
+                                "rotate": [
+                                    66,
+                                    0,
+                                    26
+                                ],
+                                "dist": 936,
+                                "title": "view",
+                                "caption": "view",
+                                "translate": [
+                                    -29,
+                                    -56,
+                                    -55
+                                ],
+                                "type": "view",
+                                "size": [
+                                    400,
+                                    300
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "desc": "Bolt through the aluminium channels and servo brackets",
+                        "num": 2,
+                        "views": [
+                            {
+                                "rotate": [
+                                    66,
+                                    0,
+                                    26
+                                ],
+                                "dist": 936,
+                                "title": "view",
+                                "caption": "view",
+                                "translate": [
+                                    -29,
+                                    -56,
+                                    -55
+                                ],
+                                "type": "view",
+                                "size": [
+                                    400,
+                                    300
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "desc": "Bolt through the aluminium channels and elbow joint",
+                        "num": 3,
+                        "views": [
+                            {
+                                "rotate": [
+                                    66,
+                                    0,
+                                    26
+                                ],
+                                "dist": 936,
+                                "title": "view",
+                                "caption": "view",
+                                "translate": [
+                                    -29,
+                                    -56,
+                                    -55
+                                ],
+                                "type": "view",
+                                "size": [
+                                    400,
+                                    300
+                                ]
+                            }
+                        ]
+                    }
+                ],
                 "printed": [
                     {
-                        "views": [],
+                        "title": "Lower Arm Servo Bracket",
                         "qty": 2,
                         "call": "LowerArmServoBracket_stl()",
                         "file": "printedparts/LowerArmServoBracket.scad",
-                        "title": "Lower Arm Servo Bracket"
+                        "views": []
                     },
                     {
-                        "views": [],
+                        "title": "Elbow Joint 2",
                         "qty": 1,
                         "call": "ElbowJoint2_stl()",
                         "file": "printedparts/ElbowJoint2.scad",
-                        "title": "Elbow Joint 2"
+                        "views": []
                     }
                 ],
                 "file": "assemblies/LowerArm.scad",
-                "steps": [
-                    {
-                        "views": [
-                            {
-                                "rotate": [
-                                    66,
-                                    0,
-                                    26
-                                ],
-                                "dist": 936,
-                                "filepath": "../assemblies/AFRo/LowerArm_step1_view.png",
-                                "title": "view",
-                                "caption": "view",
-                                "translate": [
-                                    -29,
-                                    -56,
-                                    -55
-                                ],
-                                "type": "view",
-                                "size": [
-                                    400,
-                                    300
-                                ]
-                            }
-                        ],
-                        "num": 1,
-                        "desc": "Push the servo brackets onto the servo, optionally screw them into place"
-                    },
-                    {
-                        "views": [
-                            {
-                                "rotate": [
-                                    66,
-                                    0,
-                                    26
-                                ],
-                                "dist": 936,
-                                "filepath": "../assemblies/AFRo/LowerArm_step2_view.png",
-                                "title": "view",
-                                "caption": "view",
-                                "translate": [
-                                    -29,
-                                    -56,
-                                    -55
-                                ],
-                                "type": "view",
-                                "size": [
-                                    400,
-                                    300
-                                ]
-                            }
-                        ],
-                        "num": 2,
-                        "desc": "Bolt through the aluminium channels and servo brackets"
-                    },
-                    {
-                        "views": [
-                            {
-                                "rotate": [
-                                    66,
-                                    0,
-                                    26
-                                ],
-                                "dist": 936,
-                                "filepath": "../assemblies/AFRo/LowerArm_step3_view.png",
-                                "title": "view",
-                                "caption": "view",
-                                "translate": [
-                                    -29,
-                                    -56,
-                                    -55
-                                ],
-                                "type": "view",
-                                "size": [
-                                    400,
-                                    300
-                                ]
-                            }
-                        ],
-                        "num": 3,
-                        "desc": "Bolt through the aluminium channels and elbow joint"
-                    }
-                ],
+                "call": "LowerArmAssembly()",
                 "level": 3
             },
             {
-                "hash": "1d675830dd4b3980d403a5f00235bfe6",
                 "vitamins": [
                     {
-                        "views": [],
                         "title": "Dynamixel AX12",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "DynamixelAX12()",
                         "file": "vitamins/dynamixel.scad"
                     },
                     {
-                        "views": [],
                         "title": "M2 pan screw x 6mm",
+                        "views": [],
                         "qty": 8,
                         "parts": [],
                         "call": "screw(type=M2_pan_screw,length=6, hob_point=0 )",
@@ -1408,9 +1428,9 @@
                 "assemblies": [
                     {
                         "vitamins": [],
-                        "views": [],
-                        "assemblies": [],
                         "title": "Spoon",
+                        "assemblies": [],
+                        "views": [],
                         "qty": 1,
                         "steps": [],
                         "printed": [],
@@ -1421,19 +1441,10 @@
                 ],
                 "views": [],
                 "qty": 1,
-                "call": "HandAssembly()",
-                "printed": [
-                    {
-                        "views": [],
-                        "qty": 1,
-                        "call": "WristBracket_stl()",
-                        "file": "printedparts/WristBracket.scad",
-                        "title": "Wrist Bracket"
-                    }
-                ],
-                "file": "assemblies/Hand.scad",
                 "steps": [
                     {
+                        "desc": "Screw the wrist bracket onto the wrist servo",
+                        "num": 1,
                         "views": [
                             {
                                 "rotate": [
@@ -1442,7 +1453,6 @@
                                     345
                                 ],
                                 "dist": 500,
-                                "filepath": "../assemblies/AFRo/Hand_step1_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -1456,11 +1466,11 @@
                                     300
                                 ]
                             }
-                        ],
-                        "num": 1,
-                        "desc": "Screw the wrist bracket onto the wrist servo"
+                        ]
                     },
                     {
+                        "desc": "Push the spoon assembly into the wrist bracket",
+                        "num": 2,
                         "views": [
                             {
                                 "rotate": [
@@ -1469,7 +1479,6 @@
                                     325
                                 ],
                                 "dist": 753,
-                                "filepath": "../assemblies/AFRo/Hand_step2_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -1483,11 +1492,11 @@
                                     300
                                 ]
                             }
-                        ],
-                        "num": 2,
-                        "desc": "Push the spoon assembly into the wrist bracket"
+                        ]
                     },
                     {
+                        "desc": "Screw through the bracket into the servo fixings",
+                        "num": 3,
                         "views": [
                             {
                                 "rotate": [
@@ -1496,7 +1505,6 @@
                                     334
                                 ],
                                 "dist": 753,
-                                "filepath": "../assemblies/AFRo/Hand_step3_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -1510,43 +1518,51 @@
                                     300
                                 ]
                             }
-                        ],
-                        "num": 3,
-                        "desc": "Screw through the bracket into the servo fixings"
+                        ]
                     }
                 ],
+                "printed": [
+                    {
+                        "title": "Wrist Bracket",
+                        "qty": 1,
+                        "call": "WristBracket_stl()",
+                        "file": "printedparts/WristBracket.scad",
+                        "views": []
+                    }
+                ],
+                "file": "assemblies/Hand.scad",
+                "call": "HandAssembly()",
                 "level": 5
             },
             {
-                "hash": "e0df52c4d9bc2d99ae68f5112dfc3c8b",
                 "vitamins": [
                     {
-                        "views": [],
                         "title": "Dynamixel AX12",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "DynamixelAX12()",
                         "file": "vitamins/dynamixel.scad"
                     },
                     {
-                        "views": [],
                         "title": "M2 Nut",
+                        "views": [],
                         "qty": 4,
                         "parts": [],
                         "call": "nut(type=M2_nut,nyloc=false,brass=false )",
                         "file": "vitamins/nuts.scad"
                     },
                     {
-                        "views": [],
                         "title": "M2 pan screw x 6mm",
+                        "views": [],
                         "qty": 4,
                         "parts": [],
                         "call": "screw(type=M2_pan_screw,length=6, hob_point=0 )",
                         "file": "vitamins/screws.scad"
                     },
                     {
-                        "views": [],
                         "title": "Spoon",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "Spoon()",
@@ -1578,19 +1594,10 @@
                     }
                 ],
                 "qty": 1,
-                "call": "SpoonAssembly()",
-                "printed": [
-                    {
-                        "views": [],
-                        "qty": 1,
-                        "call": "SpoonHolder_stl()",
-                        "file": "printedparts/SpoonHolder.scad",
-                        "title": "Spoon Holder"
-                    }
-                ],
-                "file": "assemblies/Hand.scad",
                 "steps": [
                     {
+                        "desc": "Push M2 nuts into the back of the servo fixing tabs",
+                        "num": 1,
                         "views": [
                             {
                                 "rotate": [
@@ -1599,7 +1606,6 @@
                                     48
                                 ],
                                 "dist": 640,
-                                "filepath": "../assemblies/AFRo/Spoon_step1_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -1613,11 +1619,11 @@
                                     300
                                 ]
                             }
-                        ],
-                        "num": 1,
-                        "desc": "Push M2 nuts into the back of the servo fixing tabs"
+                        ]
                     },
                     {
+                        "desc": "Attach the spoon holder to the servo",
+                        "num": 2,
                         "views": [
                             {
                                 "rotate": [
@@ -1626,7 +1632,6 @@
                                     40
                                 ],
                                 "dist": 600,
-                                "filepath": "../assemblies/AFRo/Spoon_step2_view.png",
                                 "title": "view",
                                 "caption": "view",
                                 "translate": [
@@ -1640,40 +1645,47 @@
                                     300
                                 ]
                             }
-                        ],
-                        "num": 2,
-                        "desc": "Attach the spoon holder to the servo"
+                        ]
                     }
                 ],
+                "printed": [
+                    {
+                        "title": "Spoon Holder",
+                        "qty": 1,
+                        "call": "SpoonHolder_stl()",
+                        "file": "printedparts/SpoonHolder.scad",
+                        "views": []
+                    }
+                ],
+                "file": "assemblies/Hand.scad",
+                "call": "SpoonAssembly()",
                 "level": 7
             },
             {
-                "hash": "d8e5fb42cd7fe4ec3bf17666b70a08cc",
                 "vitamins": [],
                 "title": "Counterweight",
                 "assemblies": [],
                 "views": [],
                 "qty": 1,
-                "call": "CounterweightAssembly()",
+                "steps": [],
                 "printed": [
                     {
-                        "views": [],
+                        "title": "Counterweight Bracket",
                         "qty": 1,
                         "call": "CounterweightBracket_stl()",
                         "file": "printedparts/CounterweightBracket.scad",
-                        "title": "Counterweight Bracket"
+                        "views": []
                     }
                 ],
                 "file": "assemblies/Torso.scad",
-                "steps": [],
+                "call": "CounterweightAssembly()",
                 "level": 2
             },
             {
-                "hash": "974e47fe0904afccbc8b20ccd216b16e",
                 "vitamins": [
                     {
+                        "title": "Aluminium Angle 10x10x1mm x 420mm",
                         "views": [],
-                        "title": "Aluminium Angle 10x10x1mm 420mm",
                         "qty": 1,
                         "parts": [],
                         "call": "aluAngle(10,10,420,1)",
@@ -1684,18 +1696,17 @@
                 "assemblies": [],
                 "views": [],
                 "qty": 1,
-                "call": "CableGuideAssembly()",
+                "steps": [],
                 "printed": [],
                 "file": "assemblies/CableGuide.scad",
-                "steps": [],
+                "call": "CableGuideAssembly()",
                 "level": 2
             },
             {
-                "hash": "35a3ad58d231ac0eab5fc7d50a53f1ae",
                 "vitamins": [
                     {
-                        "views": [],
                         "title": "NEMA17 Stepper Motor",
+                        "views": [],
                         "qty": 1,
                         "parts": [],
                         "call": "NEMA(NEMA17)",
@@ -1706,54 +1717,27 @@
                 "assemblies": [],
                 "views": [],
                 "qty": 1,
-                "call": "TorsoDriveAssembly()",
+                "steps": [],
                 "printed": [
                     {
-                        "views": [],
+                        "title": "Torso Drive Gear",
                         "qty": 1,
                         "call": "TorsoDriveGear_stl()",
                         "file": "printedparts/TorsoDriveGear.scad",
-                        "title": "Torso Drive Gear"
+                        "views": []
                     }
                 ],
                 "file": "assemblies/Torso.scad",
-                "steps": [],
+                "call": "TorsoDriveAssembly()",
                 "level": 1
             }
         ],
         "printed": [
             {
-                "hash": "bdbc3845621c9a291a55fa41f28986b5",
-                "views": [
-                    {
-                        "rotate": [
-                            55,
-                            0,
-                            25
-                        ],
-                        "dist": 500,
-                        "title": "view",
-                        "filepath": "../printedparts/images/BaseBracket_view.png",
-                        "caption": "view",
-                        "translate": [
-                            -5,
-                            10,
-                            16
-                        ],
-                        "type": "view",
-                        "size": [
-                            400,
-                            300
-                        ]
-                    }
-                ],
                 "title": "Base Bracket",
                 "qty": 1,
                 "call": "BaseBracket_stl()",
-                "file": "printedparts/BaseBracket.scad"
-            },
-            {
-                "hash": "5e770ab0fa9a18e856eb703f33eab0c8",
+                "file": "printedparts/BaseBracket.scad",
                 "views": [
                     {
                         "rotate": [
@@ -1763,12 +1747,11 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../printedparts/images/TorsoBigGear_view.png",
                         "caption": "view",
                         "translate": [
-                            -1,
-                            2,
-                            3
+                            -5,
+                            10,
+                            16
                         ],
                         "type": "view",
                         "size": [
@@ -1776,29 +1759,27 @@
                             300
                         ]
                     }
-                ],
+                ]
+            },
+            {
                 "title": "Torso Big Gear",
                 "qty": 1,
                 "call": "TorsoBigGear_stl()",
-                "file": "printedparts/TorsoBigGear.scad"
-            },
-            {
-                "hash": "ac2954793212a848e4f85f077d3bcb36",
+                "file": "printedparts/TorsoBigGear.scad",
                 "views": [
                     {
                         "rotate": [
-                            48,
+                            55,
                             0,
-                            54
+                            25
                         ],
-                        "dist": 734,
+                        "dist": 500,
                         "title": "view",
-                        "filepath": "../printedparts/images/TorsoBase_view.png",
                         "caption": "view",
                         "translate": [
-                            -4,
                             -1,
-                            4
+                            2,
+                            3
                         ],
                         "type": "view",
                         "size": [
@@ -1806,29 +1787,27 @@
                             300
                         ]
                     }
-                ],
+                ]
+            },
+            {
                 "title": "Torso Base",
                 "qty": 1,
                 "call": "TorsoBase_stl()",
-                "file": "printedparts/TorsoBase.scad"
-            },
-            {
-                "hash": "0fb5c7d25b1127053d41030bf9a34415",
+                "file": "printedparts/TorsoBase.scad",
                 "views": [
                     {
                         "rotate": [
-                            55,
+                            48,
                             0,
-                            25
+                            54
                         ],
-                        "dist": 500,
+                        "dist": 734,
                         "title": "view",
-                        "filepath": "../printedparts/images/TorsoBearingCollar_view.png",
                         "caption": "view",
                         "translate": [
-                            -5,
-                            10,
-                            16
+                            -4,
+                            -1,
+                            4
                         ],
                         "type": "view",
                         "size": [
@@ -1836,14 +1815,13 @@
                             300
                         ]
                     }
-                ],
+                ]
+            },
+            {
                 "title": "Torso Bearing Collar",
                 "qty": 1,
                 "call": "TorsoBearingCollar_stl()",
-                "file": "printedparts/TorsoBearingCollar.scad"
-            },
-            {
-                "hash": "b524af48a3e58a575efb4f0dac5e9eb5",
+                "file": "printedparts/TorsoBearingCollar.scad",
                 "views": [
                     {
                         "rotate": [
@@ -1853,7 +1831,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../printedparts/images/TorsoBearingTopCollar_view.png",
                         "caption": "view",
                         "translate": [
                             -5,
@@ -1866,29 +1843,27 @@
                             300
                         ]
                     }
-                ],
+                ]
+            },
+            {
                 "title": "Torso Bearing Top Collar",
                 "qty": 1,
                 "call": "TorsoBearingTopCollar_stl()",
-                "file": "printedparts/TorsoBearingTopCollar.scad"
-            },
-            {
-                "hash": "e20303c1f1f34e8c43ab9ab66db6e090",
+                "file": "printedparts/TorsoBearingTopCollar.scad",
                 "views": [
                     {
                         "rotate": [
-                            48,
+                            55,
                             0,
-                            54
+                            25
                         ],
-                        "dist": 734,
+                        "dist": 500,
                         "title": "view",
-                        "filepath": "../printedparts/images/TorsoCap_view.png",
                         "caption": "view",
                         "translate": [
-                            -4,
-                            -1,
-                            4
+                            -5,
+                            10,
+                            16
                         ],
                         "type": "view",
                         "size": [
@@ -1896,14 +1871,13 @@
                             300
                         ]
                     }
-                ],
+                ]
+            },
+            {
                 "title": "Torso Cap",
                 "qty": 1,
                 "call": "TorsoCap_stl()",
-                "file": "printedparts/TorsoCap.scad"
-            },
-            {
-                "hash": "8ec9d2511d1e2195a393b84ebd9647e5",
+                "file": "printedparts/TorsoCap.scad",
                 "views": [
                     {
                         "rotate": [
@@ -1913,7 +1887,6 @@
                         ],
                         "dist": 734,
                         "title": "view",
-                        "filepath": "../printedparts/images/CounterweightIdler_view.png",
                         "caption": "view",
                         "translate": [
                             -4,
@@ -1926,14 +1899,13 @@
                             300
                         ]
                     }
-                ],
+                ]
+            },
+            {
                 "title": "Counterweight Idler",
                 "qty": 2,
                 "call": "CounterweightIdler_stl()",
-                "file": "printedparts/CounterweightIdler.scad"
-            },
-            {
-                "hash": "8b11d29b9ba442b8b8fd50b8698a5988",
+                "file": "printedparts/CounterweightIdler.scad",
                 "views": [
                     {
                         "rotate": [
@@ -1943,7 +1915,6 @@
                         ],
                         "dist": 734,
                         "title": "view",
-                        "filepath": "../printedparts/images/CounterweightIdlerGuide_view.png",
                         "caption": "view",
                         "translate": [
                             -4,
@@ -1956,29 +1927,27 @@
                             300
                         ]
                     }
-                ],
+                ]
+            },
+            {
                 "title": "Counterweight Idler Guide",
                 "qty": 2,
                 "call": "CounterweightIdlerGuide_stl()",
-                "file": "printedparts/CounterweightIdlerGuide.scad"
-            },
-            {
-                "hash": "13a70f0c3610cce9e7573516004cd53e",
+                "file": "printedparts/CounterweightIdlerGuide.scad",
                 "views": [
                     {
                         "rotate": [
-                            61,
+                            48,
                             0,
-                            47
+                            54
                         ],
-                        "dist": 545,
+                        "dist": 734,
                         "title": "view",
-                        "filepath": "../printedparts/images/ShoulderBracketLeft_view.png",
                         "caption": "view",
                         "translate": [
-                            -22,
-                            -24,
-                            -4
+                            -4,
+                            -1,
+                            4
                         ],
                         "type": "view",
                         "size": [
@@ -1986,14 +1955,13 @@
                             300
                         ]
                     }
-                ],
+                ]
+            },
+            {
                 "title": "Shoulder Bracket Left",
                 "qty": 1,
                 "call": "ShoulderBracketLeft_stl()",
-                "file": "printedparts/ShoulderBracketLeft.scad"
-            },
-            {
-                "hash": "cf33fe1ab3969fdcc7b6f4ea9b0ca331",
+                "file": "printedparts/ShoulderBracketLeft.scad",
                 "views": [
                     {
                         "rotate": [
@@ -2003,7 +1971,6 @@
                         ],
                         "dist": 545,
                         "title": "view",
-                        "filepath": "../printedparts/images/ShoulderBracketRight_view.png",
                         "caption": "view",
                         "translate": [
                             -22,
@@ -2016,29 +1983,27 @@
                             300
                         ]
                     }
-                ],
+                ]
+            },
+            {
                 "title": "Shoulder Bracket Right",
                 "qty": 1,
                 "call": "ShoulderBracketRight_stl()",
-                "file": "printedparts/ShoulderBracketRight.scad"
-            },
-            {
-                "hash": "53431bf607ad34b77bd4f5a1b3984d11",
+                "file": "printedparts/ShoulderBracketRight.scad",
                 "views": [
                     {
                         "rotate": [
-                            48,
+                            61,
                             0,
-                            54
+                            47
                         ],
-                        "dist": 734,
+                        "dist": 545,
                         "title": "view",
-                        "filepath": "../printedparts/images/ShoulderBeltClamp_view.png",
                         "caption": "view",
                         "translate": [
-                            -4,
-                            -1,
-                            4
+                            -22,
+                            -24,
+                            -4
                         ],
                         "type": "view",
                         "size": [
@@ -2046,74 +2011,13 @@
                             300
                         ]
                     }
-                ],
+                ]
+            },
+            {
                 "title": "Shoulder Belt Clamp",
                 "qty": 1,
                 "call": "ShoulderBeltClamp_stl()",
-                "file": "printedparts/ShoulderBeltClamp.scad"
-            },
-            {
-                "hash": "33005e5e0a421e935c91716f0a4e2596",
-                "views": [
-                    {
-                        "rotate": [
-                            55,
-                            0,
-                            25
-                        ],
-                        "dist": 500,
-                        "title": "view",
-                        "filepath": "../printedparts/images/ElbowDrivePulley_view.png",
-                        "caption": "view",
-                        "translate": [
-                            -1,
-                            2,
-                            3
-                        ],
-                        "type": "view",
-                        "size": [
-                            400,
-                            300
-                        ]
-                    }
-                ],
-                "title": "Elbow Drive Pulley",
-                "qty": 1,
-                "call": "ElbowDrivePulley_stl()",
-                "file": "printedparts/ElbowDrivePulley.scad"
-            },
-            {
-                "hash": "f57dc1ba98ad5a6dea3dabe5d795bbec",
-                "views": [
-                    {
-                        "rotate": [
-                            55,
-                            0,
-                            25
-                        ],
-                        "dist": 500,
-                        "title": "view",
-                        "filepath": "../printedparts/images/ElbowMotorPlate_view.png",
-                        "caption": "view",
-                        "translate": [
-                            -1,
-                            2,
-                            3
-                        ],
-                        "type": "view",
-                        "size": [
-                            400,
-                            300
-                        ]
-                    }
-                ],
-                "title": "Elbow Motor Plate",
-                "qty": 1,
-                "call": "ElbowMotorPlate_stl()",
-                "file": "printedparts/ElbowMotorPlate.scad"
-            },
-            {
-                "hash": "2b8b0182aa9c1163773d65c54c012662",
+                "file": "printedparts/ShoulderBeltClamp.scad",
                 "views": [
                     {
                         "rotate": [
@@ -2123,7 +2027,6 @@
                         ],
                         "dist": 734,
                         "title": "view",
-                        "filepath": "../printedparts/images/CounterweightLineBracket_view.png",
                         "caption": "view",
                         "translate": [
                             -4,
@@ -2136,29 +2039,83 @@
                             300
                         ]
                     }
-                ],
+                ]
+            },
+            {
+                "title": "Elbow Drive Pulley",
+                "qty": 1,
+                "call": "ElbowDrivePulley_stl()",
+                "file": "printedparts/ElbowDrivePulley.scad",
+                "views": [
+                    {
+                        "rotate": [
+                            55,
+                            0,
+                            25
+                        ],
+                        "dist": 500,
+                        "title": "view",
+                        "caption": "view",
+                        "translate": [
+                            -1,
+                            2,
+                            3
+                        ],
+                        "type": "view",
+                        "size": [
+                            400,
+                            300
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Elbow Motor Plate",
+                "qty": 1,
+                "call": "ElbowMotorPlate_stl()",
+                "file": "printedparts/ElbowMotorPlate.scad",
+                "views": [
+                    {
+                        "rotate": [
+                            55,
+                            0,
+                            25
+                        ],
+                        "dist": 500,
+                        "title": "view",
+                        "caption": "view",
+                        "translate": [
+                            -1,
+                            2,
+                            3
+                        ],
+                        "type": "view",
+                        "size": [
+                            400,
+                            300
+                        ]
+                    }
+                ]
+            },
+            {
                 "title": "Counterweight Line Bracket",
                 "qty": 1,
                 "call": "CounterweightLineBracket_stl()",
-                "file": "printedparts/CounterweightLineBracket.scad"
-            },
-            {
-                "hash": "e798cab65957fe4174b53875fb1af098",
+                "file": "printedparts/CounterweightLineBracket.scad",
                 "views": [
                     {
                         "rotate": [
-                            55,
+                            48,
                             0,
-                            25
+                            54
                         ],
-                        "dist": 500,
+                        "dist": 734,
                         "title": "view",
-                        "filepath": "../printedparts/images/ElbowDrivenPulley_view.png",
                         "caption": "view",
                         "translate": [
+                            -4,
                             -1,
-                            2,
-                            3
+                            4
                         ],
                         "type": "view",
                         "size": [
@@ -2166,14 +2123,13 @@
                             300
                         ]
                     }
-                ],
+                ]
+            },
+            {
                 "title": "Elbow Driven Pulley",
                 "qty": 1,
                 "call": "ElbowDrivenPulley_stl()",
-                "file": "printedparts/ElbowDrivenPulley.scad"
-            },
-            {
-                "hash": "c9c439200e26d628e5a4f5272ec1a940",
+                "file": "printedparts/ElbowDrivenPulley.scad",
                 "views": [
                     {
                         "rotate": [
@@ -2183,7 +2139,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../printedparts/images/ElbowJoint_view.png",
                         "caption": "view",
                         "translate": [
                             -1,
@@ -2196,14 +2151,41 @@
                             300
                         ]
                     }
-                ],
+                ]
+            },
+            {
                 "title": "Elbow Joint",
                 "qty": 1,
                 "call": "ElbowJoint_stl()",
-                "file": "printedparts/ElbowJoint.scad"
+                "file": "printedparts/ElbowJoint.scad",
+                "views": [
+                    {
+                        "rotate": [
+                            55,
+                            0,
+                            25
+                        ],
+                        "dist": 500,
+                        "title": "view",
+                        "caption": "view",
+                        "translate": [
+                            -1,
+                            2,
+                            3
+                        ],
+                        "type": "view",
+                        "size": [
+                            400,
+                            300
+                        ]
+                    }
+                ]
             },
             {
-                "hash": "efd0f8116e8ee3128d4d0374dfe3e492",
+                "title": "Lower Arm Servo Bracket",
+                "qty": 2,
+                "call": "LowerArmServoBracket_stl()",
+                "file": "printedparts/LowerArmServoBracket.scad",
                 "views": [
                     {
                         "rotate": [
@@ -2213,7 +2195,6 @@
                         ],
                         "dist": 632,
                         "title": "view",
-                        "filepath": "../printedparts/images/LowerArmServoBracket_view.png",
                         "caption": "view",
                         "translate": [
                             -94,
@@ -2226,44 +2207,13 @@
                             300
                         ]
                     }
-                ],
-                "title": "Lower Arm Servo Bracket",
-                "qty": 2,
-                "call": "LowerArmServoBracket_stl()",
-                "file": "printedparts/LowerArmServoBracket.scad"
+                ]
             },
             {
-                "hash": "edea8446ae1209e8e66dab5848e20f53",
-                "views": [
-                    {
-                        "rotate": [
-                            55,
-                            0,
-                            25
-                        ],
-                        "dist": 500,
-                        "title": "view",
-                        "filepath": "../printedparts/images/WristBracket_view.png",
-                        "caption": "view",
-                        "translate": [
-                            -1,
-                            2,
-                            3
-                        ],
-                        "type": "view",
-                        "size": [
-                            400,
-                            300
-                        ]
-                    }
-                ],
                 "title": "Wrist Bracket",
                 "qty": 1,
                 "call": "WristBracket_stl()",
-                "file": "printedparts/WristBracket.scad"
-            },
-            {
-                "hash": "90a791f4647ad387de88623a0e4929ab",
+                "file": "printedparts/WristBracket.scad",
                 "views": [
                     {
                         "rotate": [
@@ -2273,7 +2223,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../printedparts/images/SpoonHolder_view.png",
                         "caption": "view",
                         "translate": [
                             -1,
@@ -2286,14 +2235,13 @@
                             300
                         ]
                     }
-                ],
+                ]
+            },
+            {
                 "title": "Spoon Holder",
                 "qty": 1,
                 "call": "SpoonHolder_stl()",
-                "file": "printedparts/SpoonHolder.scad"
-            },
-            {
-                "hash": "1e623fd442c2f131158dfe26bb62a0dd",
+                "file": "printedparts/SpoonHolder.scad",
                 "views": [
                     {
                         "rotate": [
@@ -2303,7 +2251,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../printedparts/images/ElbowJoint2_view.png",
                         "caption": "view",
                         "translate": [
                             -1,
@@ -2316,14 +2263,41 @@
                             300
                         ]
                     }
-                ],
+                ]
+            },
+            {
                 "title": "Elbow Joint 2",
                 "qty": 1,
                 "call": "ElbowJoint2_stl()",
-                "file": "printedparts/ElbowJoint2.scad"
+                "file": "printedparts/ElbowJoint2.scad",
+                "views": [
+                    {
+                        "rotate": [
+                            55,
+                            0,
+                            25
+                        ],
+                        "dist": 500,
+                        "title": "view",
+                        "caption": "view",
+                        "translate": [
+                            -1,
+                            2,
+                            3
+                        ],
+                        "type": "view",
+                        "size": [
+                            400,
+                            300
+                        ]
+                    }
+                ]
             },
             {
-                "hash": "bfdcb81c273fe682eb6fb18edd812d29",
+                "title": "Counterweight Bracket",
+                "qty": 1,
+                "call": "CounterweightBracket_stl()",
+                "file": "printedparts/CounterweightBracket.scad",
                 "views": [
                     {
                         "rotate": [
@@ -2333,7 +2307,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../printedparts/images/CounterweightBracket_view.png",
                         "caption": "view",
                         "translate": [
                             -4,
@@ -2346,14 +2319,13 @@
                             300
                         ]
                     }
-                ],
-                "title": "Counterweight Bracket",
-                "qty": 1,
-                "call": "CounterweightBracket_stl()",
-                "file": "printedparts/CounterweightBracket.scad"
+                ]
             },
             {
-                "hash": "3ee8f075435ef68be6c87a4f73c0dae5",
+                "title": "Torso Drive Gear",
+                "qty": 1,
+                "call": "TorsoDriveGear_stl()",
+                "file": "printedparts/TorsoDriveGear.scad",
                 "views": [
                     {
                         "rotate": [
@@ -2363,7 +2335,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../printedparts/images/TorsoDriveGear_view.png",
                         "caption": "view",
                         "translate": [
                             -1,
@@ -2376,11 +2347,7 @@
                             300
                         ]
                     }
-                ],
-                "title": "Torso Drive Gear",
-                "qty": 1,
-                "call": "TorsoDriveGear_stl()",
-                "file": "printedparts/TorsoDriveGear.scad"
+                ]
             }
         ],
         "file": "AFRo.scad",
@@ -2394,7 +2361,6 @@
                 ],
                 "dist": 4228,
                 "title": "view",
-                "filepath": "../images/AFRo_view.png",
                 "caption": "view",
                 "translate": [
                     -80,
@@ -2408,8 +2374,8 @@
                 ]
             },
             {
-                "type": "assembly",
                 "call": "AFRoAssembly()",
+                "type": "assembly",
                 "children": [
                     {
                         "rotate": [
@@ -2432,8 +2398,8 @@
                         ]
                     },
                     {
-                        "type": "printed",
                         "call": "BaseBracket_stl()",
+                        "type": "printed",
                         "children": [
                             {
                                 "rotate": [
@@ -2460,8 +2426,8 @@
                         "title": "Base Bracket"
                     },
                     {
-                        "type": "assembly",
                         "call": "TorsoAssembly()",
+                        "type": "assembly",
                         "children": [
                             {
                                 "rotate": [
@@ -2484,8 +2450,8 @@
                                 ]
                             },
                             {
-                                "type": "printed",
                                 "call": "TorsoBigGear_stl()",
+                                "type": "printed",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2512,8 +2478,8 @@
                                 "title": "Torso Big Gear"
                             },
                             {
-                                "type": "printed",
                                 "call": "TorsoBase_stl()",
+                                "type": "printed",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2540,8 +2506,8 @@
                                 "title": "Torso Base"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "ball_bearing(BB6205_2RS)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2568,8 +2534,8 @@
                                 "title": "Ball Bearing 6205_2RS"
                             },
                             {
-                                "type": "printed",
                                 "call": "TorsoBearingCollar_stl()",
+                                "type": "printed",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2596,8 +2562,8 @@
                                 "title": "Torso Bearing Collar"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "ball_bearing(BB6205_2RS)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2624,8 +2590,8 @@
                                 "title": "Ball Bearing 6205_2RS"
                             },
                             {
-                                "type": "printed",
                                 "call": "TorsoBearingTopCollar_stl()",
+                                "type": "printed",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2652,8 +2618,8 @@
                                 "title": "Torso Bearing Top Collar"
                             },
                             {
-                                "type": "printed",
                                 "call": "TorsoCap_stl()",
+                                "type": "printed",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2680,8 +2646,8 @@
                                 "title": "Torso Cap"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "NEMA(NEMA17)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2708,8 +2674,8 @@
                                 "title": "NEMA17 Stepper Motor"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "pulley(type=T2p5x18_metal_pulley)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2736,8 +2702,8 @@
                                 "title": "T2.5x18 Pulley"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "belt(T2p5x6)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -2761,15 +2727,15 @@
                                     }
                                 ],
                                 "file": "vitamins/belts.scad",
-                                "title": "Belt T2p5x6"
+                                "title": "Belt T2p5x6 960mm"
                             },
                             {
-                                "type": "assembly",
                                 "call": "CounterweightIdlerAssembly()",
+                                "type": "assembly",
                                 "children": [
                                     {
-                                        "type": "printed",
                                         "call": "CounterweightIdler_stl()",
+                                        "type": "printed",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -2796,8 +2762,8 @@
                                         "title": "Counterweight Idler"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "ball_bearing(BB624)",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -2824,8 +2790,8 @@
                                         "title": "Ball Bearing 624"
                                     },
                                     {
-                                        "type": "printed",
                                         "call": "CounterweightIdlerGuide_stl()",
+                                        "type": "printed",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -2852,8 +2818,8 @@
                                         "title": "Counterweight Idler Guide"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "washer(type=M4_washer)",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -2880,8 +2846,8 @@
                                         "title": "M4 Washer 9x0.8"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "washer(type=M4_washer)",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -2908,8 +2874,8 @@
                                         "title": "M4 Washer 9x0.8"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "washer(type=M4_washer)",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -2936,8 +2902,8 @@
                                         "title": "M4 Washer 9x0.8"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "screw(type=M4_cap_screw,length=20, hob_point=0 )",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -2964,8 +2930,8 @@
                                         "title": "M4 cap screw x 20mm"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "washer(type=M4_washer)",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -2992,8 +2958,8 @@
                                         "title": "M4 Washer 9x0.8"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "nut(type=M4_nut,nyloc=true,brass=false )",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3024,12 +2990,12 @@
                                 "title": "Counterweight Idler"
                             },
                             {
-                                "type": "assembly",
                                 "call": "CounterweightIdlerAssembly()",
+                                "type": "assembly",
                                 "children": [
                                     {
-                                        "type": "printed",
                                         "call": "CounterweightIdler_stl()",
+                                        "type": "printed",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3056,8 +3022,8 @@
                                         "title": "Counterweight Idler"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "ball_bearing(BB624)",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3084,8 +3050,8 @@
                                         "title": "Ball Bearing 624"
                                     },
                                     {
-                                        "type": "printed",
                                         "call": "CounterweightIdlerGuide_stl()",
+                                        "type": "printed",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3112,8 +3078,8 @@
                                         "title": "Counterweight Idler Guide"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "washer(type=M4_washer)",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3140,8 +3106,8 @@
                                         "title": "M4 Washer 9x0.8"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "washer(type=M4_washer)",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3168,8 +3134,8 @@
                                         "title": "M4 Washer 9x0.8"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "washer(type=M4_washer)",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3196,8 +3162,8 @@
                                         "title": "M4 Washer 9x0.8"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "screw(type=M4_cap_screw,length=20, hob_point=0 )",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3224,8 +3190,8 @@
                                         "title": "M4 cap screw x 20mm"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "washer(type=M4_washer)",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3252,8 +3218,8 @@
                                         "title": "M4 Washer 9x0.8"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "nut(type=M4_nut,nyloc=true,brass=false )",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3284,12 +3250,12 @@
                                 "title": "Counterweight Idler"
                             },
                             {
-                                "type": "assembly",
                                 "call": "ShoulderAssembly()",
+                                "type": "assembly",
                                 "children": [
                                     {
-                                        "type": "vitamin",
                                         "call": "linear_bearing(type=LM8UU)",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3316,8 +3282,8 @@
                                         "title": "LM8UU Linear Bearing"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "linear_bearing(type=LM20UU)",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3344,8 +3310,8 @@
                                         "title": "LM20UU Linear Bearing"
                                     },
                                     {
-                                        "type": "printed",
                                         "call": "ShoulderBracketLeft_stl()",
+                                        "type": "printed",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3372,8 +3338,8 @@
                                         "title": "Shoulder Bracket Left"
                                     },
                                     {
-                                        "type": "printed",
                                         "call": "ShoulderBracketRight_stl()",
+                                        "type": "printed",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3400,8 +3366,8 @@
                                         "title": "Shoulder Bracket Right"
                                     },
                                     {
-                                        "type": "printed",
                                         "call": "ShoulderBeltClamp_stl()",
+                                        "type": "printed",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3428,22 +3394,22 @@
                                         "title": "Shoulder Belt Clamp"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "aluAngle(10,40,250,1.5)",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
-                                                    171,
-                                                    354,
-                                                    87
+                                                    168,
+                                                    352,
+                                                    90
                                                 ],
                                                 "dist": 500,
                                                 "title": "view",
                                                 "caption": "view",
                                                 "translate": [
-                                                    18,
-                                                    26,
-                                                    18
+                                                    16,
+                                                    14,
+                                                    5
                                                 ],
                                                 "type": "view",
                                                 "size": [
@@ -3453,25 +3419,25 @@
                                             }
                                         ],
                                         "file": "vitamins/aluAngle.scad",
-                                        "title": "Aluminium Angle 10x40x1.5mm 250mm"
+                                        "title": "Aluminium Angle 10x40x1.5mm x 250mm"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "aluAngle(10,40,250,1.5)",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
-                                                    171,
-                                                    354,
-                                                    87
+                                                    168,
+                                                    352,
+                                                    90
                                                 ],
                                                 "dist": 500,
                                                 "title": "view",
                                                 "caption": "view",
                                                 "translate": [
-                                                    18,
-                                                    26,
-                                                    18
+                                                    16,
+                                                    14,
+                                                    5
                                                 ],
                                                 "type": "view",
                                                 "size": [
@@ -3481,11 +3447,11 @@
                                             }
                                         ],
                                         "file": "vitamins/aluAngle.scad",
-                                        "title": "Aluminium Angle 10x40x1.5mm 250mm"
+                                        "title": "Aluminium Angle 10x40x1.5mm x 250mm"
                                     },
                                     {
-                                        "type": "vitamin",
                                         "call": "NEMA(NEMA11)",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3512,8 +3478,8 @@
                                         "title": "NEMA11 Stepper Motor"
                                     },
                                     {
-                                        "type": "printed",
                                         "call": "ElbowDrivePulley_stl()",
+                                        "type": "printed",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3540,8 +3506,8 @@
                                         "title": "Elbow Drive Pulley"
                                     },
                                     {
-                                        "type": "printed",
                                         "call": "ElbowMotorPlate_stl()",
+                                        "type": "printed",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3568,8 +3534,8 @@
                                         "title": "Elbow Motor Plate"
                                     },
                                     {
-                                        "type": "printed",
                                         "call": "CounterweightLineBracket_stl()",
+                                        "type": "printed",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -3596,12 +3562,12 @@
                                         "title": "Counterweight Line Bracket"
                                     },
                                     {
-                                        "type": "assembly",
                                         "call": "ElbowJointAssembly()",
+                                        "type": "assembly",
                                         "children": [
                                             {
-                                                "type": "vitamin",
                                                 "call": "nut(type=M6_nut,nyloc=true,brass=false )",
+                                                "type": "vitamin",
                                                 "children": [
                                                     {
                                                         "rotate": [
@@ -3628,8 +3594,8 @@
                                                 "title": "Nyloc M6 Nut"
                                             },
                                             {
-                                                "type": "vitamin",
                                                 "call": "washer(type=M8_washer)",
+                                                "type": "vitamin",
                                                 "children": [
                                                     {
                                                         "rotate": [
@@ -3656,8 +3622,8 @@
                                                 "title": "M8 Washer 17x1.8"
                                             },
                                             {
-                                                "type": "printed",
                                                 "call": "ElbowDrivenPulley_stl()",
+                                                "type": "printed",
                                                 "children": [
                                                     {
                                                         "rotate": [
@@ -3684,8 +3650,8 @@
                                                 "title": "Elbow Driven Pulley"
                                             },
                                             {
-                                                "type": "vitamin",
                                                 "call": "belt(T2p5x6)",
+                                                "type": "vitamin",
                                                 "children": [
                                                     {
                                                         "rotate": [
@@ -3709,11 +3675,11 @@
                                                     }
                                                 ],
                                                 "file": "vitamins/belts.scad",
-                                                "title": "Belt T2p5x6"
+                                                "title": "Belt T2p5x6 673mm"
                                             },
                                             {
-                                                "type": "vitamin",
                                                 "call": "nut(type=M6_nut,nyloc=false,brass=false )",
+                                                "type": "vitamin",
                                                 "children": [
                                                     {
                                                         "rotate": [
@@ -3740,8 +3706,8 @@
                                                 "title": "M6 Nut"
                                             },
                                             {
-                                                "type": "vitamin",
                                                 "call": "washer(type=M8_washer)",
+                                                "type": "vitamin",
                                                 "children": [
                                                     {
                                                         "rotate": [
@@ -3768,8 +3734,8 @@
                                                 "title": "M8 Washer 17x1.8"
                                             },
                                             {
-                                                "type": "vitamin",
                                                 "call": "ball_bearing(BB608)",
+                                                "type": "vitamin",
                                                 "children": [
                                                     {
                                                         "rotate": [
@@ -3796,8 +3762,8 @@
                                                 "title": "Ball Bearing 608"
                                             },
                                             {
-                                                "type": "vitamin",
                                                 "call": "ball_bearing(BB608)",
+                                                "type": "vitamin",
                                                 "children": [
                                                     {
                                                         "rotate": [
@@ -3824,8 +3790,8 @@
                                                 "title": "Ball Bearing 608"
                                             },
                                             {
-                                                "type": "vitamin",
                                                 "call": "washer(type=M8_washer)",
+                                                "type": "vitamin",
                                                 "children": [
                                                     {
                                                         "rotate": [
@@ -3852,8 +3818,8 @@
                                                 "title": "M8 Washer 17x1.8"
                                             },
                                             {
-                                                "type": "vitamin",
                                                 "call": "nut(type=M6_nut,nyloc=false,brass=false )",
+                                                "type": "vitamin",
                                                 "children": [
                                                     {
                                                         "rotate": [
@@ -3880,8 +3846,8 @@
                                                 "title": "M6 Nut"
                                             },
                                             {
-                                                "type": "printed",
                                                 "call": "ElbowJoint_stl()",
+                                                "type": "printed",
                                                 "children": [
                                                     {
                                                         "rotate": [
@@ -3912,8 +3878,8 @@
                                         "title": "Elbow Joint"
                                     },
                                     {
-                                        "type": "assembly",
                                         "call": "LowerArmAssembly()",
+                                        "type": "assembly",
                                         "children": [
                                             {
                                                 "num": 1,
@@ -3940,8 +3906,8 @@
                                                         ]
                                                     },
                                                     {
-                                                        "type": "printed",
                                                         "call": "LowerArmServoBracket_stl()",
+                                                        "type": "printed",
                                                         "children": [
                                                             {
                                                                 "rotate": [
@@ -3968,8 +3934,8 @@
                                                         "title": "Lower Arm Servo Bracket"
                                                     },
                                                     {
-                                                        "type": "printed",
                                                         "call": "LowerArmServoBracket_stl()",
+                                                        "type": "printed",
                                                         "children": [
                                                             {
                                                                 "rotate": [
@@ -3996,8 +3962,8 @@
                                                         "title": "Lower Arm Servo Bracket"
                                                     },
                                                     {
-                                                        "type": "assembly",
                                                         "call": "HandAssembly()",
+                                                        "type": "assembly",
                                                         "children": [
                                                             {
                                                                 "num": 1,
@@ -4024,8 +3990,8 @@
                                                                         ]
                                                                     },
                                                                     {
-                                                                        "type": "vitamin",
                                                                         "call": "DynamixelAX12()",
+                                                                        "type": "vitamin",
                                                                         "children": [
                                                                             {
                                                                                 "rotate": [
@@ -4052,8 +4018,8 @@
                                                                         "title": "Dynamixel AX12"
                                                                     },
                                                                     {
-                                                                        "type": "printed",
                                                                         "call": "WristBracket_stl()",
+                                                                        "type": "printed",
                                                                         "children": [
                                                                             {
                                                                                 "rotate": [
@@ -4080,8 +4046,8 @@
                                                                         "title": "Wrist Bracket"
                                                                     },
                                                                     {
-                                                                        "type": "vitamin",
                                                                         "call": "screw(type=M2_pan_screw,length=6, hob_point=0 )",
+                                                                        "type": "vitamin",
                                                                         "children": [
                                                                             {
                                                                                 "rotate": [
@@ -4108,8 +4074,8 @@
                                                                         "title": "M2 pan screw x 6mm"
                                                                     },
                                                                     {
-                                                                        "type": "vitamin",
                                                                         "call": "screw(type=M2_pan_screw,length=6, hob_point=0 )",
+                                                                        "type": "vitamin",
                                                                         "children": [
                                                                             {
                                                                                 "rotate": [
@@ -4136,8 +4102,8 @@
                                                                         "title": "M2 pan screw x 6mm"
                                                                     },
                                                                     {
-                                                                        "type": "vitamin",
                                                                         "call": "screw(type=M2_pan_screw,length=6, hob_point=0 )",
+                                                                        "type": "vitamin",
                                                                         "children": [
                                                                             {
                                                                                 "rotate": [
@@ -4164,8 +4130,8 @@
                                                                         "title": "M2 pan screw x 6mm"
                                                                     },
                                                                     {
-                                                                        "type": "vitamin",
                                                                         "call": "screw(type=M2_pan_screw,length=6, hob_point=0 )",
+                                                                        "type": "vitamin",
                                                                         "children": [
                                                                             {
                                                                                 "rotate": [
@@ -4219,8 +4185,8 @@
                                                                         ]
                                                                     },
                                                                     {
-                                                                        "type": "assembly",
                                                                         "call": "SpoonAssembly()",
+                                                                        "type": "assembly",
                                                                         "children": [
                                                                             {
                                                                                 "rotate": [
@@ -4243,8 +4209,8 @@
                                                                                 ]
                                                                             },
                                                                             {
-                                                                                "type": "vitamin",
                                                                                 "call": "DynamixelAX12()",
+                                                                                "type": "vitamin",
                                                                                 "children": [
                                                                                     {
                                                                                         "rotate": [
@@ -4295,8 +4261,8 @@
                                                                                         ]
                                                                                     },
                                                                                     {
-                                                                                        "type": "vitamin",
                                                                                         "call": "nut(type=M2_nut,nyloc=false,brass=false )",
+                                                                                        "type": "vitamin",
                                                                                         "children": [
                                                                                             {
                                                                                                 "rotate": [
@@ -4323,8 +4289,8 @@
                                                                                         "title": "M2 Nut"
                                                                                     },
                                                                                     {
-                                                                                        "type": "vitamin",
                                                                                         "call": "nut(type=M2_nut,nyloc=false,brass=false )",
+                                                                                        "type": "vitamin",
                                                                                         "children": [
                                                                                             {
                                                                                                 "rotate": [
@@ -4351,8 +4317,8 @@
                                                                                         "title": "M2 Nut"
                                                                                     },
                                                                                     {
-                                                                                        "type": "vitamin",
                                                                                         "call": "nut(type=M2_nut,nyloc=false,brass=false )",
+                                                                                        "type": "vitamin",
                                                                                         "children": [
                                                                                             {
                                                                                                 "rotate": [
@@ -4379,8 +4345,8 @@
                                                                                         "title": "M2 Nut"
                                                                                     },
                                                                                     {
-                                                                                        "type": "vitamin",
                                                                                         "call": "nut(type=M2_nut,nyloc=false,brass=false )",
+                                                                                        "type": "vitamin",
                                                                                         "children": [
                                                                                             {
                                                                                                 "rotate": [
@@ -4434,8 +4400,8 @@
                                                                                         ]
                                                                                     },
                                                                                     {
-                                                                                        "type": "vitamin",
                                                                                         "call": "screw(type=M2_pan_screw,length=6, hob_point=0 )",
+                                                                                        "type": "vitamin",
                                                                                         "children": [
                                                                                             {
                                                                                                 "rotate": [
@@ -4462,8 +4428,8 @@
                                                                                         "title": "M2 pan screw x 6mm"
                                                                                     },
                                                                                     {
-                                                                                        "type": "vitamin",
                                                                                         "call": "screw(type=M2_pan_screw,length=6, hob_point=0 )",
+                                                                                        "type": "vitamin",
                                                                                         "children": [
                                                                                             {
                                                                                                 "rotate": [
@@ -4490,8 +4456,8 @@
                                                                                         "title": "M2 pan screw x 6mm"
                                                                                     },
                                                                                     {
-                                                                                        "type": "vitamin",
                                                                                         "call": "screw(type=M2_pan_screw,length=6, hob_point=0 )",
+                                                                                        "type": "vitamin",
                                                                                         "children": [
                                                                                             {
                                                                                                 "rotate": [
@@ -4518,8 +4484,8 @@
                                                                                         "title": "M2 pan screw x 6mm"
                                                                                     },
                                                                                     {
-                                                                                        "type": "vitamin",
                                                                                         "call": "screw(type=M2_pan_screw,length=6, hob_point=0 )",
+                                                                                        "type": "vitamin",
                                                                                         "children": [
                                                                                             {
                                                                                                 "rotate": [
@@ -4546,8 +4512,8 @@
                                                                                         "title": "M2 pan screw x 6mm"
                                                                                     },
                                                                                     {
-                                                                                        "type": "printed",
                                                                                         "call": "SpoonHolder_stl()",
+                                                                                        "type": "printed",
                                                                                         "children": [
                                                                                             {
                                                                                                 "rotate": [
@@ -4574,8 +4540,8 @@
                                                                                         "title": "Spoon Holder"
                                                                                     },
                                                                                     {
-                                                                                        "type": "vitamin",
                                                                                         "call": "Spoon()",
+                                                                                        "type": "vitamin",
                                                                                         "children": [
                                                                                             {
                                                                                                 "rotate": [
@@ -4636,8 +4602,8 @@
                                                                         ]
                                                                     },
                                                                     {
-                                                                        "type": "vitamin",
                                                                         "call": "screw(type=M2_pan_screw,length=6, hob_point=0 )",
+                                                                        "type": "vitamin",
                                                                         "children": [
                                                                             {
                                                                                 "rotate": [
@@ -4664,8 +4630,8 @@
                                                                         "title": "M2 pan screw x 6mm"
                                                                     },
                                                                     {
-                                                                        "type": "vitamin",
                                                                         "call": "screw(type=M2_pan_screw,length=6, hob_point=0 )",
+                                                                        "type": "vitamin",
                                                                         "children": [
                                                                             {
                                                                                 "rotate": [
@@ -4692,8 +4658,8 @@
                                                                         "title": "M2 pan screw x 6mm"
                                                                     },
                                                                     {
-                                                                        "type": "vitamin",
                                                                         "call": "screw(type=M2_pan_screw,length=6, hob_point=0 )",
+                                                                        "type": "vitamin",
                                                                         "children": [
                                                                             {
                                                                                 "rotate": [
@@ -4720,8 +4686,8 @@
                                                                         "title": "M2 pan screw x 6mm"
                                                                     },
                                                                     {
-                                                                        "type": "vitamin",
                                                                         "call": "screw(type=M2_pan_screw,length=6, hob_point=0 )",
+                                                                        "type": "vitamin",
                                                                         "children": [
                                                                             {
                                                                                 "rotate": [
@@ -4782,22 +4748,22 @@
                                                         ]
                                                     },
                                                     {
-                                                        "type": "vitamin",
                                                         "call": "aluAngle(10,40,200,1.5)",
+                                                        "type": "vitamin",
                                                         "children": [
                                                             {
                                                                 "rotate": [
-                                                                    171,
-                                                                    354,
-                                                                    87
+                                                                    168,
+                                                                    352,
+                                                                    90
                                                                 ],
                                                                 "dist": 500,
                                                                 "title": "view",
                                                                 "caption": "view",
                                                                 "translate": [
-                                                                    18,
-                                                                    26,
-                                                                    18
+                                                                    16,
+                                                                    14,
+                                                                    5
                                                                 ],
                                                                 "type": "view",
                                                                 "size": [
@@ -4807,25 +4773,25 @@
                                                             }
                                                         ],
                                                         "file": "vitamins/aluAngle.scad",
-                                                        "title": "Aluminium Angle 10x40x1.5mm 200mm"
+                                                        "title": "Aluminium Angle 10x40x1.5mm x 200mm"
                                                     },
                                                     {
-                                                        "type": "vitamin",
                                                         "call": "aluAngle(10,40,200,1.5)",
+                                                        "type": "vitamin",
                                                         "children": [
                                                             {
                                                                 "rotate": [
-                                                                    171,
-                                                                    354,
-                                                                    87
+                                                                    168,
+                                                                    352,
+                                                                    90
                                                                 ],
                                                                 "dist": 500,
                                                                 "title": "view",
                                                                 "caption": "view",
                                                                 "translate": [
-                                                                    18,
-                                                                    26,
-                                                                    18
+                                                                    16,
+                                                                    14,
+                                                                    5
                                                                 ],
                                                                 "type": "view",
                                                                 "size": [
@@ -4835,7 +4801,7 @@
                                                             }
                                                         ],
                                                         "file": "vitamins/aluAngle.scad",
-                                                        "title": "Aluminium Angle 10x40x1.5mm 200mm"
+                                                        "title": "Aluminium Angle 10x40x1.5mm x 200mm"
                                                     }
                                                 ],
                                                 "desc": "Bolt through the aluminium channels and servo brackets"
@@ -4865,8 +4831,8 @@
                                                         ]
                                                     },
                                                     {
-                                                        "type": "printed",
                                                         "call": "ElbowJoint2_stl()",
+                                                        "type": "printed",
                                                         "children": [
                                                             {
                                                                 "rotate": [
@@ -4904,12 +4870,12 @@
                                 "title": "Shoulder"
                             },
                             {
-                                "type": "assembly",
                                 "call": "CounterweightAssembly()",
+                                "type": "assembly",
                                 "children": [
                                     {
-                                        "type": "printed",
                                         "call": "CounterweightBracket_stl()",
+                                        "type": "printed",
                                         "children": [
                                             {
                                                 "rotate": [
@@ -4940,8 +4906,8 @@
                                 "title": "Counterweight"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "screw(type=M4_hex_screw,length=30, hob_point=0 )",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -4968,8 +4934,8 @@
                                 "title": "M4 hex screw x 30mm"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "washer(type=M4_washer)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -4996,8 +4962,8 @@
                                 "title": "M4 Washer 9x0.8"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "washer(type=M5_penny_washer)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -5024,8 +4990,8 @@
                                 "title": "M5 Washer 20x1.4"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "washer(type=M4_washer)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -5052,8 +5018,8 @@
                                 "title": "M4 Washer 9x0.8"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "ball_bearing(BB624)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -5080,8 +5046,8 @@
                                 "title": "Ball Bearing 624"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "ball_bearing(BB624)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -5108,8 +5074,8 @@
                                 "title": "Ball Bearing 624"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "washer(type=M4_washer)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -5136,8 +5102,8 @@
                                 "title": "M4 Washer 9x0.8"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "washer(type=M5_penny_washer)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -5164,8 +5130,8 @@
                                 "title": "M5 Washer 20x1.4"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "washer(type=M4_washer)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -5192,8 +5158,8 @@
                                 "title": "M4 Washer 9x0.8"
                             },
                             {
-                                "type": "vitamin",
                                 "call": "nut(type=M4_nut,nyloc=true,brass=false )",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -5220,26 +5186,26 @@
                                 "title": "Nyloc M4 Nut"
                             },
                             {
-                                "type": "assembly",
                                 "call": "CableGuideAssembly()",
+                                "type": "assembly",
                                 "children": [
                                     {
-                                        "type": "vitamin",
                                         "call": "aluAngle(10,10,420,1)",
+                                        "type": "vitamin",
                                         "children": [
                                             {
                                                 "rotate": [
-                                                    171,
-                                                    354,
-                                                    87
+                                                    168,
+                                                    352,
+                                                    90
                                                 ],
                                                 "dist": 500,
                                                 "title": "view",
                                                 "caption": "view",
                                                 "translate": [
-                                                    18,
-                                                    26,
-                                                    18
+                                                    16,
+                                                    14,
+                                                    5
                                                 ],
                                                 "type": "view",
                                                 "size": [
@@ -5249,7 +5215,7 @@
                                             }
                                         ],
                                         "file": "vitamins/aluAngle.scad",
-                                        "title": "Aluminium Angle 10x10x1mm 420mm"
+                                        "title": "Aluminium Angle 10x10x1mm x 420mm"
                                     }
                                 ],
                                 "file": "assemblies/CableGuide.scad",
@@ -5260,12 +5226,12 @@
                         "title": "Torso"
                     },
                     {
-                        "type": "assembly",
                         "call": "TorsoDriveAssembly()",
+                        "type": "assembly",
                         "children": [
                             {
-                                "type": "vitamin",
                                 "call": "NEMA(NEMA17)",
+                                "type": "vitamin",
                                 "children": [
                                     {
                                         "rotate": [
@@ -5292,8 +5258,8 @@
                                 "title": "NEMA17 Stepper Motor"
                             },
                             {
-                                "type": "printed",
                                 "call": "TorsoDriveGear_stl()",
+                                "type": "printed",
                                 "children": [
                                     {
                                         "rotate": [
