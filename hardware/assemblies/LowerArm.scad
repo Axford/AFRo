@@ -23,11 +23,13 @@ module LowerArmAssembly() {
         step(1, "Push the servo brackets onto the servo, optionally screw them into place") {
             view(t=[-29, -56, -55], r=[66,0,26], d=936);
             
-            attach(DefConLeft,DefConLeft, ExplodeSpacing=20)
+            attach(DefConLeft, DefConLeft)
+                attach(LowerArm_Con_Wrist, LowerArmServoBracket_Con_Servo, ExplodeSpacing=20)
                 LowerArmServoBracket_stl();
         
-            attach(DefConRight,DefConRight, ExplodeSpacing=20)
-                mirror([1,0,0])
+            mirror([1,0,0])
+                attach(DefConLeft, DefConLeft)
+                attach(LowerArm_Con_Wrist, LowerArmServoBracket_Con_Servo, ExplodeSpacing=20)
                 LowerArmServoBracket_stl();
 
             attach(LowerArm_Con_Wrist, DefConUp, $Explode=false) {
@@ -40,15 +42,12 @@ module LowerArmAssembly() {
         step(2, "Bolt through the aluminium channels and servo brackets") {
             view(t=[-29, -56, -55], r=[66,0,26], d=936);
             // sides
-            *for (i=[0,1])
-                mirror([i,0,0])
-                attach(DefConLeft, DefConLeft, ExplodeSpacing=20, offset=-7)
-                translate([sw/2 + 1.5, -LowerArmLength, 0])
-                rotate([-90,0,0])
-                mirror([1,0,0])
-                aluAngle(10,40,LowerArmLength,1.5);
-               
-            attach(LowerArm_Con_LeftSide, LowerArmLeftSide_Con_Default)
+            attach(LowerArm_Con_LeftSide, LowerArmLeftSide_Con_Default, ExplodeSpacing=20, offset=10)
+                LowerArmLeftSide(complete=true);
+                
+            // FIXME: replace with proper cutpart
+            mirror([1,0,0])
+                attach(LowerArm_Con_LeftSide, LowerArmLeftSide_Con_Default, ExplodeSpacing=20, offset=10)
                 LowerArmLeftSide(complete=true);
                 
             // bolts

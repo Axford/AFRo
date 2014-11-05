@@ -1,6 +1,8 @@
 # AFRo
 # Assembly Guide
 
+![view](../images/AFRo_view.png)
+
 ## Bill of Materials
 
 Make sure you have all of the following parts before you begin.
@@ -14,7 +16,7 @@ Qty | Vitamin | Image
 2 | [NEMA17 Stepper Motor]() | ![](../vitamins/images/NEMA17StepperMotor_view.png) | 
 1 | [Spoon]() | ![](../vitamins/images/Spoon_view.png) | 
 1 | [Aluminium Angle 10x10x1mm x 420mm]() | ![](../vitamins/images/AluminiumAngle10x10x1mmx420mm_view.png) | 
-2 | [Aluminium Angle 10x40x1.5mm x 200mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mmx200mm_view.png) | 
+4 | [Aluminium Angle 10x40x1.5mm x 200mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mmx200mm_view.png) | 
 2 | [Aluminium Angle 10x40x1.5mm x 250mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mmx250mm_view.png) | 
 2 | [Ball Bearing 608]() | ![](../vitamins/images/BallBearing608_view.png) | 
 2 | [Ball Bearing 6205_2RS]() | ![](../vitamins/images/BallBearing6205_2RS_view.png) | 
@@ -39,7 +41,7 @@ Qty | Vitamin | Image
 
 Qty | Part Name | Image
 --- | --- | ---
-1 | Lower Arm Left Side | ![](../cutparts/images/LowerArmLeftSide_view.png) | 
+2 | Lower Arm Left Side | ![](../cutparts/images/LowerArmLeftSide_view.png) | 
 
 ### Printed Parts
 
@@ -69,13 +71,13 @@ Qty | Part Name | Image
 1 | [Wrist Bracket](../printedparts/stl/WristBracket.stl) | ![](../printedparts/images/WristBracket_view.png) | 
 
 
-## Lower Arm Left Side
+## Lower Arm Left Side (x2)
 
 ### Fabrication Steps
 
-1. Cut aluminium angle to length: 200mm
+1. Cut aluminium angle to 200mm
 ![](../cutparts/images/LowerArmLeftSide_step1_view.png)
-2. Drill fixing holes: 4mm diameter
+2. Drill 4mm diameter fixing holes
 ![](../cutparts/images/LowerArmLeftSide_step2_view.png)
 
 

@@ -445,6 +445,14 @@ def update_cache_info_for(vl, ovl):
             if oldv:
                 # merge json info
                 jsontools.json_merge_missing_keys(v, oldv)
+                
+                # recurse for views
+                if 'views' in v:
+                    update_cache_info_for(v['views'], oldv['views'])
+                    
+                # recurse for steps
+                if 'steps' in v:
+                    update_cache_info_for(v['steps'], oldv['steps'])
     
 
 def update_cache_info(jso, oldjso):

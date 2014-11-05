@@ -6,7 +6,7 @@ Hand_Con_SpoonAssembly = [
     ], [1,0,0], -90,0,0];
     
     
-Hand_Con_WristServo = [[0,0,0],[0,0,-1],180,0,0];
+Hand_Con_WristServo = [[0,0,0],[0,0,-1],0,0,0];
 
 module HandAssembly() {
 	

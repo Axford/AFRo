@@ -28,7 +28,7 @@ module LowerArmLeftSide(complete=false) {
         }
     
         step(2, "Drill 4mm diameter fixing holes") {
-            view(t=vt, r=vr);
+            view(t=vt, r=vr);   
             
             // FIXME: Replace with correct hole pattern
             color(alu_color)
@@ -36,9 +36,14 @@ module LowerArmLeftSide(complete=false) {
                 difference() {
                     LowerArmLeftSide_Start();
 
-                    translate([0,10,30])
-                        rotate([0,90,0])
-                        cylinder(r=3, h=10, center=true);
+                    // Wrist fixings
+                    attach([[LowerArmWidth/2 + 1.5,42,LowerArmLength], [0,-1,0], 180,0,0], LowerArmServoBracket_Con_Servo, $Explode=false) 
+                        for(i=[0:1])                        
+                        attach(LowerArmServoBracket_Con_Fixings[i], DefConDown, ExplodeSpacing=20)
+                            cylinder(r=4/2, h=100, center=true);
+                            
+                    // Elbow fixings
+                    
                 }
         }
         

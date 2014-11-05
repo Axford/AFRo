@@ -3,5 +3,5 @@ UseSTL=false;
 UseVitaminSTL=true;
 DebugConnectors=true;
 DebugCoordinateFrames=true;
-$ShowStep=3;
+$ShowStep=2;
 LowerArmAssembly();
