@@ -105,6 +105,7 @@ include <colors.scad>
 include <utils.scad>
 include <vitamins.scad>
 include <machine.scad>
+include <cutparts.scad>
 include <printedparts.scad>
 include <assemblies.scad>
 

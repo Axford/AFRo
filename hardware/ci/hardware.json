@@ -1,8 +1,96 @@
 [
     {
+        "cut": [
+            {
+                "completeCall": "LowerArmLeftSide(true)",
+                "hash": "7fe599f44272aeb569d4bca97799c50e",
+                "title": "Lower Arm Left Side",
+                "views": [
+                    {
+                        "rotate": [
+                            163,
+                            339,
+                            90
+                        ],
+                        "dist": 500,
+                        "title": "view",
+                        "filepath": "../cutparts/images/LowerArmLeftSide_view.png",
+                        "caption": "view",
+                        "translate": [
+                            25,
+                            40,
+                            16
+                        ],
+                        "type": "view",
+                        "size": [
+                            400,
+                            300
+                        ]
+                    }
+                ],
+                "qty": 1,
+                "call": "LowerArmLeftSide()",
+                "file": "cutparts/LowerArmLeftSide.scad",
+                "steps": [
+                    {
+                        "desc": "Cut aluminium angle to length: 200mm",
+                        "num": 1,
+                        "views": [
+                            {
+                                "rotate": [
+                                    163,
+                                    339,
+                                    90
+                                ],
+                                "dist": 500,
+                                "title": "view",
+                                "filepath": "../cutparts/images/LowerArmLeftSide_step1_view.png",
+                                "caption": "view",
+                                "translate": [
+                                    25,
+                                    40,
+                                    16
+                                ],
+                                "type": "view",
+                                "size": [
+                                    400,
+                                    300
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "desc": "Drill fixing holes: 4mm diameter",
+                        "num": 2,
+                        "views": [
+                            {
+                                "rotate": [
+                                    163,
+                                    339,
+                                    90
+                                ],
+                                "dist": 500,
+                                "title": "view",
+                                "filepath": "../cutparts/images/LowerArmLeftSide_step2_view.png",
+                                "caption": "view",
+                                "translate": [
+                                    25,
+                                    40,
+                                    16
+                                ],
+                                "type": "view",
+                                "size": [
+                                    400,
+                                    300
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
         "vitamins": [
             {
-                "hash": "93d5f505840843188b054f8cc861f21f",
                 "title": "Ball Bearing 6205_2RS",
                 "views": [
                     {
@@ -13,7 +101,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/BallBearing6205_2RS_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -33,7 +120,6 @@
                 "file": "vitamins/ball-bearings.scad"
             },
             {
-                "hash": "43ad91f7d442439449440740564c121f",
                 "title": "NEMA17 Stepper Motor",
                 "views": [
                     {
@@ -44,7 +130,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/NEMA17StepperMotor_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -64,7 +149,6 @@
                 "file": "vitamins/stepper-motors.scad"
             },
             {
-                "hash": "5fab8de41376afb3c8e188a8cf66e9ac",
                 "title": "T2.5x18 Pulley",
                 "views": [
                     {
@@ -75,7 +159,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/T25x18Pulley_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -95,7 +178,6 @@
                 "file": "vitamins/pullies.scad"
             },
             {
-                "hash": "3d249caf635ed63a37e76468cc606b56",
                 "title": "Belt T2p5x6 960mm",
                 "views": [
                     {
@@ -106,7 +188,6 @@
                         ],
                         "dist": 735,
                         "title": "view",
-                        "filepath": "../vitamins/images/BeltT2p5x6960mm_view.png",
                         "caption": "view",
                         "translate": [
                             52,
@@ -126,7 +207,6 @@
                 "file": "vitamins/belts.scad"
             },
             {
-                "hash": "92852f3753a109a34d6566b3d973039e",
                 "title": "Ball Bearing 624",
                 "views": [
                     {
@@ -137,7 +217,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/BallBearing624_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -157,7 +236,6 @@
                 "file": "vitamins/ball-bearings.scad"
             },
             {
-                "hash": "1065932f95f7258a44ab203e8ee09ea9",
                 "title": "M4 Washer 9x0.8",
                 "views": [
                     {
@@ -168,7 +246,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/M4Washer9x08_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -188,7 +265,6 @@
                 "file": "vitamins/washers.scad"
             },
             {
-                "hash": "7bf70cbd85dcf0724c65ce3e8d284b72",
                 "title": "M4 cap screw x 20mm",
                 "views": [
                     {
@@ -199,7 +275,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/M4capscrewx20mm_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -219,7 +294,6 @@
                 "file": "vitamins/screws.scad"
             },
             {
-                "hash": "1857e057bed4af4573b85e7bffbe35a1",
                 "title": "Nyloc M4 Nut",
                 "views": [
                     {
@@ -230,7 +304,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/NylocM4Nut_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -250,7 +323,6 @@
                 "file": "vitamins/nuts.scad"
             },
             {
-                "hash": "7e14871d574b8790f6db81213b9323e3",
                 "title": "LM8UU Linear Bearing",
                 "views": [
                     {
@@ -261,7 +333,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/LM8UULinearBearing_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -281,7 +352,6 @@
                 "file": "vitamins/linear-bearings.scad"
             },
             {
-                "hash": "88ee67be7aee7a2d22572739d18e14ac",
                 "title": "LM20UU Linear Bearing",
                 "views": [
                     {
@@ -292,7 +362,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/LM20UULinearBearing_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -312,7 +381,6 @@
                 "file": "vitamins/linear-bearings.scad"
             },
             {
-                "hash": "4179ead1804f6a5554407541624a8867",
                 "title": "Aluminium Angle 10x40x1.5mm x 250mm",
                 "views": [
                     {
@@ -323,7 +391,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/AluminiumAngle10x40x15mmx250mm_view.png",
                         "caption": "view",
                         "translate": [
                             16,
@@ -343,7 +410,6 @@
                 "file": "vitamins/aluAngle.scad"
             },
             {
-                "hash": "65d11b702fed7e8db450522a88abd18e",
                 "title": "NEMA11 Stepper Motor",
                 "views": [
                     {
@@ -354,7 +420,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/NEMA11StepperMotor_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -374,7 +439,6 @@
                 "file": "vitamins/stepper-motors.scad"
             },
             {
-                "hash": "b5b9cab4933be98f416e30ad0ee4db75",
                 "title": "Nyloc M6 Nut",
                 "views": [
                     {
@@ -385,7 +449,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/NylocM6Nut_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -405,7 +468,6 @@
                 "file": "vitamins/nuts.scad"
             },
             {
-                "hash": "38273ac5866a8b509936a8fe5ffbe147",
                 "title": "M8 Washer 17x1.8",
                 "views": [
                     {
@@ -416,7 +478,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/M8Washer17x18_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -436,7 +497,6 @@
                 "file": "vitamins/washers.scad"
             },
             {
-                "hash": "3d249caf635ed63a37e76468cc606b56",
                 "title": "Belt T2p5x6 673mm",
                 "views": [
                     {
@@ -447,7 +507,6 @@
                         ],
                         "dist": 735,
                         "title": "view",
-                        "filepath": "../vitamins/images/BeltT2p5x6673mm_view.png",
                         "caption": "view",
                         "translate": [
                             52,
@@ -467,7 +526,6 @@
                 "file": "vitamins/belts.scad"
             },
             {
-                "hash": "b2cc4d7a6822b992a8024594ff5dac20",
                 "title": "M6 Nut",
                 "views": [
                     {
@@ -478,7 +536,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/M6Nut_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -498,7 +555,6 @@
                 "file": "vitamins/nuts.scad"
             },
             {
-                "hash": "66af9c48b53cbed7e8ff2d72861d87fe",
                 "title": "Ball Bearing 608",
                 "views": [
                     {
@@ -509,7 +565,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/BallBearing608_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -529,7 +584,6 @@
                 "file": "vitamins/ball-bearings.scad"
             },
             {
-                "hash": "438f32f91bddd77b4a49ed81206d950b",
                 "title": "Dynamixel AX12",
                 "views": [
                     {
@@ -540,7 +594,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/DynamixelAX12_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -560,7 +613,6 @@
                 "file": "vitamins/dynamixel.scad"
             },
             {
-                "hash": "0f7510ef77ddd92eca801ee21c039bc2",
                 "title": "M2 pan screw x 6mm",
                 "views": [
                     {
@@ -571,7 +623,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/M2panscrewx6mm_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -591,7 +642,6 @@
                 "file": "vitamins/screws.scad"
             },
             {
-                "hash": "a4394805380374b7f9934c2999505277",
                 "title": "M2 Nut",
                 "views": [
                     {
@@ -602,7 +652,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/M2Nut_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -622,7 +671,6 @@
                 "file": "vitamins/nuts.scad"
             },
             {
-                "hash": "b7b950b85899fec8c5cae863fde772ca",
                 "title": "Spoon",
                 "views": [
                     {
@@ -633,7 +681,6 @@
                         ],
                         "dist": 850,
                         "title": "view",
-                        "filepath": "../vitamins/images/Spoon_view.png",
                         "caption": "view",
                         "translate": [
                             30,
@@ -653,7 +700,6 @@
                 "file": "vitamins/Spoon.scad"
             },
             {
-                "hash": "2609a54e95b37ea4eb63a74b4048c0c1",
                 "title": "Aluminium Angle 10x40x1.5mm x 200mm",
                 "views": [
                     {
@@ -664,7 +710,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/AluminiumAngle10x40x15mmx200mm_view.png",
                         "caption": "view",
                         "translate": [
                             16,
@@ -684,7 +729,6 @@
                 "file": "vitamins/aluAngle.scad"
             },
             {
-                "hash": "4a8575d7a3ec81b33f750ab22d779344",
                 "title": "M4 hex screw x 30mm",
                 "views": [
                     {
@@ -695,7 +739,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/M4hexscrewx30mm_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -715,7 +758,6 @@
                 "file": "vitamins/screws.scad"
             },
             {
-                "hash": "b2689061e2a28e2c91942b5c4a8d0c3f",
                 "title": "M5 Washer 20x1.4",
                 "views": [
                     {
@@ -726,7 +768,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/M5Washer20x14_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -746,7 +787,6 @@
                 "file": "vitamins/washers.scad"
             },
             {
-                "hash": "1675734d05b033a481d4320ec1079585",
                 "title": "Aluminium Angle 10x10x1mm x 420mm",
                 "views": [
                     {
@@ -757,7 +797,6 @@
                         ],
                         "dist": 500,
                         "title": "view",
-                        "filepath": "../vitamins/images/AluminiumAngle10x10x1mmx420mm_view.png",
                         "caption": "view",
                         "translate": [
                             16,
@@ -780,34 +819,8 @@
         "title": "AFRo",
         "assemblies": [
             {
+                "cut": [],
                 "vitamins": [],
-                "title": "AFRo",
-                "assemblies": [
-                    {
-                        "vitamins": [],
-                        "title": "Torso",
-                        "assemblies": [],
-                        "views": [],
-                        "qty": 1,
-                        "steps": [],
-                        "printed": [],
-                        "file": "assemblies/Torso.scad",
-                        "call": "TorsoAssembly()",
-                        "level": 1
-                    },
-                    {
-                        "vitamins": [],
-                        "title": "Torso Drive",
-                        "assemblies": [],
-                        "views": [],
-                        "qty": 1,
-                        "steps": [],
-                        "printed": [],
-                        "file": "assemblies/Torso.scad",
-                        "call": "TorsoDriveAssembly()",
-                        "level": 1
-                    }
-                ],
                 "views": [
                     {
                         "rotate": [
@@ -830,8 +843,37 @@
                         ]
                     }
                 ],
+                "assemblies": [
+                    {
+                        "cut": [],
+                        "vitamins": [],
+                        "views": [],
+                        "assemblies": [],
+                        "title": "Torso",
+                        "qty": 1,
+                        "call": "TorsoAssembly()",
+                        "printed": [],
+                        "file": "assemblies/Torso.scad",
+                        "steps": [],
+                        "level": 1
+                    },
+                    {
+                        "cut": [],
+                        "vitamins": [],
+                        "views": [],
+                        "assemblies": [],
+                        "title": "Torso Drive",
+                        "qty": 1,
+                        "call": "TorsoDriveAssembly()",
+                        "printed": [],
+                        "file": "assemblies/Torso.scad",
+                        "steps": [],
+                        "level": 1
+                    }
+                ],
+                "title": "AFRo",
                 "qty": 1,
-                "steps": [],
+                "call": "AFRoAssembly()",
                 "printed": [
                     {
                         "title": "Base Bracket",
@@ -842,10 +884,11 @@
                     }
                 ],
                 "file": "assemblies/AFRo.scad",
-                "call": "AFRoAssembly()",
+                "steps": [],
                 "level": 0
             },
             {
+                "cut": [],
                 "vitamins": [
                     {
                         "title": "Ball Bearing 6205_2RS",
@@ -920,57 +963,6 @@
                         "file": "vitamins/nuts.scad"
                     }
                 ],
-                "title": "Torso",
-                "assemblies": [
-                    {
-                        "vitamins": [],
-                        "title": "Counterweight Idler",
-                        "assemblies": [],
-                        "views": [],
-                        "qty": 2,
-                        "steps": [],
-                        "printed": [],
-                        "file": "assemblies/Torso.scad",
-                        "call": "CounterweightIdlerAssembly()",
-                        "level": 2
-                    },
-                    {
-                        "vitamins": [],
-                        "title": "Shoulder",
-                        "assemblies": [],
-                        "views": [],
-                        "qty": 1,
-                        "steps": [],
-                        "printed": [],
-                        "file": "assemblies/Shoulder.scad",
-                        "call": "ShoulderAssembly()",
-                        "level": 2
-                    },
-                    {
-                        "vitamins": [],
-                        "title": "Counterweight",
-                        "assemblies": [],
-                        "views": [],
-                        "qty": 1,
-                        "steps": [],
-                        "printed": [],
-                        "file": "assemblies/Torso.scad",
-                        "call": "CounterweightAssembly()",
-                        "level": 2
-                    },
-                    {
-                        "vitamins": [],
-                        "title": "Cable Guide",
-                        "assemblies": [],
-                        "views": [],
-                        "qty": 1,
-                        "steps": [],
-                        "printed": [],
-                        "file": "assemblies/CableGuide.scad",
-                        "call": "CableGuideAssembly()",
-                        "level": 2
-                    }
-                ],
                 "views": [
                     {
                         "rotate": [
@@ -993,8 +985,63 @@
                         ]
                     }
                 ],
+                "assemblies": [
+                    {
+                        "cut": [],
+                        "vitamins": [],
+                        "views": [],
+                        "assemblies": [],
+                        "title": "Counterweight Idler",
+                        "qty": 2,
+                        "call": "CounterweightIdlerAssembly()",
+                        "printed": [],
+                        "file": "assemblies/Torso.scad",
+                        "steps": [],
+                        "level": 2
+                    },
+                    {
+                        "cut": [],
+                        "vitamins": [],
+                        "views": [],
+                        "assemblies": [],
+                        "title": "Shoulder",
+                        "qty": 1,
+                        "call": "ShoulderAssembly()",
+                        "printed": [],
+                        "file": "assemblies/Shoulder.scad",
+                        "steps": [],
+                        "level": 2
+                    },
+                    {
+                        "cut": [],
+                        "vitamins": [],
+                        "views": [],
+                        "assemblies": [],
+                        "title": "Counterweight",
+                        "qty": 1,
+                        "call": "CounterweightAssembly()",
+                        "printed": [],
+                        "file": "assemblies/Torso.scad",
+                        "steps": [],
+                        "level": 2
+                    },
+                    {
+                        "cut": [],
+                        "vitamins": [],
+                        "views": [],
+                        "assemblies": [],
+                        "title": "Cable Guide",
+                        "qty": 1,
+                        "call": "CableGuideAssembly()",
+                        "printed": [],
+                        "file": "assemblies/CableGuide.scad",
+                        "steps": [],
+                        "level": 2
+                    }
+                ],
+                "title": "Torso",
                 "qty": 1,
-                "steps": [],
+                "call": "TorsoAssembly()",
                 "printed": [
                     {
                         "title": "Torso Big Gear",
@@ -1033,10 +1080,11 @@
                     }
                 ],
                 "file": "assemblies/Torso.scad",
-                "call": "TorsoAssembly()",
+                "steps": [],
                 "level": 1
             },
             {
+                "cut": [],
                 "vitamins": [
                     {
                         "title": "Ball Bearing 624",
@@ -1071,11 +1119,11 @@
                         "file": "vitamins/nuts.scad"
                     }
                 ],
-                "title": "Counterweight Idler",
-                "assemblies": [],
                 "views": [],
+                "assemblies": [],
+                "title": "Counterweight Idler",
                 "qty": 2,
-                "steps": [],
+                "call": "CounterweightIdlerAssembly()",
                 "printed": [
                     {
                         "title": "Counterweight Idler",
@@ -1093,10 +1141,11 @@
                     }
                 ],
                 "file": "assemblies/Torso.scad",
-                "call": "CounterweightIdlerAssembly()",
+                "steps": [],
                 "level": 2
             },
             {
+                "cut": [],
                 "vitamins": [
                     {
                         "title": "LM8UU Linear Bearing",
@@ -1131,36 +1180,38 @@
                         "file": "vitamins/stepper-motors.scad"
                     }
                 ],
-                "title": "Shoulder",
+                "views": [],
                 "assemblies": [
                     {
+                        "cut": [],
                         "vitamins": [],
-                        "title": "Elbow Joint",
-                        "assemblies": [],
                         "views": [],
+                        "assemblies": [],
+                        "title": "Elbow Joint",
                         "qty": 1,
-                        "steps": [],
+                        "call": "ElbowJointAssembly()",
                         "printed": [],
                         "file": "assemblies/Shoulder.scad",
-                        "call": "ElbowJointAssembly()",
+                        "steps": [],
                         "level": 3
                     },
                     {
+                        "cut": [],
                         "vitamins": [],
-                        "title": "Lower Arm",
-                        "assemblies": [],
                         "views": [],
+                        "assemblies": [],
+                        "title": "Lower Arm",
                         "qty": 1,
-                        "steps": [],
+                        "call": "LowerArmAssembly()",
                         "printed": [],
                         "file": "assemblies/LowerArm.scad",
-                        "call": "LowerArmAssembly()",
+                        "steps": [],
                         "level": 3
                     }
                 ],
-                "views": [],
+                "title": "Shoulder",
                 "qty": 1,
-                "steps": [],
+                "call": "ShoulderAssembly()",
                 "printed": [
                     {
                         "title": "Shoulder Bracket Left",
@@ -1206,10 +1257,11 @@
                     }
                 ],
                 "file": "assemblies/Shoulder.scad",
-                "call": "ShoulderAssembly()",
+                "steps": [],
                 "level": 2
             },
             {
+                "cut": [],
                 "vitamins": [
                     {
                         "title": "Nyloc M6 Nut",
@@ -1252,11 +1304,11 @@
                         "file": "vitamins/ball-bearings.scad"
                     }
                 ],
-                "title": "Elbow Joint",
-                "assemblies": [],
                 "views": [],
+                "assemblies": [],
+                "title": "Elbow Joint",
                 "qty": 1,
-                "steps": [],
+                "call": "ElbowJointAssembly()",
                 "printed": [
                     {
                         "title": "Elbow Driven Pulley",
@@ -1274,37 +1326,48 @@
                     }
                 ],
                 "file": "assemblies/Shoulder.scad",
-                "call": "ElbowJointAssembly()",
+                "steps": [],
                 "level": 3
             },
             {
-                "vitamins": [
-                    {
-                        "title": "Aluminium Angle 10x40x1.5mm x 200mm",
-                        "views": [],
-                        "qty": 2,
-                        "parts": [],
-                        "call": "aluAngle(10,40,200,1.5)",
-                        "file": "vitamins/aluAngle.scad"
-                    }
-                ],
-                "title": "Lower Arm",
+                "cut": [],
+                "vitamins": [],
+                "views": [],
                 "assemblies": [
                     {
+                        "cut": [],
                         "vitamins": [],
-                        "title": "Hand",
-                        "assemblies": [],
                         "views": [],
+                        "assemblies": [],
+                        "title": "Hand",
                         "qty": 1,
-                        "steps": [],
+                        "call": "HandAssembly()",
                         "printed": [],
                         "file": "assemblies/Hand.scad",
-                        "call": "HandAssembly()",
+                        "steps": [],
                         "level": 4
                     }
                 ],
-                "views": [],
+                "title": "Lower Arm",
                 "qty": 1,
+                "call": "LowerArmAssembly()",
+                "printed": [
+                    {
+                        "title": "Lower Arm Servo Bracket",
+                        "qty": 2,
+                        "call": "LowerArmServoBracket_stl()",
+                        "file": "printedparts/LowerArmServoBracket.scad",
+                        "views": []
+                    },
+                    {
+                        "title": "Elbow Joint 2",
+                        "qty": 1,
+                        "call": "ElbowJoint2_stl()",
+                        "file": "printedparts/ElbowJoint2.scad",
+                        "views": []
+                    }
+                ],
+                "file": "assemblies/LowerArm.scad",
                 "steps": [
                     {
                         "desc": "Push the servo brackets onto the servo, optionally screw them into place",
@@ -1385,27 +1448,10 @@
                         ]
                     }
                 ],
-                "printed": [
-                    {
-                        "title": "Lower Arm Servo Bracket",
-                        "qty": 2,
-                        "call": "LowerArmServoBracket_stl()",
-                        "file": "printedparts/LowerArmServoBracket.scad",
-                        "views": []
-                    },
-                    {
-                        "title": "Elbow Joint 2",
-                        "qty": 1,
-                        "call": "ElbowJoint2_stl()",
-                        "file": "printedparts/ElbowJoint2.scad",
-                        "views": []
-                    }
-                ],
-                "file": "assemblies/LowerArm.scad",
-                "call": "LowerArmAssembly()",
                 "level": 3
             },
             {
+                "cut": [],
                 "vitamins": [
                     {
                         "title": "Dynamixel AX12",
@@ -1424,23 +1470,35 @@
                         "file": "vitamins/screws.scad"
                     }
                 ],
-                "title": "Hand",
+                "views": [],
                 "assemblies": [
                     {
+                        "cut": [],
                         "vitamins": [],
-                        "title": "Spoon",
-                        "assemblies": [],
                         "views": [],
+                        "assemblies": [],
+                        "title": "Spoon",
                         "qty": 1,
-                        "steps": [],
+                        "call": "SpoonAssembly()",
                         "printed": [],
                         "file": "assemblies/Hand.scad",
-                        "call": "SpoonAssembly()",
+                        "steps": [],
                         "level": 6
                     }
                 ],
-                "views": [],
+                "title": "Hand",
                 "qty": 1,
+                "call": "HandAssembly()",
+                "printed": [
+                    {
+                        "title": "Wrist Bracket",
+                        "qty": 1,
+                        "call": "WristBracket_stl()",
+                        "file": "printedparts/WristBracket.scad",
+                        "views": []
+                    }
+                ],
+                "file": "assemblies/Hand.scad",
                 "steps": [
                     {
                         "desc": "Screw the wrist bracket onto the wrist servo",
@@ -1521,20 +1579,10 @@
                         ]
                     }
                 ],
-                "printed": [
-                    {
-                        "title": "Wrist Bracket",
-                        "qty": 1,
-                        "call": "WristBracket_stl()",
-                        "file": "printedparts/WristBracket.scad",
-                        "views": []
-                    }
-                ],
-                "file": "assemblies/Hand.scad",
-                "call": "HandAssembly()",
                 "level": 5
             },
             {
+                "cut": [],
                 "vitamins": [
                     {
                         "title": "Dynamixel AX12",
@@ -1569,8 +1617,6 @@
                         "file": "vitamins/Spoon.scad"
                     }
                 ],
-                "title": "Spoon",
-                "assemblies": [],
                 "views": [
                     {
                         "rotate": [
@@ -1593,7 +1639,20 @@
                         ]
                     }
                 ],
+                "assemblies": [],
+                "title": "Spoon",
                 "qty": 1,
+                "call": "SpoonAssembly()",
+                "printed": [
+                    {
+                        "title": "Spoon Holder",
+                        "qty": 1,
+                        "call": "SpoonHolder_stl()",
+                        "file": "printedparts/SpoonHolder.scad",
+                        "views": []
+                    }
+                ],
+                "file": "assemblies/Hand.scad",
                 "steps": [
                     {
                         "desc": "Push M2 nuts into the back of the servo fixing tabs",
@@ -1648,26 +1707,16 @@
                         ]
                     }
                 ],
-                "printed": [
-                    {
-                        "title": "Spoon Holder",
-                        "qty": 1,
-                        "call": "SpoonHolder_stl()",
-                        "file": "printedparts/SpoonHolder.scad",
-                        "views": []
-                    }
-                ],
-                "file": "assemblies/Hand.scad",
-                "call": "SpoonAssembly()",
                 "level": 7
             },
             {
+                "cut": [],
                 "vitamins": [],
-                "title": "Counterweight",
-                "assemblies": [],
                 "views": [],
+                "assemblies": [],
+                "title": "Counterweight",
                 "qty": 1,
-                "steps": [],
+                "call": "CounterweightAssembly()",
                 "printed": [
                     {
                         "title": "Counterweight Bracket",
@@ -1678,10 +1727,11 @@
                     }
                 ],
                 "file": "assemblies/Torso.scad",
-                "call": "CounterweightAssembly()",
+                "steps": [],
                 "level": 2
             },
             {
+                "cut": [],
                 "vitamins": [
                     {
                         "title": "Aluminium Angle 10x10x1mm x 420mm",
@@ -1692,17 +1742,18 @@
                         "file": "vitamins/aluAngle.scad"
                     }
                 ],
-                "title": "Cable Guide",
-                "assemblies": [],
                 "views": [],
+                "assemblies": [],
+                "title": "Cable Guide",
                 "qty": 1,
-                "steps": [],
+                "call": "CableGuideAssembly()",
                 "printed": [],
                 "file": "assemblies/CableGuide.scad",
-                "call": "CableGuideAssembly()",
+                "steps": [],
                 "level": 2
             },
             {
+                "cut": [],
                 "vitamins": [
                     {
                         "title": "NEMA17 Stepper Motor",
@@ -1713,11 +1764,11 @@
                         "file": "vitamins/stepper-motors.scad"
                     }
                 ],
-                "title": "Torso Drive",
-                "assemblies": [],
                 "views": [],
+                "assemblies": [],
+                "title": "Torso Drive",
                 "qty": 1,
-                "steps": [],
+                "call": "TorsoDriveAssembly()",
                 "printed": [
                     {
                         "title": "Torso Drive Gear",
@@ -1728,7 +1779,7 @@
                     }
                 ],
                 "file": "assemblies/Torso.scad",
-                "call": "TorsoDriveAssembly()",
+                "steps": [],
                 "level": 1
             }
         ],
@@ -4748,60 +4799,143 @@
                                                         ]
                                                     },
                                                     {
-                                                        "call": "aluAngle(10,40,200,1.5)",
-                                                        "type": "vitamin",
+                                                        "completeCall": "LowerArmLeftSide(true)",
+                                                        "title": "Lower Arm Left Side",
+                                                        "call": "LowerArmLeftSide()",
+                                                        "file": "cutparts/LowerArmLeftSide.scad",
+                                                        "type": "cut",
                                                         "children": [
                                                             {
                                                                 "rotate": [
-                                                                    168,
-                                                                    352,
+                                                                    163,
+                                                                    339,
                                                                     90
                                                                 ],
                                                                 "dist": 500,
                                                                 "title": "view",
                                                                 "caption": "view",
                                                                 "translate": [
-                                                                    16,
-                                                                    14,
-                                                                    5
+                                                                    25,
+                                                                    40,
+                                                                    16
                                                                 ],
                                                                 "type": "view",
                                                                 "size": [
                                                                     400,
                                                                     300
                                                                 ]
-                                                            }
-                                                        ],
-                                                        "file": "vitamins/aluAngle.scad",
-                                                        "title": "Aluminium Angle 10x40x1.5mm x 200mm"
-                                                    },
-                                                    {
-                                                        "call": "aluAngle(10,40,200,1.5)",
-                                                        "type": "vitamin",
-                                                        "children": [
+                                                            },
                                                             {
-                                                                "rotate": [
-                                                                    168,
-                                                                    352,
-                                                                    90
+                                                                "num": 1,
+                                                                "type": "step",
+                                                                "children": [
+                                                                    {
+                                                                        "rotate": [
+                                                                            163,
+                                                                            339,
+                                                                            90
+                                                                        ],
+                                                                        "dist": 500,
+                                                                        "title": "view",
+                                                                        "caption": "view",
+                                                                        "translate": [
+                                                                            25,
+                                                                            40,
+                                                                            16
+                                                                        ],
+                                                                        "type": "view",
+                                                                        "size": [
+                                                                            400,
+                                                                            300
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "call": "aluAngle(10,40,200,1.5)",
+                                                                        "type": "vitamin",
+                                                                        "children": [
+                                                                            {
+                                                                                "rotate": [
+                                                                                    168,
+                                                                                    352,
+                                                                                    90
+                                                                                ],
+                                                                                "dist": 500,
+                                                                                "title": "view",
+                                                                                "caption": "view",
+                                                                                "translate": [
+                                                                                    16,
+                                                                                    14,
+                                                                                    5
+                                                                                ],
+                                                                                "type": "view",
+                                                                                "size": [
+                                                                                    400,
+                                                                                    300
+                                                                                ]
+                                                                            }
+                                                                        ],
+                                                                        "file": "vitamins/aluAngle.scad",
+                                                                        "title": "Aluminium Angle 10x40x1.5mm x 200mm"
+                                                                    }
                                                                 ],
-                                                                "dist": 500,
-                                                                "title": "view",
-                                                                "caption": "view",
-                                                                "translate": [
-                                                                    16,
-                                                                    14,
-                                                                    5
+                                                                "desc": "Cut aluminium angle to length: 200mm"
+                                                            },
+                                                            {
+                                                                "num": 2,
+                                                                "type": "step",
+                                                                "children": [
+                                                                    {
+                                                                        "rotate": [
+                                                                            163,
+                                                                            339,
+                                                                            90
+                                                                        ],
+                                                                        "dist": 500,
+                                                                        "title": "view",
+                                                                        "caption": "view",
+                                                                        "translate": [
+                                                                            25,
+                                                                            40,
+                                                                            16
+                                                                        ],
+                                                                        "type": "view",
+                                                                        "size": [
+                                                                            400,
+                                                                            300
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "call": "aluAngle(10,40,200,1.5)",
+                                                                        "type": "vitamin",
+                                                                        "children": [
+                                                                            {
+                                                                                "rotate": [
+                                                                                    168,
+                                                                                    352,
+                                                                                    90
+                                                                                ],
+                                                                                "dist": 500,
+                                                                                "title": "view",
+                                                                                "caption": "view",
+                                                                                "translate": [
+                                                                                    16,
+                                                                                    14,
+                                                                                    5
+                                                                                ],
+                                                                                "type": "view",
+                                                                                "size": [
+                                                                                    400,
+                                                                                    300
+                                                                                ]
+                                                                            }
+                                                                        ],
+                                                                        "file": "vitamins/aluAngle.scad",
+                                                                        "title": "Aluminium Angle 10x40x1.5mm x 200mm"
+                                                                    }
                                                                 ],
-                                                                "type": "view",
-                                                                "size": [
-                                                                    400,
-                                                                    300
-                                                                ]
+                                                                "desc": "Drill fixing holes: 4mm diameter"
                                                             }
-                                                        ],
-                                                        "file": "vitamins/aluAngle.scad",
-                                                        "title": "Aluminium Angle 10x40x1.5mm x 200mm"
+                                                        ]
                                                     }
                                                 ],
                                                 "desc": "Bolt through the aluminium channels and servo brackets"
@@ -5440,6 +5574,10 @@
             {
                 "type": "file",
                 "file": "vitamins/Spoon.scad"
+            },
+            {
+                "type": "file",
+                "file": "cutparts/LowerArmLeftSide.scad"
             },
             {
                 "type": "file",

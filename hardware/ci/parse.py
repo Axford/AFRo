@@ -284,9 +284,34 @@ def add_printed(jso, pl, addViews=True):
         
     if addViews:
         add_views_for(jso, pfound)   
+        
+        
+def add_cut(jso, cl, addSteps=True, addViews=True):
+    
+    afound = None
+    for a in cl:
+        if a['title'] == jso['title']:
+            afound = a
+            continue
+    
+    if afound:
+        afound['qty'] += 1
+    else:
+        afound = { 
+            'title':jso['title'], 'call':jso['call'], 'file':jso['file'],
+            'completeCall':jso['completeCall'],
+            'qty':1, 'views':[], 'steps':[]
+            }
+        cl.append(afound)
+        
+    if addViews:
+        add_views_for(jso, afound) 
+    if addSteps:
+        add_steps_for(jso, afound)     
+                        
     
     
-def add_assembly(jso, al, pl, vl, addSteps=True, addViews=True, addChildren=True, level=0):
+def add_assembly(jso, al, pl, vl, cl, addSteps=True, addViews=True, addChildren=True, level=0):
     #print("  Assembly: "+jso['title'])
     #print("    Level: "+str(level))
     
@@ -302,7 +327,7 @@ def add_assembly(jso, al, pl, vl, addSteps=True, addViews=True, addChildren=True
     else:
         afound = { 
             'title':jso['title'], 'call':jso['call'], 'file':jso['file'], 'level':level,
-            'qty':1, 'views':[], 'steps':[], 'assemblies':[], 'vitamins':[], 'printed':[]
+            'qty':1, 'views':[], 'steps':[], 'assemblies':[], 'vitamins':[], 'printed':[], 'cut':[]
             }
         al.append(afound)
         
@@ -314,6 +339,7 @@ def add_assembly(jso, al, pl, vl, addSteps=True, addViews=True, addChildren=True
     nvl = afound['vitamins'];
     nal = afound['assemblies'];
     npl = afound['printed'];
+    ncl = afound['cut'];
     
     # Collate immediate children, and sub-assemblies nested in steps!
     nextlevel = level + 1
@@ -326,10 +352,13 @@ def add_assembly(jso, al, pl, vl, addSteps=True, addViews=True, addChildren=True
                     add_vitamin(c, nvl, addViews=False)
         
                 if tn == 'assembly':
-                    add_assembly(c, nal, npl, nvl, addSteps=False, addViews=False, addChildren=False, level=nextlevel)    
+                    add_assembly(c, nal, npl, nvl, ncl, addSteps=False, addViews=False, addChildren=False, level=nextlevel)    
         
+                if tn == 'cut':
+                    add_cut(c, ncl, addViews=False, addSteps=False)
+                    
                 if tn == 'printed':
-                    add_printed(c, npl, addViews=False) 
+                    add_printed(c, npl, addViews=False)
                     
                 if tn == 'step':
                     for sc in c['children']:
@@ -340,15 +369,18 @@ def add_assembly(jso, al, pl, vl, addSteps=True, addViews=True, addChildren=True
                                 add_vitamin(sc, nvl, addViews=False)
         
                             if tn2 == 'assembly':
-                                add_assembly(sc, nal, npl, nvl, addSteps=False, addViews=False, addChildren=False, level=nextlevel)   
+                                add_assembly(sc, nal, npl, nvl, ncl, addSteps=False, addViews=False, addChildren=False, level=nextlevel)   
         
                             if tn2 == 'printed':
                                 add_printed(sc, npl, addViews=False)
+                    
+                            if tn == 'cut':
+                                add_cut(c, ncl, addViews=False,  addSteps=False)
                         
                             
     
 
-def summarise_parts_for(jso, al, pl, vl, level=0):
+def summarise_parts_for(jso, al, pl, vl, cl, level=0):
     # print("sum_parts_for "+str(level))
     if type(jso) is DictType:
         tn = jso['type']
@@ -357,14 +389,17 @@ def summarise_parts_for(jso, al, pl, vl, level=0):
             add_vitamin(jso, vl)
         
         if tn == 'assembly':
-            add_assembly(jso, al, pl, vl, level=level)    
+            add_assembly(jso, al, pl, vl, cl, level=level)    
+        
+        if tn == 'cut':
+            add_cut(jso, cl) 
         
         if tn == 'printed':
             add_printed(jso, pl) 
         
         if 'children' in jso:
             for c in jso['children']:
-                summarise_parts_for(c, al, pl, vl, level+1)
+                summarise_parts_for(c, al, pl, vl, cl, level+1)
 
 def summarise_parts(jso, oldjso):
     print("Summarising parts for each machine...")
@@ -374,14 +409,16 @@ def summarise_parts(jso, oldjso):
             print("  "+m['title']+"...")
             
             al = m['assemblies'] = []
+            cl = m['cut'] = []
             pl = m['printed'] = []
             vl = m['vitamins'] = []
             
             for c in m['children']:
-                summarise_parts_for(c, al, pl, vl, 0)
+                summarise_parts_for(c, al, pl, vl, cl, 0)
                 
             print("  Found:")
             print("    "+str(len(al))+" assemblies")
+            print("    "+str(len(cl))+" cut parts")
             print("    "+str(len(pl))+" printed parts")
             print("    "+str(len(vl))+" vitamins")
             
@@ -435,7 +472,11 @@ def update_cache_info(jso, oldjso):
                 if 'vitamins' in oldm:
                     print("    Updating vitamins...")
                     update_cache_info_for(m['vitamins'], oldm['vitamins'])
-                    
+                
+                if 'cut' in oldm:
+                    print("    Updating cut parts...")
+                    update_cache_info_for(m['cut'], oldm['cut'])
+                
                 if 'printed' in oldm:
                     print("    Updating printed parts...")
                     update_cache_info_for(m['printed'], oldm['printed'])

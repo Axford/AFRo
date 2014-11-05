@@ -1,7 +1,5 @@
-2014-11-05 10:33:47.874 OpenSCAD[80955:507]   compiled module: 0x104685cb0
-2014-11-05 10:33:47.877 OpenSCAD[80955:507]   compiled module: 0x1046981a0
-2014-11-05 10:33:47.882 OpenSCAD[80955:507]   compiled module: 0x101e2d0f0
-2014-11-05 10:33:47.885 OpenSCAD[80955:507]   compiled module: 0x1046daa30
-2014-11-05 10:33:47.888 OpenSCAD[80955:507]   compiled module: 0x1046f8f40
-2014-11-05 10:33:47.925 OpenSCAD[80955:507] Compiling design (CSG Products normalization)...
-2014-11-05 10:33:47.925 OpenSCAD[80955:507] Normalized CSG tree has 1 elements
+2014-11-05 12:17:58.933 OpenSCAD[82344:507]   compiled module: 0x103eb8ec0
+2014-11-05 12:17:58.936 OpenSCAD[82344:507]   compiled module: 0x101e02090
+2014-11-05 12:17:58.941 OpenSCAD[82344:507]   compiled module: 0x101e42b40
+2014-11-05 12:17:58.944 OpenSCAD[82344:507]   compiled module: 0x10380d9a0
+2014-11-05 12:17:58.947 OpenSCAD[82344:507]   compiled module: 0x10382bdc0

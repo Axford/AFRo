@@ -35,6 +35,12 @@ Qty | Vitamin | Image
 2 | [M5 Washer 20x1.4]() | ![](../vitamins/images/M5Washer20x14_view.png) | 
 3 | [M8 Washer 17x1.8]() | ![](../vitamins/images/M8Washer17x18_view.png) | 
 
+### Cut Parts
+
+Qty | Part Name | Image
+--- | --- | ---
+1 | Lower Arm Left Side | ![](../cutparts/images/LowerArmLeftSide_view.png) | 
+
 ### Printed Parts
 
 Qty | Part Name | Image
@@ -61,6 +67,16 @@ Qty | Part Name | Image
 1 | [Torso Cap](../printedparts/stl/TorsoCap.stl) | ![](../printedparts/images/TorsoCap_view.png) | 
 1 | [Torso Drive Gear](../printedparts/stl/TorsoDriveGear.stl) | ![](../printedparts/images/TorsoDriveGear_view.png) | 
 1 | [Wrist Bracket](../printedparts/stl/WristBracket.stl) | ![](../printedparts/images/WristBracket_view.png) | 
+
+
+## Lower Arm Left Side
+
+### Fabrication Steps
+
+1. Cut aluminium angle to length: 200mm
+![](../cutparts/images/LowerArmLeftSide_step1_view.png)
+2. Drill fixing holes: 4mm diameter
+![](../cutparts/images/LowerArmLeftSide_step2_view.png)
 
 
 ## Spoon
@@ -140,12 +156,6 @@ Qty | Part Name | Image
 
 
 ## Lower Arm
-
-### Vitamins
-
-Qty | Vitamin | Image
---- | --- | ---
-2 | [Aluminium Angle 10x40x1.5mm x 200mm]() | ![](../vitamins/images/AluminiumAngle10x40x15mmx200mm_view.png) | 
 
 ### Printed Parts
 

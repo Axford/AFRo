@@ -3,6 +3,7 @@
 
 // Global var to show BOM echo's - overridden where relevant by build scripts
 $ShowBOM = false;
+$CutPart=false;
 
 // Generic modules
 // ---------------
@@ -86,6 +87,24 @@ module printedPart(file, title, call, customAttrs=false) {
     }
 }
 
+module cutPart(file, title, call, completeCall, finalStep, showComplete=false, customAttrs=false) {
+	assign($CutPart=true)
+    assign($ShowStep = (showComplete ? finalStep : $ShowStep))
+    object(true) {
+        attr("type","cut");
+        attr("file",file);
+        attr("title",title);
+        attr("call",call);
+        attr("completeCall",completeCall);
+        if (customAttrs) {
+            children();
+        } else {
+            attrArray("children", true) 
+                children();
+        }
+    }
+}
+
 module vitamin(file, title, call, customAttrs=false) {
 	object(true) {
         attr("type","vitamin");
@@ -143,11 +162,11 @@ module step(num=1, desc="") {
     attr("desc",desc);
     attrArray("children", false);
     
-    if (num <= $ShowStep) {
-        assign($Explode= (num == $ShowStep ? true : false), $ShowStep=100)
+    if (num <= $ShowStep && (($CutPart ? num == $ShowStep : true) || $ShowBOM)) {
+        assign($Explode= (num == $ShowStep ? true : false), $ShowStep=100 )
             children();
     }
-    
+
     end();
 }
 

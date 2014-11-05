@@ -49,6 +49,21 @@ def gen_bom(m):
             md += '![](../vitamins/images/'+views.view_filename(v['title']+'_view') + ') | '
             md += '\n'
         md += '\n'
+        
+    
+    # cut parts
+    if len(m['cut']) > 0:
+        m['cut'].sort(key=cut_call, reverse=False)
+        md += '### Cut Parts\n\n'
+        md += 'Qty | Part Name | Image\n'
+        md += '--- | --- | ---\n'
+        for v in m['cut']:
+            md += str(v['qty']) + ' | '
+            md += v['title'] + ' | '
+            md += '![](../cutparts/images/'+views.view_filename(v['title']+'_view') + ') | '
+            md += '\n'
+        md += '\n'
+    
                 
     # printed parts
     if len(m['printed']) > 0:
@@ -73,6 +88,30 @@ def vitamin_call(v):
 
 def printed_call(p):
     return p['call']
+
+def cut_call(c):
+    return c['call']
+
+
+def gen_cut(m, a):
+    md = '## '+a['title']
+    if a['qty'] > 1:
+        md += ' (x'+str(a['qty'])+')'
+    md += '\n\n'
+    
+    # fabrication steps
+    if len(a['steps']) > 0:
+        md += '### Fabrication Steps\n\n'
+        for step in a['steps']:
+            md += str(step['num']) + '. '+step['desc'] + '\n'
+            for view in step['views']:
+                md += '![](../cutparts/images/'+views.view_filename(a['title']+'_step'+str(step['num'])+'_'+view['title'])+')\n'
+        md += '\n'
+    
+    md += '\n'
+    
+    return md
+
 
 def gen_assembly(m, a):
     md = '## '+a['title']
@@ -181,6 +220,11 @@ def guides():
             
             # BOM
             md += gen_bom(m)
+            
+            # Cut Parts
+            m['cut'].sort(key=cut_call, reverse=False)
+            for c in m['cut']:
+                md += gen_cut(m,c)
             
             # Assemblies
             # sort by level desc
