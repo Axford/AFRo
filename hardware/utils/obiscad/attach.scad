@@ -14,8 +14,16 @@ use <vector.scad>
 
 $Explode = false;  // override in global config or specific machine file
 $ExplodeChildren = false;  //  override to explode all children
-$AnimateExplode = false;  // set to true to animate the explosion  
+$AnimateExplode = false;  // set to true to animate the explosion
 $AnimateExplodeT = 0;  // animation time, range 0:1
+
+// vector direction shortcuts
+_up = [0,0,1];
+_down = [0,0,-1];
+_left = [-1,0,0];
+_right = [1,0,0];
+_forward = [0,1,0];
+_back = [0,-1,0];
 
 // default connector
 DefCon = [[0,0,0],[0,0,1],0,0,0];
@@ -38,14 +46,17 @@ function connector_axis(c) 		  	= c[1];
 function connector_ang(c) 			= c[2];
 function connector_thickness(c) 	= c[3];	   // the thickness of the mounting point
 function connector_bore(c) 			= c[4];    // the required diameter of a fixing
- 
+
+
+// Utility to make a quick connector
+function con(t=[0,0,0], d=_up, ang=0, thickness=0, bore=0) = [t, d, ang, thickness, bore];
 
 
 //--------------------------------------------------------------------
 //-- Draw a connector
 //-- A connector is defined a 3-tuple that consist of a point
 //--- (the attachment point), and axis (the attachment axis) and
-//--- an angle the connected part should be rotate around the 
+//--- an angle the connected part should be rotate around the
 //--  attachment axis
 //--
 //--- Input parameters:
@@ -67,7 +78,7 @@ module connector(c,clr="Gray")
   color("Gray") point(p);
 
   //-- Draw the attachment axis vector (with a mark)
-  
+
   translate(p)
     rotate(a=ang, v=v)
     color(clr) vector(unitv(v)*6, l_arrow=2, mark=true);
@@ -80,9 +91,9 @@ function offsetConnector(a, o) = [[a[0][0]+o[0], a[0][1]+o[1], a[0][2]+o[2]], a[
 
 //-------------------------------------------------------------------------
 //--  ATTACH OPERATOR
-//--  This operator applies the necesary transformations to the 
+//--  This operator applies the necesary transformations to the
 //--  child (attachable part) so that it is attached to the main part
-//--  
+//--
 //--  Parameters
 //--    a -> Connector of the main part
 //--    b -> Connector of the attachable part
@@ -93,7 +104,7 @@ module attach(a,b, Invert=false, ExplodeSpacing = 10, offset=0, showVector=true)
   pos1 = a[0];  //-- Attachment point. Main part
   v    = Invert ? invertVector(a[1]) : a[1];  //-- Attachment axis. Main part
   roll = a[2];  //-- Rolling angle
-  
+
   pos2 = b[0];  //-- Attachment point. Attachable part
   vref = b[1];  //-- Atachment axis. Attachable part
                 //-- The rolling angle of the attachable part is not used
@@ -103,7 +114,7 @@ module attach(a,b, Invert=false, ExplodeSpacing = 10, offset=0, showVector=true)
   //raxis = cross(vref,v);
   //raxis = v[0]==vref[0] && v[1]==vref[1] ? [0,1,0] : cross(vref,v);
   raxis = mod(cross(vref,v)) == 0 ? ( vref[0] == 0 ? [1,0,0] : ( vref[1] == 0 ? [0,1,0] : [0,0,1] ) ): cross(vref,v);
-    
+
   //-- Calculate the angle between the vectors
   ang = anglev(vref,v);
   //---------------------------------------------------------
@@ -124,15 +135,15 @@ module attach(a,b, Invert=false, ExplodeSpacing = 10, offset=0, showVector=true)
                 translate($Explode ? -vref * ExplodeSpacing * au : [0,0,0])
                 assign($Explode=$ExplodeChildren)  // turn off explosions for children
                 children(i);
-                
-            // Show assembly vector 
+
+            // Show assembly vector
             if ($Explode && showVector) {
 		        // show attachment axis
 		        color([1,0,0, au * 0.7])
 		            translate(-vref * ExplodeSpacing * au + vref*offset)
 		            vector(vref * ExplodeSpacing, l=abs(ExplodeSpacing * au), l_arrow=2, mark=false);
 		    }
-            
+
         }
 }
 
@@ -143,29 +154,28 @@ module attachWithOffset(a,b,o, Invert=false, ExplodeSpacing = 10) {
 }
 
 
-
 // --------------------------------------
 // Matrix equivalent of the attach module
 // --------------------------------------
 
-function attachV(a,b, Invert=false) = 
+function attachV(a,b, Invert=false) =
     Invert ? invertVector(a[1]) : a[1];
 
 function attachRAxis(a,b,Invert=false) =
-    mod(cross(b[1],attachV(a,b,Invert))) == 0 ? 
-        ( b[1][0] == 0 ? [1,0,0] : ( b[1][1] == 0 ? [0,1,0] : [0,0,1]  ) ) : 
+    mod(cross(b[1],attachV(a,b,Invert))) == 0 ?
+        ( b[1][0] == 0 ? [1,0,0] : ( b[1][1] == 0 ? [0,1,0] : [0,0,1]  ) ) :
         cross(b[1], attachV(a,b,Invert));
 
-function attachMatrix(a,b, Invert=false, ExplodeSpacing=10) = 
+function attachMatrix(a,b, Invert=false, ExplodeSpacing=10) =
     translate(a[0]) *
     rotate(
-        a=a[2], 
-        v=attachV(a,b,Invert), 
+        a=a[2],
+        v=attachV(a,b,Invert),
         normV=false
     ) *
     rotate(
-        a=anglev(b[1], attachV(a,b,Invert)), 
-        v=attachRAxis(a,b,Invert), 
+        a=anglev(b[1], attachV(a,b,Invert)),
+        v=attachRAxis(a,b,Invert),
         normV=false
     ) *
     translate(-b[0]) *
@@ -190,7 +200,7 @@ function MatrixRotOnly(m) = [
 // c1 = parent connector used in attach
 // c2 = child connector used in attach
 // c3 = target connector (in child coord frame)
-function attachedConnector(c1, c2, c3, ExplodeSpacing=10) = 
+function attachedConnector(c1, c2, c3, ExplodeSpacing=10) =
     [
         attachedTranslation(c1,c2,c3, ExplodeSpacing=ExplodeSpacing),
         attachedDirection(c1,c2,c3, ExplodeSpacing=ExplodeSpacing),
@@ -203,14 +213,14 @@ function attachedConnector(c1, c2, c3, ExplodeSpacing=10) =
 // c1 = parent connector used in attach
 // c2 = child connector used in attach
 // c3 = target connector (in child coord frame)
-function attachedTranslation(c1, c2, c3, v=[0,0,0], ExplodeSpacing=10) = 
+function attachedTranslation(c1, c2, c3, v=[0,0,0], ExplodeSpacing=10) =
     V4to3(attachMatrix(c1,c2, ExplodeSpacing=ExplodeSpacing) * V3to4(c3[0]))
 ;
 
 // c1 = parent connector used in attach
 // c2 = child connector used in attach
 // c3 = target connector (in child coord frame)
-function attachedDirection(c1, c2, c3, v=[0,0,-1], ExplodeSpacing=10) = 
+function attachedDirection(c1, c2, c3, v=[0,0,-1], ExplodeSpacing=10) =
     V4to3(MatrixRotOnly(attachMatrix(c1,c2, $Explode=false)) * V3to4(c3[1]))
 ;
 
@@ -220,6 +230,13 @@ function attachedDirection(c1, c2, c3, v=[0,0,-1], ExplodeSpacing=10) =
 // --------------------------------------
 
 
+module thread(offset, ExplodeSpacing=10) {
+    if($children)
+        for(i=[0:$children-1])
+            attach(offsetConnector(DefConDown, [0,0,offset]), DefConDown, ExplodeSpacing=ExplodeSpacing * (i+1))
+            children(i);
+}
+
 
 // threads along neg z axis, starting at z=0 with first part
 // up to 12 children
@@ -227,36 +244,36 @@ module threadTogether(a) {
 	//echo($children);
 	children(0);
 	if ($children>1)
-		translate([0,0,-a[0]]) 
+		translate([0,0,-a[0]])
 		children(1);
 	if ($children>2)
-		translate([0,0,-a[0]-a[1]]) 
+		translate([0,0,-a[0]-a[1]])
 		children(2);
 	if ($children>3)
-		translate([0,0,-a[0]-a[1]-a[2]]) 
+		translate([0,0,-a[0]-a[1]-a[2]])
 		children(3);
 	if ($children>4)
-		translate([0,0,-a[0]-a[1]-a[2]-a[3]]) 
+		translate([0,0,-a[0]-a[1]-a[2]-a[3]])
 		children(4);
 	if ($children>5)
-		translate([0,0,-a[0]-a[1]-a[2]-a[3]-a[4]]) 
+		translate([0,0,-a[0]-a[1]-a[2]-a[3]-a[4]])
 		children(5);
 	if ($children>6)
-		translate([0,0,-a[0]-a[1]-a[2]-a[3]-a[4]-a[5]]) 
+		translate([0,0,-a[0]-a[1]-a[2]-a[3]-a[4]-a[5]])
 		children(6);
 	if ($children>7)
-		translate([0,0,-a[0]-a[1]-a[2]-a[3]-a[4]-a[5]-a[6]]) 
+		translate([0,0,-a[0]-a[1]-a[2]-a[3]-a[4]-a[5]-a[6]])
 		children(7);
 	if ($children>8)
-		translate([0,0,-a[0]-a[1]-a[2]-a[3]-a[4]-a[5]-a[6]-a[7]]) 
+		translate([0,0,-a[0]-a[1]-a[2]-a[3]-a[4]-a[5]-a[6]-a[7]])
 		children(8);
 	if ($children>9)
-		translate([0,0,-a[0]-a[1]-a[2]-a[3]-a[4]-a[5]-a[6]-a[7]-a[8]]) 
+		translate([0,0,-a[0]-a[1]-a[2]-a[3]-a[4]-a[5]-a[6]-a[7]-a[8]])
 		children(9);
 	if ($children>10)
-		translate([0,0,-a[0]-a[1]-a[2]-a[3]-a[4]-a[5]-a[6]-a[7]-a[8]-a[9]]) 
+		translate([0,0,-a[0]-a[1]-a[2]-a[3]-a[4]-a[5]-a[6]-a[7]-a[8]-a[9]])
 		children(10);
 	if ($children>11)
-		translate([0,0,-a[0]-a[1]-a[2]-a[3]-a[4]-a[5]-a[6]-a[7]-a[8]-a[9]-a[10]]) 
+		translate([0,0,-a[0]-a[1]-a[2]-a[3]-a[4]-a[5]-a[6]-a[7]-a[8]-a[9]-a[10]])
 		children(11);
 }

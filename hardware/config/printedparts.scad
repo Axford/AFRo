@@ -7,6 +7,7 @@ include <../printedparts/CounterweightBracket.scad>
 include <../printedparts/CounterweightIdler.scad>
 include <../printedparts/CounterweightIdlerGuide.scad>
 include <../printedparts/CounterweightLineBracket.scad>
+include <../printedparts/ElbowDrivenGear.scad>
 include <../printedparts/ElbowDrivenPulley.scad>
 include <../printedparts/ElbowDrivePulley.scad>
 include <../printedparts/ElbowJoint.scad>

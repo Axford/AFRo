@@ -25,14 +25,14 @@ function nut_trap_depth(type) = type[5];
 
 screw_pan_color = [0.7,0.7,0.7];
 
-module nut(type, nyloc = false, brass = false) {
+module nut(type, nyloc = false, brass = false, ExplodeSpacing=10) {
     hole_rad  = type[0] / 2;
     outer_rad = nut_radius(type);
     thickness = nut_thickness(type);
     nyloc_thickness = type[3];
-    
+
     vitamin(
-        "vitamins/nuts.scad", 
+        "vitamins/nuts.scad",
         str(nyloc?"Nyloc " : "", brass?"Brass ":"", "M", type[0], type[7] ? " Half" : "" , " Nut"),
         str("nut(type=",type[6],",nyloc=",nyloc,",brass=",brass," )")
     ) {
@@ -52,6 +52,9 @@ module nut(type, nyloc = false, brass = false) {
         translate([0, 0, -1])
             cylinder(r = hole_rad, h = nyloc_thickness + 2);
     }
+
+    thread(thickness, ExplodeSpacing=ExplodeSpacing)
+        children();
 }
 
 module nut_and_washer(type, nyloc) {

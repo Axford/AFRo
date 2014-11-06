@@ -1,4 +1,4 @@
-module ElbowDrivenPulley_stl() {
+module ElbowDrivenPulley_stl(ExplodeSpacing=10) {
     printedPart("printedparts/ElbowDrivenPulley.scad", "Elbow Driven Pulley", "ElbowDrivenPulley_stl()") {
 
         view(t=[-1, 2, 3]);
@@ -7,7 +7,7 @@ module ElbowDrivenPulley_stl() {
             import(str(STLPath, "ElbowDrivenPulley.stl"));
         } else {
 
-            difference() {
+            union() {
                 pulley(
                     teeth = 34,			// Number of teeth, standard Mendel T5 belt = 8, gives Outside Diameter of 11.88mm
                     belt_type = "T2.5",	// supported types: MXL 40DP XL H T2.5 T5 T10 AT5 HTD_3mm HTD_5mm HTD_8mm GT2_2mm GT2_3mm GT2_5mm
@@ -21,30 +21,38 @@ module ElbowDrivenPulley_stl() {
                     idler = 1,			// Belt retainer below teeth, 0 = No, 1 = Yes
                     idler_ht = 1.5,		// height of idler flange over pulley, standard = 1.5
                     pulley_t_ht = 8,	// length of toothed part of pulley, standard = 12
-                    pulley_b_ht = 8,	// pulley base height, standard = 8. Set to same as idler_ht if you want an idler but no pulley.
-                    pulley_b_dia = 22,	// pulley base diameter, standard = 20
+                    pulley_b_ht = 9,	// pulley base height, standard = 8. Set to same as idler_ht if you want an idler but no pulley.
+                    pulley_b_dia = 12,	// pulley base diameter, standard = 20
                     no_of_nuts = 1,		// number of captive nuts required, standard = 1
                     nut_angle = 90,		// angle between nuts, standard = 90
                     nut_shaft_distance = 2.2,	// distance between inner face of nut and shaft, can be negative.
-                    //	********************************
-                    //	** Scaling tooth for good fit **
-                    //	********************************
-                    //	To improve fit of belt to pulley, set the following constant. Decrease or 
-                    // increase by 0.1mm at a time. We are modelling the *BELT* tooth here, not the 
-                    // tooth on the pulley. Increasing the number will *decrease* the pulley tooth 
-                    // size. Increasing the tooth width will also scale proportionately the tooth 
-                    // depth, to maintain the shape of the tooth, and increase how far into the 
-                    // pulley the tooth is indented. Can be negative 
                     additional_tooth_width = 0.2, // scaling for good fit
-                    //	If you need more tooth depth than this provides, adjust the following constant. 
-                    // However, this will cause the shape of the tooth to change.
                     additional_tooth_depth = 0 //mm
                 );
 
-                // lock nut
-                translate([0,0,-1])
-                    cylinder(r=nut_radius(M6_nut), h=nut_thickness(M6_nut)+1, $fn=6);
+                // gear
+                gear(
+                    number_of_teeth=ElbowDriveGearTeeth,
+                    circular_pitch=ElbowGearCircularPitch, diametral_pitch=false,
+                    pressure_angle=32,
+                    clearance = 0.2,
+                    gear_thickness=8,
+                    rim_thickness=8,
+                    rim_width=5,
+                    hub_thickness=8,
+                    hub_diameter=10,
+                    bore_diameter=4,
+                    circles=0,
+                    backlash=0,
+                    twist=0,
+                    involute_facets=0,
+                    flat=false);
             }
         }
     }
+
+    h = 8 + 9 + 1.5;
+    // allow for natural threading
+    thread(h, ExplodeSpacing=ExplodeSpacing)
+        children();
 }

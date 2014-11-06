@@ -3,5 +3,4 @@ UseSTL=false;
 UseVitaminSTL=true;
 DebugConnectors=true;
 DebugCoordinateFrames=true;
-$Explode=false;
-ElbowJointAssembly();
+washer(type=M6_washer);

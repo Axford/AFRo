@@ -3,5 +3,4 @@ UseSTL=false;
 UseVitaminSTL=true;
 DebugConnectors=true;
 DebugCoordinateFrames=true;
-$Explode=false;
-ElbowJointAssembly();
+nut(type=M4_nut,nyloc=false,brass=false );

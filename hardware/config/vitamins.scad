@@ -45,6 +45,7 @@ include <../vitamins/sam3.scad>
 include <../vitamins/cupHolder.scad>
 include <../vitamins/Spoon.scad>
 include <../vitamins/aluAngle.scad>
+include <../vitamins/aluTube.scad>
 
 include <../vitamins/pulleys2.scad>
 

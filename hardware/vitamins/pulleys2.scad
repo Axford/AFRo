@@ -7,8 +7,8 @@
 // http://www.thingiverse.com/thing:3104 by GilesBathgate
 // http://www.thingiverse.com/thing:2079 by nophead
 // http://www.thingiverse.com/thing:16627 by droftarts
-// 
-// dxf tooth data from 
+//
+// dxf tooth data from
 // http://oem.cadregister.com/asp/PPOW_Entry.asp?company=915217&elementID=07807803/METRIC/URETH/WV0025/F
 // pulley diameter checked and modelled from data at http://www.sdp-si.com/D265/HTML/D265T016.html
 //
@@ -46,14 +46,14 @@
 	//	********************************
 	//	** Scaling tooth for good fit **
 	//	********************************
-	//	To improve fit of belt to pulley, set the following constant. Decrease or 
-	// increase by 0.1mm at a time. We are modelling the *BELT* tooth here, not the 
-	// tooth on the pulley. Increasing the number will *decrease* the pulley tooth 
-	// size. Increasing the tooth width will also scale proportionately the tooth 
-	// depth, to maintain the shape of the tooth, and increase how far into the 
-	// pulley the tooth is indented. Can be negative 
+	//	To improve fit of belt to pulley, set the following constant. Decrease or
+	// increase by 0.1mm at a time. We are modelling the *BELT* tooth here, not the
+	// tooth on the pulley. Increasing the number will *decrease* the pulley tooth
+	// size. Increasing the tooth width will also scale proportionately the tooth
+	// depth, to maintain the shape of the tooth, and increase how far into the
+	// pulley the tooth is indented. Can be negative
 	additional_tooth_width = 0.2, // scaling for good fit
-	//	If you need more tooth depth than this provides, adjust the following constant. 
+	//	If you need more tooth depth than this provides, adjust the following constant.
 	// However, this will cause the shape of the tooth to change.
 	additional_tooth_depth = 0 //mm
 );
@@ -89,14 +89,14 @@ module pulley(
 	//	********************************
 	//	** Scaling tooth for good fit **
 	//	********************************
-	//	To improve fit of belt to pulley, set the following constant. Decrease or 
-	// increase by 0.1mm at a time. We are modelling the *BELT* tooth here, not the 
-	// tooth on the pulley. Increasing the number will *decrease* the pulley tooth 
-	// size. Increasing the tooth width will also scale proportionately the tooth 
-	// depth, to maintain the shape of the tooth, and increase how far into the 
-	// pulley the tooth is indented. Can be negative 
+	//	To improve fit of belt to pulley, set the following constant. Decrease or
+	// increase by 0.1mm at a time. We are modelling the *BELT* tooth here, not the
+	// tooth on the pulley. Increasing the number will *decrease* the pulley tooth
+	// size. Increasing the tooth width will also scale proportionately the tooth
+	// depth, to maintain the shape of the tooth, and increase how far into the
+	// pulley the tooth is indented. Can be negative
 	additional_tooth_width = 0.2, // scaling for good fit
-	//	If you need more tooth depth than this provides, adjust the following constant. 
+	//	If you need more tooth depth than this provides, adjust the following constant.
 	// However, this will cause the shape of the tooth to change.
 	additional_tooth_depth = 0 //mm
 ) {
@@ -152,7 +152,7 @@ module pulley(
 	if (belt_type == "HTD_5mm") {
 		pulley2(teeth, belt_type, motor_shaft, m3_dia, m3_nut_hex, m3_nut_flats, m3_nut_depth, retainer, retainer_ht,
 			idler, idler_ht, pulley_t_ht, pulley_b_ht, pulley_b_dia, no_of_nuts, nut_angle, nut_shaft_distance,
-			additional_tooth_width, additional_tooth_depth, tooth_spacing (teeth, 5,0.5715), 2.199, 3.781); 
+			additional_tooth_width, additional_tooth_depth, tooth_spacing (teeth, 5,0.5715), 2.199, 3.781);
 	}
 	if (belt_type == "HTD_8mm") {
 		pulley2(teeth, belt_type, motor_shaft, m3_dia, m3_nut_hex, m3_nut_flats, m3_nut_depth, retainer, retainer_ht,
@@ -197,11 +197,11 @@ module pulley2(teeth, belt_type, motor_shaft, m3_dia, m3_nut_hex, m3_nut_flats, 
 //	translate ([0,0, pulley_b_ht + pulley_t_ht + retainer_ht ]) rotate ([0,180,0])
 
 	difference()
-	 {	 
+	 {
 		union()
 		{
 			//base
-	
+
 			if ( pulley_b_ht < 2 ) { echo ("CAN'T DRAW PULLEY BASE, HEIGHT LESS THAN 2!!!"); } else {
 				rotate_extrude($fn=pulley_b_dia*2)
 				{
@@ -210,21 +210,21 @@ module pulley2(teeth, belt_type, motor_shaft, m3_dia, m3_nut_hex, m3_nut_flats, 
 						translate([pulley_b_dia/2-1,pulley_b_ht-1]) circle(1);
 				}
 			}
-	
+
 		difference()
 			{
 			//shaft - diameter is outside diameter of pulley
-			
-			translate([0,0,pulley_b_ht]) 
-			rotate ([0,0,360/(teeth*4)]) 
+
+			translate([0,0,pulley_b_ht])
+			rotate ([0,0,360/(teeth*4)])
 			cylinder(r=pulley_OD/2,h=pulley_t_ht, $fn=teeth*4);
-	
+
 			//teeth - cut out of shaft
-		
-			for(i=[1:teeth]) 
+
+			for(i=[1:teeth])
 			rotate([0,0,i*(360/teeth)])
-			translate([0,-tooth_distance_from_centre,pulley_b_ht -1]) 
-			scale ([ tooth_width_scale , tooth_depth_scale , 1 ]) 
+			translate([0,-tooth_distance_from_centre,pulley_b_ht -1])
+			scale ([ tooth_width_scale , tooth_depth_scale , 1 ])
 			{
 			if ( belt_type == "MXL" ) { MXL(pulley_t_ht);}
 			if ( belt_type == "40DP" ) { 40DP(pulley_t_ht);}
@@ -243,34 +243,38 @@ module pulley2(teeth, belt_type, motor_shaft, m3_dia, m3_nut_hex, m3_nut_flats, 
 			}
 
 			}
-			
+
 		//belt retainer / idler
-		if ( retainer > 0 ) {translate ([0,0, pulley_b_ht + pulley_t_ht ]) 
-		rotate_extrude($fn=teeth*4)  
+		if ( retainer > 0 ) {translate ([0,0, pulley_b_ht + pulley_t_ht ])
+		rotate_extrude($fn=teeth*4)
 		polygon([[0,0],[pulley_OD/2,0],[pulley_OD/2 + retainer_ht , retainer_ht],[0 , retainer_ht],[0,0]]);}
-		
-		if ( idler > 0 ) {translate ([0,0, pulley_b_ht - idler_ht ]) 
-		rotate_extrude($fn=teeth*4)  
+
+		if ( idler > 0 ) {translate ([0,0, pulley_b_ht - idler_ht ])
+		rotate_extrude($fn=teeth*4)
 		polygon([[0,0],[pulley_OD/2 + idler_ht,0],[pulley_OD/2 , idler_ht],[0 , idler_ht],[0,0]]);}
-	
+
 		}
-	   
+
 		//hole for motor shaft
 		translate([0,0,-1])cylinder(r=motor_shaft/2,h=pulley_b_ht + pulley_t_ht + retainer_ht + 2,$fn=motor_shaft*4);
-				
+
 		//captive nut and grub screw holes
-	
-		if ( pulley_b_ht < m3_nut_flats ) { echo ("CAN'T DRAW CAPTIVE NUTS, HEIGHT LESS THAN NUT DIAMETER!!!"); } else {
-		if ( (pulley_b_dia - motor_shaft)/2 < m3_nut_depth + 3 ) { echo ("CAN'T DRAW CAPTIVE NUTS, DIAMETER TOO SMALL FOR NUT DEPTH!!!"); } else {
-	
+
+		if ( pulley_b_ht < m3_nut_flats ) {
+			//echo ("CAN'T DRAW CAPTIVE NUTS, HEIGHT LESS THAN NUT DIAMETER!!!");
+		} else {
+		if ( (pulley_b_dia - motor_shaft)/2 < m3_nut_depth + 3 ) {
+			//echo ("CAN'T DRAW CAPTIVE NUTS, DIAMETER TOO SMALL FOR NUT DEPTH!!!"); 
+		} else {
+
 			for(j=[1:no_of_nuts]) rotate([0,0,j*nut_angle])
 			translate([0,0,nut_elevation])rotate([90,0,0])
-	
+
 			union()
 			{
 				//entrance
 				translate([0,-pulley_b_ht/4-0.5,motor_shaft/2+m3_nut_depth/2+nut_shaft_distance]) cube([m3_nut_flats,pulley_b_ht/2+1,m3_nut_depth],center=true);
-	
+
 				//nut
 				if ( m3_nut_hex > 0 )
 					{
@@ -280,13 +284,13 @@ module pulley2(teeth, belt_type, motor_shaft, m3_dia, m3_nut_hex, m3_nut_flats, 
 						// square nut
 						translate([0,0.25,motor_shaft/2+m3_nut_depth/2+nut_shaft_distance]) cube([m3_nut_flats,m3_nut_flats,m3_nut_depth],center=true);
 					}
-	
+
 				//grub screw hole
 				rotate([0,0,22.5])cylinder(r=m3_dia/2,h=pulley_b_dia/2+1,$fn=8);
 			}
 		}}
 	 }
-	   
+
 	}
 
 

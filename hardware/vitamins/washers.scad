@@ -34,25 +34,27 @@ module washer(type, ExplodeSpacing=10) {
     hole = type[0];
     thickness = washer_thickness(type);
     diameter  = washer_diameter(type);
-    
+
     vitamin(
-        "vitamins/washers.scad", 
+        "vitamins/washers.scad",
         str("M",hole, washer_soft(type) ? " Rubber":""  ," Washer ",diameter,"x",thickness),
         str("washer(type=",type[5],")")
     ) {
         view();
-    }  
-        
+    }
+
     color(washer_color(type)) render() difference() {
         cylinder(r = diameter / 2, h = thickness - 0.05);
         cylinder(r = hole / 2, h = 2 * thickness + 1, center = true);
     }
-    
+
     if($children)
-        attach(DefConDown, DefConDown, ExplodeSpacing=ExplodeSpacing)
-            children();
+        for(i=[0:$children-1])
+            attach(offsetConnector(DefConDown, [0,0,thickness]), DefConDown, ExplodeSpacing=ExplodeSpacing * (i+1))
+            children(i);
 }
 
+// FIXME: Update star_washer to new format
 module star_washer(type) {
     hole = type[0];
     thickness = washer_thickness(type);

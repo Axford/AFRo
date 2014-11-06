@@ -3,5 +3,4 @@ UseSTL=false;
 UseVitaminSTL=true;
 DebugConnectors=true;
 DebugCoordinateFrames=true;
-$Explode=false;
-ElbowJointAssembly();
+belt(T2p5x6);

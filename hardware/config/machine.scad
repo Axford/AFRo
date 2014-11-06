@@ -32,7 +32,7 @@ TorsoVerticalTravel = 300;
 TorsoPostDia = 20;
 TorsoRodDia = 8;  // smooth rod diameter
 TorsoRodSpacing = 160;  // spacing of smooth rods
-TorsoPostElbowOffset = 150; 
+TorsoPostElbowOffset = 150;
 
 TorsoPostAxisOffset = 50;  // motor offset
 
@@ -42,6 +42,16 @@ TorsoAngle = 130;
 TorsoPosition = 0;
 
 TorsoBaseThickness = 8;
+
+Torso_gears_pitch_radius = TorsoPostAxisOffset;
+TorsoBigGearTeeth = 41;
+TorsoDriveGearTeeth = 11;
+Torso_gears_circular_pitch = Torso_gears_pitch_radius*2 / TorsoBigGearTeeth * 180 * TorsoBigGearTeeth/(TorsoDriveGearTeeth+TorsoBigGearTeeth);
+
+TorsoStepperZOffset = 40;
+
+TorsoBigGearThickness = 14;
+
 
 // Counterweight
 
@@ -68,6 +78,10 @@ UpperArmHeight = 38;
 // Elbow
 
 ElbowAngle = 130;
+ElbowGearSpacing=25;
+ElbowDriveGearTeeth = 16;
+ElbowDrivenGearTeeth = 2 * ElbowDriveGearTeeth;
+ElbowGearCircularPitch = ElbowGearSpacing*2 / ElbowDrivenGearTeeth * 180 * ElbowDrivenGearTeeth/(ElbowDriveGearTeeth+ElbowDrivenGearTeeth);
 
 // Lower Arm
 
