@@ -67,10 +67,6 @@ module ShoulderAssembly() {
         translate([0,-UpperArmLength - TorsoRodSpacing/2, bh-ShoulderHeight]) {
 
             ElbowJointAssembly();
-
-            translate([0,0,-3])
-                rotate([0,0,ElbowAngle])
-                LowerArmAssembly();
         }
 
 	}
@@ -91,55 +87,83 @@ module ElbowJointAssembly() {
 		// stl
 		ElbowJoint_stl();
 
-		// tube
-		translate([0,0,-40])
-			aluTube(8, 6, ShoulderHeight+40);
+		step(1, "Loosely assemble the driven gear set and push fit into the elbow joint") {
 
-		// threaded rod
-		translate([0,0,-ShoulderHeight-6])
-			cylinder(r=6/2, h=115);
+			view(t=[5,19,14], r=[42,53,43],d=1200);
 
-		// lower bearing
-		translate([0,0,bw/2-2])
-			ball_bearing(BB608);
+			// driven gear upper assembly
+			attach(con([0,0,ShoulderHeight - bw/2], _down), DefConDown, $ExplodeChildren=$Explode)
+				ball_bearing(BB608)
+				washer(M6_washer)
+				washer(M6_washer)
+				ElbowDrivenGear_stl()
+				washer(M6_washer)
+				nut(M6_nut, nyloc=true);
 
-		// lower washer
-		translate([0,0,-3])
-			washer(M8_washer);
+			// threaded rod
+			attach(con([0,0,-ShoulderHeight-6], _up), DefConUp, ExplodeSpacing=80, offset=80)
+				ThreadedRod(od=6, l=105);
+		}
 
-		// bottom nut
-		translate([0,0,-ShoulderHeight-5])
-			nut(M6_nut);
+		step (2,"Assemble the pulley set") {
+			view(t=[5,19,14], r=[42,53,43],d=1200);
 
-		// driven gear upper assembly
-		attach(con([0,0,ShoulderHeight - bw/2], _down), DefConDown, $ExplodeChildren=$Explode)
-			ball_bearing(BB608)
-			washer(M6_washer)
-			washer(M6_washer)
-			ElbowDrivenGear_stl()
-			washer(M6_washer)
-			nut(M6_nut, nyloc=true);
+			// driven pulley upper assembly
+			attach(con([0,ElbowGearSpacing,ShoulderHeight - bw2/2], _down), DefConDown, $ExplodeChildren=$Explode)
+				ball_bearing(BB624)
+				washer(M4_washer)
+				washer(M6_washer)
+				rotate([0,0, 180/ElbowDriveGearTeeth])
+				ElbowDrivenPulley_stl()
+				washer(M4_washer)
+				screw(M4_cap_screw, 50);
 
-        // driven pulley upper assembly
-        attach(con([0,ElbowGearSpacing,ShoulderHeight - bw2/2], _down), DefConDown, $ExplodeChildren=$Explode)
-			ball_bearing(BB624)
-			washer(M4_washer)
-			washer(M6_washer)
-			rotate([0,0, 180/ElbowDriveGearTeeth])
-			ElbowDrivenPulley_stl()
-			washer(M4_washer)
-			screw(M4_cap_screw, 50);
+			// driven pulley lower assembly
+			attach(con([0,ElbowGearSpacing,ShoulderHeight/2 - bw2/2], _up), DefConDown, $ExplodeChildren=$Explode, ExplodeSpacing=20)
+				ball_bearing(BB624)
+				washer(M4_washer)
+				nut(M4_nut, nyloc=true);
+		}
 
-		// driven pulley lower assembly
-		attach(con([0,ElbowGearSpacing,ShoulderHeight/2 - bw2/2], _up), DefConDown, $ExplodeChildren=$Explode, ExplodeSpacing=20)
-			ball_bearing(BB624)
-			washer(M4_washer)
-			nut(M4_nut);
+		step(3, "Slide the aluminium tube over the threaded rod and push fit the lower bearing") {
+			view(t=[-23,20,-53], r=[42,53,43],d=1280);
 
-		// belt
-		translate([0,ElbowGearSpacing,ShoulderHeight+15])
-			rotate([0,0,90])
-			belt(T2p5x6, 0, 0, 12, UpperArmLength + TorsoRodSpacing/2 + 40 - ElbowGearSpacing, 0, 12, gap = 0);
+			// tube
+			attach(con([0,0,-40], _up), DefConUp, ExplodeSpacing=90)
+				aluTube(8, 6, ShoulderHeight+40);
+
+			// lower bearing
+			attach(con([0,0,bw/2-2], _up), DefConUp, ExplodeSpacing=140)
+				ball_bearing(BB608);
+		}
+
+		step(4,"Connect the lower arm") {
+			view(t=[-23,20,-53], r=[42,53,43],d=1280);
+
+			// lower washer
+			attach(con([0,0,-3], _up), DefConUp, ExplodeSpacing=50)
+				washer(M8_washer);
+
+			attach(con([0,0,-3], _up), DefConUp, ExplodeSpacing=60)
+				rotate([0,0,ElbowAngle])
+				LowerArmAssembly();
+
+			// bottom nut
+			attach(con([0,0,-ShoulderHeight-5], _up), DefConUp, ExplodeSpacing=70)
+				nut(M6_nut);
+
+
+		}
+
+		step(5,"Slip the belt round the pulley - this be connected later") {
+			view(t=[-23,20,-53], r=[42,53,43],d=1280);
+
+			// belt
+			translate([0,ElbowGearSpacing,ShoulderHeight+15])
+				rotate([0,0,90])
+				belt(T2p5x6, 0, 0, 12, UpperArmLength + TorsoRodSpacing/2 + 40 - ElbowGearSpacing, 0, 12, gap = 0);
+		}
+
 
 	}
 

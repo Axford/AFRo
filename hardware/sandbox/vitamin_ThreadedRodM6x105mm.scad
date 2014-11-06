@@ -3,5 +3,4 @@ UseSTL=false;
 UseVitaminSTL=true;
 DebugConnectors=true;
 DebugCoordinateFrames=true;
-$ShowStep=4;
-ElbowJointAssembly();
+ThreadedRod(6,105);
