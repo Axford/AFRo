@@ -102,7 +102,7 @@ module ElbowJointAssembly() {
 
 			// threaded rod
 			attach(con([0,0,-ShoulderHeight-6], _up), DefConUp, ExplodeSpacing=80, offset=80)
-				ThreadedRod(od=6, l=105);
+				ThreadedRod(od=6, l=110);
 		}
 
 		step (2,"Assemble the pulley set") {
@@ -130,7 +130,7 @@ module ElbowJointAssembly() {
 
 			// tube
 			attach(con([0,0,-40], _up), DefConUp, ExplodeSpacing=90)
-				aluTube(8, 6, ShoulderHeight+40);
+				aluTube(8, 6, ShoulderHeight+54);
 
 			// lower bearing
 			attach(con([0,0,bw/2-2], _up), DefConUp, ExplodeSpacing=140)

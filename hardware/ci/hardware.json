@@ -971,7 +971,6 @@
         "assemblies": [
             {
                 "cut": [],
-                "hash": "e3e6fad6e2e64e221e66012802503fd8",
                 "vitamins": [],
                 "views": [
                     {
@@ -1041,7 +1040,6 @@
             },
             {
                 "cut": [],
-                "hash": "23b8a5cd70235c6a2d0be1c8127395a1",
                 "vitamins": [
                     {
                         "title": "Ball Bearing 6205_2RS",
@@ -1238,7 +1236,6 @@
             },
             {
                 "cut": [],
-                "hash": "69ca9d646d86f23649a8feec3035d3a5",
                 "vitamins": [
                     {
                         "title": "Ball Bearing 624",
@@ -1300,7 +1297,6 @@
             },
             {
                 "cut": [],
-                "hash": "13b0dc33ac5fad179e129a7c04dc369a",
                 "vitamins": [
                     {
                         "title": "LM8UU Linear Bearing",
@@ -1404,7 +1400,6 @@
             },
             {
                 "cut": [],
-                "hash": "db935c13f4069efeebbc29c7b4cea93e",
                 "vitamins": [
                     {
                         "title": "Ball Bearing 608",
@@ -1559,7 +1554,6 @@
                                 ],
                                 "dist": 1200,
                                 "title": "view",
-                                "filepath": "../assemblies/AFRo/ElbowJoint_step1_view.png",
                                 "caption": "view",
                                 "translate": [
                                     5,
@@ -1586,7 +1580,6 @@
                                 ],
                                 "dist": 1200,
                                 "title": "view",
-                                "filepath": "../assemblies/AFRo/ElbowJoint_step2_view.png",
                                 "caption": "view",
                                 "translate": [
                                     5,
@@ -1613,7 +1606,6 @@
                                 ],
                                 "dist": 1280,
                                 "title": "view",
-                                "filepath": "../assemblies/AFRo/ElbowJoint_step3_view.png",
                                 "caption": "view",
                                 "translate": [
                                     -23,
@@ -1640,7 +1632,6 @@
                                 ],
                                 "dist": 1280,
                                 "title": "view",
-                                "filepath": "../assemblies/AFRo/ElbowJoint_step4_view.png",
                                 "caption": "view",
                                 "translate": [
                                     -23,
@@ -1667,7 +1658,6 @@
                                 ],
                                 "dist": 1280,
                                 "title": "view",
-                                "filepath": "../assemblies/AFRo/ElbowJoint_step5_view.png",
                                 "caption": "view",
                                 "translate": [
                                     -23,
@@ -1687,7 +1677,6 @@
             },
             {
                 "cut": [],
-                "hash": "65449772d94f328bac2be600cae1f217",
                 "vitamins": [
                     {
                         "title": "M4 Washer 9x0.8",
@@ -1763,7 +1752,6 @@
                                 ],
                                 "dist": 936,
                                 "title": "view",
-                                "filepath": "../assemblies/AFRo/LowerArm_step1_view.png",
                                 "caption": "view",
                                 "translate": [
                                     -29,
@@ -1790,7 +1778,6 @@
                                 ],
                                 "dist": 1000,
                                 "title": "view",
-                                "filepath": "../assemblies/AFRo/LowerArm_step2_view.png",
                                 "caption": "view",
                                 "translate": [
                                     -21,
@@ -1817,7 +1804,6 @@
                                 ],
                                 "dist": 936,
                                 "title": "view",
-                                "filepath": "../assemblies/AFRo/LowerArm_step3_view.png",
                                 "caption": "view",
                                 "translate": [
                                     -29,
@@ -1837,7 +1823,6 @@
             },
             {
                 "cut": [],
-                "hash": "773384685ca4b5066d78764881fe4a10",
                 "vitamins": [
                     {
                         "title": "Dynamixel AX12",
@@ -1898,7 +1883,6 @@
                                 ],
                                 "dist": 500,
                                 "title": "view",
-                                "filepath": "../assemblies/AFRo/Hand_step1_view.png",
                                 "caption": "view",
                                 "translate": [
                                     6,
@@ -1925,7 +1909,6 @@
                                 ],
                                 "dist": 753,
                                 "title": "view",
-                                "filepath": "../assemblies/AFRo/Hand_step2_view.png",
                                 "caption": "view",
                                 "translate": [
                                     20,
@@ -1952,7 +1935,6 @@
                                 ],
                                 "dist": 753,
                                 "title": "view",
-                                "filepath": "../assemblies/AFRo/Hand_step3_view.png",
                                 "caption": "view",
                                 "translate": [
                                     20,
@@ -1972,7 +1954,6 @@
             },
             {
                 "cut": [],
-                "hash": "ef5bdedc54ed2787f178b4481f682353",
                 "vitamins": [
                     {
                         "title": "Dynamixel AX12",
@@ -2056,7 +2037,6 @@
                                 ],
                                 "dist": 640,
                                 "title": "view",
-                                "filepath": "../assemblies/AFRo/Spoon_step1_view.png",
                                 "caption": "view",
                                 "translate": [
                                     -3,
@@ -2083,7 +2063,6 @@
                                 ],
                                 "dist": 600,
                                 "title": "view",
-                                "filepath": "../assemblies/AFRo/Spoon_step2_view.png",
                                 "caption": "view",
                                 "translate": [
                                     5,
@@ -2103,7 +2082,6 @@
             },
             {
                 "cut": [],
-                "hash": "d8e5fb42cd7fe4ec3bf17666b70a08cc",
                 "vitamins": [],
                 "views": [],
                 "assemblies": [],
@@ -2125,7 +2103,6 @@
             },
             {
                 "cut": [],
-                "hash": "2555d150481be5192ec1b9260c3af56e",
                 "vitamins": [
                     {
                         "title": "Aluminium Angle 10x10x1mm x 420mm",
@@ -2148,7 +2125,6 @@
             },
             {
                 "cut": [],
-                "hash": "5908b04bb4046e4a3d093e0b11bd35ac",
                 "vitamins": [
                     {
                         "title": "NEMA17 Stepper Motor",
@@ -2180,10 +2156,38 @@
         ],
         "printed": [
             {
+                "hash": "bdbc3845621c9a291a55fa41f28986b5",
                 "title": "Base Bracket",
+                "views": [
+                    {
+                        "rotate": [
+                            55,
+                            0,
+                            25
+                        ],
+                        "dist": 500,
+                        "title": "view",
+                        "filepath": "../printedparts/images/BaseBracket_view.png",
+                        "caption": "view",
+                        "translate": [
+                            -5,
+                            10,
+                            16
+                        ],
+                        "type": "view",
+                        "size": [
+                            400,
+                            300
+                        ]
+                    }
+                ],
                 "qty": 1,
                 "call": "BaseBracket_stl()",
-                "file": "printedparts/BaseBracket.scad",
+                "file": "printedparts/BaseBracket.scad"
+            },
+            {
+                "hash": "5e770ab0fa9a18e856eb703f33eab0c8",
+                "title": "Torso Big Gear",
                 "views": [
                     {
                         "rotate": [
@@ -2193,11 +2197,12 @@
                         ],
                         "dist": 500,
                         "title": "view",
+                        "filepath": "../printedparts/images/TorsoBigGear_view.png",
                         "caption": "view",
                         "translate": [
-                            -5,
-                            10,
-                            16
+                            -1,
+                            2,
+                            3
                         ],
                         "type": "view",
                         "size": [
@@ -2205,27 +2210,29 @@
                             300
                         ]
                     }
-                ]
-            },
-            {
-                "title": "Torso Big Gear",
+                ],
                 "qty": 1,
                 "call": "TorsoBigGear_stl()",
-                "file": "printedparts/TorsoBigGear.scad",
+                "file": "printedparts/TorsoBigGear.scad"
+            },
+            {
+                "hash": "ac2954793212a848e4f85f077d3bcb36",
+                "title": "Torso Base",
                 "views": [
                     {
                         "rotate": [
-                            55,
+                            48,
                             0,
-                            25
+                            54
                         ],
-                        "dist": 500,
+                        "dist": 734,
                         "title": "view",
+                        "filepath": "../printedparts/images/TorsoBase_view.png",
                         "caption": "view",
                         "translate": [
+                            -4,
                             -1,
-                            2,
-                            3
+                            4
                         ],
                         "type": "view",
                         "size": [
@@ -2233,27 +2240,29 @@
                             300
                         ]
                     }
-                ]
-            },
-            {
-                "title": "Torso Base",
+                ],
                 "qty": 1,
                 "call": "TorsoBase_stl()",
-                "file": "printedparts/TorsoBase.scad",
+                "file": "printedparts/TorsoBase.scad"
+            },
+            {
+                "hash": "0fb5c7d25b1127053d41030bf9a34415",
+                "title": "Torso Bearing Collar",
                 "views": [
                     {
                         "rotate": [
-                            48,
+                            55,
                             0,
-                            54
+                            25
                         ],
-                        "dist": 734,
+                        "dist": 500,
                         "title": "view",
+                        "filepath": "../printedparts/images/TorsoBearingCollar_view.png",
                         "caption": "view",
                         "translate": [
-                            -4,
-                            -1,
-                            4
+                            -5,
+                            10,
+                            16
                         ],
                         "type": "view",
                         "size": [
@@ -2261,13 +2270,14 @@
                             300
                         ]
                     }
-                ]
-            },
-            {
-                "title": "Torso Bearing Collar",
+                ],
                 "qty": 1,
                 "call": "TorsoBearingCollar_stl()",
-                "file": "printedparts/TorsoBearingCollar.scad",
+                "file": "printedparts/TorsoBearingCollar.scad"
+            },
+            {
+                "hash": "b524af48a3e58a575efb4f0dac5e9eb5",
+                "title": "Torso Bearing Top Collar",
                 "views": [
                     {
                         "rotate": [
@@ -2277,6 +2287,7 @@
                         ],
                         "dist": 500,
                         "title": "view",
+                        "filepath": "../printedparts/images/TorsoBearingTopCollar_view.png",
                         "caption": "view",
                         "translate": [
                             -5,
@@ -2289,27 +2300,29 @@
                             300
                         ]
                     }
-                ]
-            },
-            {
-                "title": "Torso Bearing Top Collar",
+                ],
                 "qty": 1,
                 "call": "TorsoBearingTopCollar_stl()",
-                "file": "printedparts/TorsoBearingTopCollar.scad",
+                "file": "printedparts/TorsoBearingTopCollar.scad"
+            },
+            {
+                "hash": "e20303c1f1f34e8c43ab9ab66db6e090",
+                "title": "Torso Cap",
                 "views": [
                     {
                         "rotate": [
-                            55,
+                            48,
                             0,
-                            25
+                            54
                         ],
-                        "dist": 500,
+                        "dist": 734,
                         "title": "view",
+                        "filepath": "../printedparts/images/TorsoCap_view.png",
                         "caption": "view",
                         "translate": [
-                            -5,
-                            10,
-                            16
+                            -4,
+                            -1,
+                            4
                         ],
                         "type": "view",
                         "size": [
@@ -2317,13 +2330,14 @@
                             300
                         ]
                     }
-                ]
-            },
-            {
-                "title": "Torso Cap",
+                ],
                 "qty": 1,
                 "call": "TorsoCap_stl()",
-                "file": "printedparts/TorsoCap.scad",
+                "file": "printedparts/TorsoCap.scad"
+            },
+            {
+                "hash": "8ec9d2511d1e2195a393b84ebd9647e5",
+                "title": "Counterweight Idler",
                 "views": [
                     {
                         "rotate": [
@@ -2333,6 +2347,7 @@
                         ],
                         "dist": 734,
                         "title": "view",
+                        "filepath": "../printedparts/images/CounterweightIdler_view.png",
                         "caption": "view",
                         "translate": [
                             -4,
@@ -2345,13 +2360,14 @@
                             300
                         ]
                     }
-                ]
-            },
-            {
-                "title": "Counterweight Idler",
+                ],
                 "qty": 2,
                 "call": "CounterweightIdler_stl()",
-                "file": "printedparts/CounterweightIdler.scad",
+                "file": "printedparts/CounterweightIdler.scad"
+            },
+            {
+                "hash": "8b11d29b9ba442b8b8fd50b8698a5988",
+                "title": "Counterweight Idler Guide",
                 "views": [
                     {
                         "rotate": [
@@ -2361,6 +2377,7 @@
                         ],
                         "dist": 734,
                         "title": "view",
+                        "filepath": "../printedparts/images/CounterweightIdlerGuide_view.png",
                         "caption": "view",
                         "translate": [
                             -4,
@@ -2373,27 +2390,29 @@
                             300
                         ]
                     }
-                ]
-            },
-            {
-                "title": "Counterweight Idler Guide",
+                ],
                 "qty": 2,
                 "call": "CounterweightIdlerGuide_stl()",
-                "file": "printedparts/CounterweightIdlerGuide.scad",
+                "file": "printedparts/CounterweightIdlerGuide.scad"
+            },
+            {
+                "hash": "13a70f0c3610cce9e7573516004cd53e",
+                "title": "Shoulder Bracket Left",
                 "views": [
                     {
                         "rotate": [
-                            48,
+                            61,
                             0,
-                            54
+                            47
                         ],
-                        "dist": 734,
+                        "dist": 545,
                         "title": "view",
+                        "filepath": "../printedparts/images/ShoulderBracketLeft_view.png",
                         "caption": "view",
                         "translate": [
-                            -4,
-                            -1,
-                            4
+                            -22,
+                            -24,
+                            -4
                         ],
                         "type": "view",
                         "size": [
@@ -2401,13 +2420,14 @@
                             300
                         ]
                     }
-                ]
-            },
-            {
-                "title": "Shoulder Bracket Left",
+                ],
                 "qty": 1,
                 "call": "ShoulderBracketLeft_stl()",
-                "file": "printedparts/ShoulderBracketLeft.scad",
+                "file": "printedparts/ShoulderBracketLeft.scad"
+            },
+            {
+                "hash": "cf33fe1ab3969fdcc7b6f4ea9b0ca331",
+                "title": "Shoulder Bracket Right",
                 "views": [
                     {
                         "rotate": [
@@ -2417,6 +2437,7 @@
                         ],
                         "dist": 545,
                         "title": "view",
+                        "filepath": "../printedparts/images/ShoulderBracketRight_view.png",
                         "caption": "view",
                         "translate": [
                             -22,
@@ -2429,27 +2450,29 @@
                             300
                         ]
                     }
-                ]
-            },
-            {
-                "title": "Shoulder Bracket Right",
+                ],
                 "qty": 1,
                 "call": "ShoulderBracketRight_stl()",
-                "file": "printedparts/ShoulderBracketRight.scad",
+                "file": "printedparts/ShoulderBracketRight.scad"
+            },
+            {
+                "hash": "53431bf607ad34b77bd4f5a1b3984d11",
+                "title": "Shoulder Belt Clamp",
                 "views": [
                     {
                         "rotate": [
-                            61,
+                            48,
                             0,
-                            47
+                            54
                         ],
-                        "dist": 545,
+                        "dist": 734,
                         "title": "view",
+                        "filepath": "../printedparts/images/ShoulderBeltClamp_view.png",
                         "caption": "view",
                         "translate": [
-                            -22,
-                            -24,
-                            -4
+                            -4,
+                            -1,
+                            4
                         ],
                         "type": "view",
                         "size": [
@@ -2457,27 +2480,29 @@
                             300
                         ]
                     }
-                ]
-            },
-            {
-                "title": "Shoulder Belt Clamp",
+                ],
                 "qty": 1,
                 "call": "ShoulderBeltClamp_stl()",
-                "file": "printedparts/ShoulderBeltClamp.scad",
+                "file": "printedparts/ShoulderBeltClamp.scad"
+            },
+            {
+                "hash": "33005e5e0a421e935c91716f0a4e2596",
+                "title": "Elbow Drive Pulley",
                 "views": [
                     {
                         "rotate": [
-                            48,
+                            55,
                             0,
-                            54
+                            25
                         ],
-                        "dist": 734,
+                        "dist": 500,
                         "title": "view",
+                        "filepath": "../printedparts/images/ElbowDrivePulley_view.png",
                         "caption": "view",
                         "translate": [
-                            -4,
                             -1,
-                            4
+                            2,
+                            3
                         ],
                         "type": "view",
                         "size": [
@@ -2485,13 +2510,14 @@
                             300
                         ]
                     }
-                ]
-            },
-            {
-                "title": "Elbow Drive Pulley",
+                ],
                 "qty": 1,
                 "call": "ElbowDrivePulley_stl()",
-                "file": "printedparts/ElbowDrivePulley.scad",
+                "file": "printedparts/ElbowDrivePulley.scad"
+            },
+            {
+                "hash": "f57dc1ba98ad5a6dea3dabe5d795bbec",
+                "title": "Elbow Motor Plate",
                 "views": [
                     {
                         "rotate": [
@@ -2501,6 +2527,7 @@
                         ],
                         "dist": 500,
                         "title": "view",
+                        "filepath": "../printedparts/images/ElbowMotorPlate_view.png",
                         "caption": "view",
                         "translate": [
                             -1,
@@ -2513,41 +2540,14 @@
                             300
                         ]
                     }
-                ]
-            },
-            {
-                "title": "Elbow Motor Plate",
+                ],
                 "qty": 1,
                 "call": "ElbowMotorPlate_stl()",
-                "file": "printedparts/ElbowMotorPlate.scad",
-                "views": [
-                    {
-                        "rotate": [
-                            55,
-                            0,
-                            25
-                        ],
-                        "dist": 500,
-                        "title": "view",
-                        "caption": "view",
-                        "translate": [
-                            -1,
-                            2,
-                            3
-                        ],
-                        "type": "view",
-                        "size": [
-                            400,
-                            300
-                        ]
-                    }
-                ]
+                "file": "printedparts/ElbowMotorPlate.scad"
             },
             {
+                "hash": "2b8b0182aa9c1163773d65c54c012662",
                 "title": "Counterweight Line Bracket",
-                "qty": 1,
-                "call": "CounterweightLineBracket_stl()",
-                "file": "printedparts/CounterweightLineBracket.scad",
                 "views": [
                     {
                         "rotate": [
@@ -2557,6 +2557,7 @@
                         ],
                         "dist": 734,
                         "title": "view",
+                        "filepath": "../printedparts/images/CounterweightLineBracket_view.png",
                         "caption": "view",
                         "translate": [
                             -4,
@@ -2569,13 +2570,14 @@
                             300
                         ]
                     }
-                ]
+                ],
+                "qty": 1,
+                "call": "CounterweightLineBracket_stl()",
+                "file": "printedparts/CounterweightLineBracket.scad"
             },
             {
+                "hash": "c5d0058bc93beac32d771ad0334281bd",
                 "title": "Elbow Joint",
-                "qty": 1,
-                "call": "ElbowJoint_stl()",
-                "file": "printedparts/ElbowJoint.scad",
                 "views": [
                     {
                         "rotate": [
@@ -2585,6 +2587,7 @@
                         ],
                         "dist": 600,
                         "title": "view",
+                        "filepath": "../printedparts/images/ElbowJoint_view.png",
                         "caption": "view",
                         "translate": [
                             -1,
@@ -2597,13 +2600,26 @@
                             300
                         ]
                     }
-                ]
+                ],
+                "qty": 1,
+                "call": "ElbowJoint_stl()",
+                "file": "printedparts/ElbowJoint.scad"
             },
             {
+                "hash": "ddeadeaddcca3890015afc4acaf14661",
                 "title": "Elbow Driven Gear",
-                "qty": 1,
-                "call": "ElbowDrivenGear_stl()",
-                "file": "printedparts/ElbowDrivenGear.scad",
+                "aabb": [
+                    [
+                        -17.708,
+                        -17.708,
+                        0.0
+                    ],
+                    [
+                        17.708,
+                        17.708,
+                        12.0
+                    ]
+                ],
                 "views": [
                     {
                         "rotate": [
@@ -2613,6 +2629,7 @@
                         ],
                         "dist": 500,
                         "title": "view",
+                        "filepath": "../printedparts/images/ElbowDrivenGear_view.png",
                         "caption": "view",
                         "translate": [
                             -1,
@@ -2625,41 +2642,46 @@
                             300
                         ]
                     }
-                ]
+                ],
+                "qty": 1,
+                "volume": 6205.306913723324,
+                "area": 3579.4441914999593,
+                "call": "ElbowDrivenGear_stl()",
+                "file": "printedparts/ElbowDrivenGear.scad"
             },
             {
+                "hash": "51753c86abc672da2e41956a2508a610",
                 "title": "Elbow Driven Pulley",
+                "views": [
+                    {
+                        "rotate": [
+                            55,
+                            0,
+                            25
+                        ],
+                        "dist": 500,
+                        "title": "view",
+                        "filepath": "../printedparts/images/ElbowDrivenPulley_view.png",
+                        "caption": "view",
+                        "translate": [
+                            -1,
+                            2,
+                            3
+                        ],
+                        "type": "view",
+                        "size": [
+                            400,
+                            300
+                        ]
+                    }
+                ],
                 "qty": 1,
                 "call": "ElbowDrivenPulley_stl()",
-                "file": "printedparts/ElbowDrivenPulley.scad",
-                "views": [
-                    {
-                        "rotate": [
-                            55,
-                            0,
-                            25
-                        ],
-                        "dist": 500,
-                        "title": "view",
-                        "caption": "view",
-                        "translate": [
-                            -1,
-                            2,
-                            3
-                        ],
-                        "type": "view",
-                        "size": [
-                            400,
-                            300
-                        ]
-                    }
-                ]
+                "file": "printedparts/ElbowDrivenPulley.scad"
             },
             {
+                "hash": "904a7f977b851f8f8484de2cbfb090e1",
                 "title": "Lower Arm Servo Bracket",
-                "qty": 2,
-                "call": "LowerArmServoBracket_stl()",
-                "file": "printedparts/LowerArmServoBracket.scad",
                 "views": [
                     {
                         "rotate": [
@@ -2669,6 +2691,7 @@
                         ],
                         "dist": 500,
                         "title": "view",
+                        "filepath": "../printedparts/images/LowerArmServoBracket_view.png",
                         "caption": "view",
                         "translate": [
                             0,
@@ -2681,13 +2704,44 @@
                             300
                         ]
                     }
-                ]
+                ],
+                "qty": 2,
+                "call": "LowerArmServoBracket_stl()",
+                "file": "printedparts/LowerArmServoBracket.scad"
             },
             {
+                "hash": "edea8446ae1209e8e66dab5848e20f53",
                 "title": "Wrist Bracket",
+                "views": [
+                    {
+                        "rotate": [
+                            55,
+                            0,
+                            25
+                        ],
+                        "dist": 500,
+                        "title": "view",
+                        "filepath": "../printedparts/images/WristBracket_view.png",
+                        "caption": "view",
+                        "translate": [
+                            -1,
+                            2,
+                            3
+                        ],
+                        "type": "view",
+                        "size": [
+                            400,
+                            300
+                        ]
+                    }
+                ],
                 "qty": 1,
                 "call": "WristBracket_stl()",
-                "file": "printedparts/WristBracket.scad",
+                "file": "printedparts/WristBracket.scad"
+            },
+            {
+                "hash": "90a791f4647ad387de88623a0e4929ab",
+                "title": "Spoon Holder",
                 "views": [
                     {
                         "rotate": [
@@ -2697,6 +2751,7 @@
                         ],
                         "dist": 500,
                         "title": "view",
+                        "filepath": "../printedparts/images/SpoonHolder_view.png",
                         "caption": "view",
                         "translate": [
                             -1,
@@ -2709,13 +2764,14 @@
                             300
                         ]
                     }
-                ]
-            },
-            {
-                "title": "Spoon Holder",
+                ],
                 "qty": 1,
                 "call": "SpoonHolder_stl()",
-                "file": "printedparts/SpoonHolder.scad",
+                "file": "printedparts/SpoonHolder.scad"
+            },
+            {
+                "hash": "1e623fd442c2f131158dfe26bb62a0dd",
+                "title": "Elbow Joint 2",
                 "views": [
                     {
                         "rotate": [
@@ -2725,6 +2781,7 @@
                         ],
                         "dist": 500,
                         "title": "view",
+                        "filepath": "../printedparts/images/ElbowJoint2_view.png",
                         "caption": "view",
                         "translate": [
                             -1,
@@ -2737,41 +2794,14 @@
                             300
                         ]
                     }
-                ]
-            },
-            {
-                "title": "Elbow Joint 2",
+                ],
                 "qty": 1,
                 "call": "ElbowJoint2_stl()",
-                "file": "printedparts/ElbowJoint2.scad",
-                "views": [
-                    {
-                        "rotate": [
-                            55,
-                            0,
-                            25
-                        ],
-                        "dist": 500,
-                        "title": "view",
-                        "caption": "view",
-                        "translate": [
-                            -1,
-                            2,
-                            3
-                        ],
-                        "type": "view",
-                        "size": [
-                            400,
-                            300
-                        ]
-                    }
-                ]
+                "file": "printedparts/ElbowJoint2.scad"
             },
             {
+                "hash": "bfdcb81c273fe682eb6fb18edd812d29",
                 "title": "Counterweight Bracket",
-                "qty": 1,
-                "call": "CounterweightBracket_stl()",
-                "file": "printedparts/CounterweightBracket.scad",
                 "views": [
                     {
                         "rotate": [
@@ -2781,6 +2811,7 @@
                         ],
                         "dist": 500,
                         "title": "view",
+                        "filepath": "../printedparts/images/CounterweightBracket_view.png",
                         "caption": "view",
                         "translate": [
                             -4,
@@ -2793,13 +2824,14 @@
                             300
                         ]
                     }
-                ]
+                ],
+                "qty": 1,
+                "call": "CounterweightBracket_stl()",
+                "file": "printedparts/CounterweightBracket.scad"
             },
             {
+                "hash": "3ee8f075435ef68be6c87a4f73c0dae5",
                 "title": "Torso Drive Gear",
-                "qty": 1,
-                "call": "TorsoDriveGear_stl()",
-                "file": "printedparts/TorsoDriveGear.scad",
                 "views": [
                     {
                         "rotate": [
@@ -2809,6 +2841,7 @@
                         ],
                         "dist": 500,
                         "title": "view",
+                        "filepath": "../printedparts/images/TorsoDriveGear_view.png",
                         "caption": "view",
                         "translate": [
                             -1,
@@ -2821,7 +2854,10 @@
                             300
                         ]
                     }
-                ]
+                ],
+                "qty": 1,
+                "call": "TorsoDriveGear_stl()",
+                "file": "printedparts/TorsoDriveGear.scad"
             }
         ],
         "file": "AFRo.scad",

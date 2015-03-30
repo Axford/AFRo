@@ -35,7 +35,7 @@ module ElbowDrivenPulley_stl(ExplodeSpacing=10) {
                     number_of_teeth=ElbowDriveGearTeeth,
                     circular_pitch=ElbowGearCircularPitch, diametral_pitch=false,
                     pressure_angle=32,
-                    clearance = 0.2,
+                    clearance = 0.5,
                     gear_thickness=8,
                     rim_thickness=8,
                     rim_width=5,
