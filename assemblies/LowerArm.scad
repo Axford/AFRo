@@ -57,11 +57,10 @@ module ElbowJoint2_stl() {
 				
 			// cable guide
 			for (i=[-1,1])
-				translate([i* (5 + tw/2), -d - 9 + tw/2, 0])
+				translate([i* (5 + tw/2) - tw/2, -d - 9 + tw/2, 0])
 				roundedRect([tw, 9, 8], tw/2);
 				
-			// cosmetic cover panel
-			
+			// support for cosmetic cover panel
 			translate([0, -d+eta, ShoulderHeight + 1.5 - dw])
 				rotate([0,90,180])
 				right_triangle(6, 6, iw);	
