@@ -1,9 +1,0 @@
-CArm:
-Vitamins:
-  1 Aluminium Extrusion BR_20x20 700mm
-  4 Aluminium Extrusion Twist Nut
-  4 M4 cap screw x 8mm
-  4 Washer M4 x 9mm x 0.8mm
-
-Printed:
-
